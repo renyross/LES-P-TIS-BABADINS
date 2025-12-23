@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <title>Pré-inscription Crèche - Demande de Place en Ligne | Les p’tits Babadins</title>
+    <meta name="description"
+        content="Formulaire de pré-inscription gratuit et sans engagement. Réservez votre place en micro-crèche en quelques clics. Réponse personnalisée." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" async
+        defer></script>
+    <script type="module" src="main.js" defer></script>
+
+    <style>
+        .form-container {
+            background: white;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--color-text-main);
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #eee;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--color-sage);
+        }
+
+        .form-section-title {
+            color: var(--color-terracotta);
+            margin: 2rem 0 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="Les p’tits Babadins"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reseau.html">Nous découvrir</a></li>
+            <li><a href="creches.html">Nos Crèches</a></li>
+            <li><a href="pedagogie.html">Notre pédagogie</a></li>
+            <li><a href="entreprises.html">Vous êtes...</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+            </li>
+        </ul>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <header class="section-bg-beige" style="padding: var(--spacing-xl) 0; text-align: center;">
+        <div class="container">
+            <h1>Réserver une place</h1>
+            <p style="max-width: 600px; margin: 0 auto;">C'est simple, rapide et sans engagement. Suivez les étapes pour
+                valider votre demande.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="form-container">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-step active" data-step="1">1</div>
+                        <div class="progress-step" data-step="2">2</div>
+                        <div class="progress-step" data-step="3">3</div>
+                        <div class="progress-step" data-step="4">4</div>
+                    </div>
+                    <div
+                        style="display: flex; justify-content: space-between; max-width: 500px; margin: 0.5rem auto 0; font-size: 0.8rem; color: #999;">
+                        <span>Enfant</span>
+                        <span>Parents</span>
+                        <span>Foyer</span>
+                        <span>Planning</span>
+                    </div>
+                </div>
+
+                <form id="multi-step-form" action="mailto:partenariat@ce-lpbx.com" method="POST" enctype="text/plain">
+                    <!-- Antipourriel (Honeypot) -->
+                    <div style="display:none;">
+                        <label>Si vous êtes un humain, laissez ce champ vide :</label>
+                        <input type="text" name="hp_field">
+                    </div>
+
+
+                    <!-- Step 1: L'Enfant -->
+                    <div class="form-step active" id="step-1">
+                        <h3 class="form-section-title">L'Enfant</h3>
+                        <div class="responsive-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="child-name">Prénom et Nom de l'enfant</label>
+                                <input type="text" id="child-name" name="child-name" class="form-input" required
+                                    placeholder="Ex: Lucas Durand">
+                                <small style="color: #999;">Ou "Enfant à naître"</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="birthdate">Date de naissance (ou prévue)</label>
+                                <input type="date" id="birthdate" name="birthdate" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="step-actions">
+                            <div></div>
+                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Les Parents -->
+                    <div class="form-step" id="step-2">
+                        <h3 class="form-section-title">Coordonnées des parents</h3>
+                        <div class="responsive-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="parent1-name">Nom complet (Parent 1)</label>
+                                <input type="text" id="parent1-name" name="parent1-name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="parent1-email">Email (Parent 1)</label>
+                                <input type="email" id="parent1-email" name="parent1-email" class="form-input" required
+                                    placeholder="Parent1@exemple.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="parent1-phone">Téléphone (Parent 1)</label>
+                            <input type="tel" id="parent1-phone" name="parent1-phone" class="form-input" required>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
+                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Foyer -->
+                    <div class="form-step" id="step-3">
+                        <h3 class="form-section-title">Informations Foyer</h3>
+                        <div class="form-group">
+                            <label class="form-label" for="address">Adresse postale complète</label>
+                            <textarea id="address" name="address" class="form-textarea" rows="2" required
+                                placeholder="Rue, Code Postal, Ville"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="income">Revenu fiscal annuel du foyer (€)</label>
+                            <input type="number" id="income" name="income" class="form-input" placeholder="Ex: 45000">
+                            <small style="color: #999;">Optionnel - Utile pour estimer les aides CAF</small>
+                        </div>
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
+                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Votre Recherche -->
+                    <div class="form-step" id="step-4">
+                        <h3 class="form-section-title">Votre Recherche & Planning</h3>
+                        <div class="responsive-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="creche">Crèche souhaitée</label>
+                                <select id="creche" name="creche" class="form-select" required>
+                                    <option value="">-- Choisir une crèche --</option>
+                                    <option value="Paris 15">Paris 15</option>
+                                    <option value="Lyon 6">Lyon 6</option>
+                                    <option value="Bordeaux">Bordeaux</option>
+                                    <option value="unknown">Je ne sais pas encore</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="start-date">Date d'entrée souhaitée</label>
+                                <input type="date" id="start-date" name="start-date" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Jours d'accueil souhaités</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label"><input type="checkbox" name="days" value="Lundi">
+                                    Lundi</label>
+                                <label class="checkbox-label"><input type="checkbox" name="days" value="Mardi">
+                                    Mardi</label>
+                                <label class="checkbox-label"><input type="checkbox" name="days" value="Mercredi">
+                                    Mercredi</label>
+                                <label class="checkbox-label"><input type="checkbox" name="days" value="Jeudi">
+                                    Jeudi</label>
+                                <label class="checkbox-label"><input type="checkbox" name="days" value="Vendredi">
+                                    Vendredi</label>
+                            </div>
+                        </div>
+
+                        <p
+                            style="font-size: 0.9rem; color: #666; margin: 1rem 0; padding: 1rem; background: #eef1f4; border-radius: 8px;">
+                            🛡️ <strong>Engagement :</strong> Vos données sont traitées avec soin. En cliquant sur
+                            valider, vous acceptez que l'équipe Les p'tits Babadins vous recontacte pour donner suite à
+                            votre dossier.
+                        </p>
+
+                        <div class="step-actions">
+                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
+                            <button type="submit" class="btn btn-primary">🚀 Finaliser ma demande</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Les p’tits Babadins</h4>
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Familles</h4>
+                    <ul>
+                        <li><a href="#">Pourquoi nous choisir ?</a></li>
+                        <li><a href="#">Notre projet éducatif</a></li>
+                        <li><a href="#">Trouver une crèche</a></li>
+                        <li><a href="#">Pré-inscription</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseau</h4>
+                    <ul>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="entreprises.html">Offre Entreprise</a></li>
+                        <li><a href="#">Rejoindre le réseau</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>💌 contact@ce-lpbx.com</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_facebook.webp" alt="Facebook"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_linkedin.webp" alt="LinkedIn"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_instagram.webp" alt="Instagram"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_youtube.webp" alt="YouTube"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Les p’tits Babadins. Tous droits réservés. Mentions Légales | Politique de
+                    Confidentialité</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('multi-step-form');
+            const steps = Array.from(document.querySelectorAll('.form-step'));
+            const progressSteps = Array.from(document.querySelectorAll('.progress-step'));
+            const nextBtns = document.querySelectorAll('.next-step');
+            const prevBtns = document.querySelectorAll('.prev-step');
+
+            let currentStep = 1;
+
+            function updateForm() {
+                // Update steps visibility
+                steps.forEach(step => {
+                    step.classList.toggle('active', parseInt(step.id.split('-')[1]) === currentStep);
+                });
+
+                // Update progress bar
+                progressSteps.forEach(step => {
+                    const stepNum = parseInt(step.dataset.step);
+                    step.classList.toggle('active', stepNum === currentStep);
+                    step.classList.toggle('completed', stepNum < currentStep);
+
+                    // Replace number with checkmark if completed
+                    if (stepNum < currentStep) {
+                        step.innerHTML = '✓';
+                    } else {
+                        step.innerHTML = stepNum;
+                    }
+                });
+
+                window.scrollTo({ top: document.querySelector('.form-container').offsetTop - 100, behavior: 'smooth' });
+            }
+
+            form.addEventListener('submit', (e) => {
+                // Honeypot check
+                const hp = form.querySelector('input[name="hp_field"]').value;
+                if (hp) {
+                    e.preventDefault();
+                    console.warn("Spam detected");
+                    return;
+                }
+
+                // reCAPTCHA Token generation (v3)
+                e.preventDefault();
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'submit' }).then(function (token) {
+                        // Add token to form and submit
+                        const tokenInput = document.createElement('input');
+                        tokenInput.type = 'hidden';
+                        tokenInput.name = 'recaptcha_token';
+                        tokenInput.value = token;
+                        form.appendChild(tokenInput);
+                        form.submit();
+                    });
+                });
+            });
+
+            nextBtns.forEach(btn => {
+
+                btn.addEventListener('click', () => {
+                    // Basic validation for current step
+                    const currentSection = document.getElementById(`step-${currentStep}`);
+                    const inputs = currentSection.querySelectorAll('input[required], select[required], textarea[required]');
+                    let valid = true;
+
+                    inputs.forEach(input => {
+                        if (!input.value) {
+                            valid = false;
+                            input.style.borderColor = '#e64ea4';
+                        } else {
+                            input.style.borderColor = '#eee';
+                        }
+                    });
+
+                    if (valid && currentStep < steps.length) {
+                        currentStep++;
+                        updateForm();
+                    }
+                });
+            });
+
+            prevBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (currentStep > 1) {
+                        currentStep--;
+                        updateForm();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+```

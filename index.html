@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <title>Micro-crèches Les p’tits Babadins | Réseau National Bienveillant</title>
+    <meta name="description"
+        content="Les p’tits Babadins est un réseau national de micro-crèches privées proposant un accueil personnalisé et une pédagogie active (Reggio Emilia). Découvrez nos crèches pour familles et entreprises partout en France." />
+
+    <!-- LLM Optimization & Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Les p’tits Babadins",
+      "url": "https://lespetitsbabadins.com",
+      "logo": "https://lespetitsbabadins.com/images/logo.webp",
+      "description": "Réseau national de micro-crèches privées axé sur la bienveillance et la pédagogie Reggio Emilia.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@lesptitsbabadins.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/lespetitsbabadins",
+        "https://www.linkedin.com/company/les-petits-babadins"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Les p’tits Babadins",
+      "url": "https://lespetitsbabadins.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://lespetitsbabadins.com/creches.html?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hero.css" />
+    <link rel="preload" as="image" href="images/hero_child_right.webp" fetchpriority="high">
+    <script src="main.js" defer></script>
+    <style>
+        /* Values Section */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-lg);
+        }
+
+        .value-card {
+            background: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-sm);
+            display: inline-block;
+            padding: 1rem;
+            background: var(--color-beige-light);
+            border-radius: 50%;
+            color: var(--color-terracotta);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="Les p’tits Babadins" width="200" height="60"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Accueil</a></li>
+            <li><a href="reseau.html">Nous découvrir</a></li>
+            <li><a href="creches.html">Nos Crèches</a></li>
+            <li><a href="pedagogie.html">Notre pédagogie</a></li>
+            <li><a href="entreprises.html">Vous êtes...</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+            </li>
+        </ul>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Réservez une place en Micro-Crèche avec Les p’tits Babadins</h1>
+                <p>
+                    <strong>Les p’tits Babadins</strong> est un réseau national de plus de 130 micro-crèches privées.
+                    Nous offrons aux <strong>familles</strong> et aux <strong>entreprises</strong> un accueil
+                    personnalisé pour les enfants de 10 semaines à 4 ans,
+                    basé sur la bienveillance et la pédagogie active <strong>Reggio Emilia</strong>.
+                </p>
+                <div class="hero-actions" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="pre-inscription.html" class="btn btn-cta">Réserver ma place en 2 min</a>
+                    <a href="creches.html" class="btn btn-outline">Trouver ma crèche</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section id="reseau-preview" class="section-bg-blue-light">
+        <div class="container">
+            <div class="text-center" style="max-width: 900px; margin: 0 auto var(--spacing-xl);">
+                <h2 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem;">Qui sommes-nous ?</h2>
+
+                <p
+                    style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-light); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <strong>Les p'tits Babadins</strong> est un acteur majeur de la petite enfance en France depuis
+                    2006.
+                    Notre réseau regroupe des structures à taille humaine (micro-crèches) conçues pour offrir un cadre
+                    rassurant,
+                    proche de l'environnement familial.
+                </p>
+
+                <p
+                    style="font-size: 1.35rem; line-height: 1.5; color: var(--brand-blue-dark); font-weight: 600; max-width: 850px; margin: 0 auto;">
+                    "Nous accompagnons chaque enfant vers l'autonomie et la socialisation, en plaçant son bien-être et
+                    son rythme au centre de notre projet pédagogique."
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Card 1: Bienveillance -->
+                <div class="value-card"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s ease;">
+                    <div
+                        style="width: 70px; height: 70px; background: #ffe6e6; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">
+                        ❤️</div>
+                    <h3 style="color: var(--brand-blue-dark); margin-bottom: 1rem;">Bienveillance</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.6;">Le respect du rythme, des envies et de
+                        l’identité de l’enfant. Une écoute bienveillante qui s'étend aux familles et à nos équipes pour
+                        un soutien mutuel.</p>
+                </div>
+
+                <!-- Card 2: Sécurité -->
+                <div class="value-card"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s ease;">
+                    <div
+                        style="width: 70px; height: 70px; background: #e6f3ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">
+                        🛡️</div>
+                    <h3 style="color: var(--brand-blue-dark); margin-bottom: 1rem;">Sécurité</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.6;">Un environnement sécurisant qui permet
+                        à l’enfant d’explorer et d’acquérir de nouvelles compétences librement, favorisant un
+                        développement psychomoteur non contraint.</p>
+                </div>
+
+                <!-- Card 3: Pédagogie Active -->
+                <div class="value-card"
+                    style="background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); text-align: center; transition: transform 0.3s ease;">
+                    <div
+                        style="width: 70px; height: 70px; background: #e6fffa; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; margin: 0 auto 1.5rem;">
+                        🌱</div>
+                    <h3 style="color: var(--brand-blue-dark); margin-bottom: 1rem;">Pédagogie Active</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.6;">Une pédagogie de la confiance et de
+                        l’autonomie où l’enfant est l’acteur principal, à l’initiative de son éveil et libre de ses
+                        mouvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="callout" class="section-bg-white">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div style="flex: 1; min-width: 300px;">
+                    <!-- Placeholder for pedagogy image -->
+                    <div
+                        style="width: 100%; height: 400px; background-color: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800&auto=format&fit=crop"
+                            srcset="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=400&auto=format&fit=crop 400w,
+                                    https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?q=80&w=800&auto=format&fit=crop 800w"
+                            sizes="(max-width: 768px) 100vw, 400px" alt="Activités d'éveil" width="400" height="400"
+                            loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--brand-pink);">Notre projet éducatif</h2>
+                    <p style="margin-bottom: var(--spacing-md);">
+                        Une pédagogie active basée sur la confiance et l'autonomie. Nous considérons l'enfant comme
+                        l'acteur principal de son éveil, en respectant ses goûts, ses envies et son propre rythme de
+                        développement.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md);">
+                        <li style="margin-bottom: 0.5rem;">✨ L'enfant acteur de son éveil</li>
+                        <li style="margin-bottom: 0.5rem;">🌱 Respect du rythme physiologique</li>
+                        <li style="margin-bottom: 0.5rem;">🛡️ Développement psychomoteur libre</li>
+                    </ul>
+                    <a href="pedagogie.html" class="btn btn-secondary"
+                        title="En savoir plus sur notre pédagogie">Découvrir notre approche éducative</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- New Section: Parents -->
+    <section id="parents" class="section-bg-white">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div style="flex: 1; min-width: 300px;">
+                    <div
+                        style="width: 100%; height: 400px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="images/blog_parent_hero.webp" alt="Parents en crèche" width="600" height="400"
+                            loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--color-terracotta);">La place des parents</h2>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 1.1rem; color: var(--color-text-light);">
+                        Nous considérons les parents comme de véritables partenaires. Au-delà de l'accueil de votre
+                        enfant, nous construisons ensemble une relation de confiance.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md);">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-orange); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Écoute et conseils quotidiens
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-orange); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Cafés-parents et temps de rencontre
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-orange); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Ateliers thématiques (santé, alimentation, éveil)
+                        </li>
+                    </ul>
+                    <a href="reseau.html" class="btn btn-outline"
+                        style="border-color: var(--color-terracotta); color: var(--color-terracotta);">Rencontrer
+                        l'équipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Nos Crèches -->
+    <section id="nos-creches" class="section-bg-green-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--spacing-lg);">
+                <h2 style="color: var(--brand-blue-dark);">Nos crèches près de chez vous</h2>
+            </div>
+
+            <div style="margin-bottom: var(--spacing-lg);">
+                <div
+                    style="width: 100%; height: 500px; background-color: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); position: relative;">
+                    <!-- Using a general view of France for the embed -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5799.306041132629!2d2.3470438!3d46.227638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1650000000000!5m2!1sfr!2sfr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Carte du réseau Les p'tits Babadins">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="text-center" style="max-width: 900px; margin: 0 auto;">
+                <p
+                    style="margin-bottom: var(--spacing-lg); font-size: 1.2rem; line-height: 1.6; color: var(--color-text-main);">
+                    Un réseau national de micro-crèches pour être au plus près des familles. <br>
+                    <strong>Trouvez la structure idéale pour votre enfant.</strong>
+                </p>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: var(--spacing-lg);">
+                    <!-- Stat Card 1 -->
+                    <div
+                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 1rem; border: 1px solid rgba(0,0,0,0.05);">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--brand-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            📍</div>
+                        <div style="text-align: left;">
+                            <strong
+                                style="display: block; font-size: 1.4rem; color: var(--brand-blue-dark);">+115</strong>
+                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Crèches en France</span>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div
+                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); display: flex; align-items: center; justify-content: center; gap: 1rem; border: 1px solid rgba(0,0,0,0.05);">
+                        <div
+                            style="width: 50px; height: 50px; background: var(--brand-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">
+                            🏡</div>
+                        <div style="text-align: left;">
+                            <strong
+                                style="display: block; font-size: 1.1rem; color: var(--brand-blue-dark);">Proximité</strong>
+                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Domicile ou Travail</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="creches.html" method="get" class="search-bar"
+                    style="max-width: 600px; margin: 0 auto; background: white; padding: 0.5rem; border-radius: 50px; box-shadow: var(--shadow-md); display: flex; gap: 0.5rem; border: 1px solid #eee;">
+                    <input type="text" name="search" placeholder="Entrez votre ville ou code postal..."
+                        style="flex: 1; border: none; padding: 0.8rem 1.5rem; border-radius: 50px; outline: none; font-size: 1rem;">
+                    <button type="submit" class="btn btn-primary"
+                        style="padding: 0.8rem 2rem; border-radius: 50px;">Rechercher</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Section (Merged) -->
+    <section id="b2b-opportunities" class="section-bg-pink-light">
+        <!-- Entreprises Part -->
+        <div id="entreprises" class="container" style="margin-bottom: var(--spacing-xl);">
+            <div
+                style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg); flex-direction: row-reverse;">
+                <div style="flex: 1; min-width: 300px;">
+                    <div
+                        style="width: 100%; height: 400px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop"
+                            width="600" height="400" loading="lazy" alt="Espace Entreprise"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--brand-blue-dark);">La place entreprise en micro-crèche</h2>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 1.1rem; color: var(--color-text-light);">
+                        Une solution de garde économique et valorisante qui favorise l'équilibre « Vie pro - Vie perso »
+                        de vos salariés.
+                        En réservant un berceau, vous offrez bien plus qu'un mode de garde : vous garantissez la
+                        sérénité.
+                    </p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md);">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-blue-light); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Performance de l'entreprise & Sérénité des équipes
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-pink); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Place prioritaire et garantie à l'année
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-green); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Coût réel inférieur à 25% grâce aux avantages fiscaux
+                        </li>
+                    </ul>
+                    <a href="entreprises.html" class="btn btn-outline"
+                        style="border-color: var(--brand-blue-dark); color: var(--brand-blue-dark);">Découvrir l'offre
+                        entreprise</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partenariat Part -->
+        <div id="partenariat" class="container">
+            <div
+                style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg); flex-direction: row-reverse;">
+                <div style="flex: 1; min-width: 300px;">
+                    <div
+                        style="width: 100%; height: 400px; background-color: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.6);">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop"
+                            width="600" height="400" loading="lazy" alt="Ouvrir sa crèche"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--brand-blue-dark);">Envie d'ouvrir votre crèche avec nous ?</h2>
+                    <p style="margin-bottom: var(--spacing-md); font-size: 1.1rem; color: var(--color-text-light);">
+                        Vous souhaitez entreprendre dans un secteur porteur de sens ? Rejoignez le réseau Les p'tits
+                        Babadins et bénéficiez de notre expertise pour créer votre propre micro-crèche (franchise ou
+                        partenariat).
+                    </p>
+                    <ul style="list-style: none; margin-bottom: var(--spacing-md);">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-green); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Accompagnement projet de A à Z
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-green); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Formation et suivi pédagogique
+                        </li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
+                            <span
+                                style="background: var(--brand-green); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
+                            Droit d'entrée accessible
+                        </li>
+                    </ul>
+                    <a href="reseau.html" class="btn btn-primary" title="Devenir partenaire">Rejoindre le réseau</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Recrutement -->
+    <section id="recrutement-home" class="section-bg-white">
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="color: var(--brand-pink); margin-bottom: 1rem;">Construisez votre carrière avec nous</h2>
+                    <p
+                        style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 2rem; line-height: 1.6;">
+                        Vous êtes passionné(e) par la Petite Enfance ? <br>
+                        Intégrez un réseau qui valorise votre expertise et vous accompagne au quotidien.
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="recrutement.html" class="btn btn-secondary">Voir nos offres</a>
+
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <div
+                        style="width: 100%; height: 550px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                        <img src="images/social_story_time.webp" alt="Éducatrice petite enfance racontant une histoire"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Social Wall Section -->
+    <section id="social-wall" class="section-bg-pink-light" style="padding-bottom: 0;">
+        <div class="container text-center">
+            <h2 style="color: var(--brand-orange); margin-bottom: 2rem;">Au cœur de nos crèches</h2>
+            <p style="margin-bottom: var(--spacing-lg);">Suivez le quotidien joyeux de nos petits explorateurs sur nos
+                réseaux.</p>
+        </div>
+
+        <!-- Manual Scroll Container -->
+        <div class="social-carousel-wrapper" style="position: relative; padding: 2rem 0; background: transparent;">
+
+            <button onclick="scrollSocial(-1)"
+                style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
+            <button onclick="scrollSocial(1)"
+                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
+
+            <div id="social-track" class="social-track"
+                style="display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 2rem; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
+                <!-- Item 1 -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_music_workshop.webp" alt="Atelier musique"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🎶 Éveil musical</div>
+                </div>
+                <!-- Item 2 -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_garden_activity.webp" alt="Jardinage"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🌱 Petit jardinier</div>
+                </div>
+                <!-- Item 3 -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/blog_motricite_libre.webp" alt="Motricité"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🤸‍♀️ Motricité libre</div>
+                </div>
+                <!-- Item 4 (Fake Video) -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/blog_adaptation_creche.webp" alt="Accueil"
+                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 1.5rem; color: var(--brand-pink); margin-left: 5px;">▶</span>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        👋 Bienvenue !</div>
+                </div>
+                <!-- Item 5 -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/blog_alimentation_bebe.webp" alt="Repas"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🥦 Miam !</div>
+                </div>
+                <!-- Item 6: Art -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_art_painting.webp" alt="Peinture"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🎨 Petits artistes</div>
+                </div>
+                <!-- Item 7: Play (Fake Video) -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_outdoor_play.webp" alt="Jeux extérieur"
+                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 1.5rem; color: var(--brand-pink); margin-left: 5px;">▶</span>
+                    </div>
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🏃‍♂️ Ça court !</div>
+                </div>
+                <!-- Item 8: Story -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_story_time.webp" alt="Lecture"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        📚 L'heure du conte</div>
+                </div>
+                <!-- Item 9: Halloween -->
+                <div class="social-card"
+                    style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
+                    <img src="images/social_halloween_party.webp" alt="Fête"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <div
+                        style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
+                        🎃 Boo !</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function scrollSocial(direction) {
+                const container = document.getElementById('social-track');
+                const scrollAmount = 300; // Card width + gap
+                container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        </script>
+
+        <style>
+            /* Hide scrollbar for clean look */
+            .social-track::-webkit-scrollbar {
+                display: none;
+            }
+
+            .social-track {
+                -ms-overflow-style: none;
+            }
+        </style>
+    </section>
+
+    <!-- New Section: Avis Parents (Carousel) -->
+    <section id="avis-parents" class="section-bg-orange-light" style="overflow: hidden;">
+        <div class="container" style="max-width: 100%; padding: 0;">
+            <h2 class="text-center" style="margin-bottom: var(--spacing-lg);">Ce qu'en pensent les parents</h2>
+
+            <style>
+                .carousel-slider {
+                    overflow: hidden;
+                    width: 100%;
+                    position: relative;
+                    padding: 1rem 0;
+                    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+                }
+
+                .carousel-track {
+                    display: flex;
+                    width: max-content;
+                    animation: scroll 40s linear infinite;
+                }
+
+                .carousel-track:hover {
+                    animation-play-state: paused;
+                }
+
+                .review-card {
+                    width: 350px;
+                    flex-shrink: 0;
+                    background: white;
+                    padding: 2rem;
+                    border-radius: var(--radius-lg);
+                    box-shadow: var(--shadow-sm);
+                    margin-right: 2rem;
+                    /* Spacing between cards */
+                    white-space: normal;
+                }
+
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-50%);
+                    }
+
+                    /* Move half the length (one set of items) */
+                }
+            </style>
+
+            <div class="carousel-slider">
+                <div class="carousel-track">
+                    <!-- Set 1 -->
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"Une
+                            équipe formidable, bienveillante et à l'écoute. Notre fille s'y épanouit chaque jour et nous
+                            partons travailler l'esprit tranquille."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-blue-light); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                S</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Sophie M.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Maman de Léa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"Nous
+                            avons trouvé chez Les p'tits Babadins une vraie seconde famille pour Tom. Le projet
+                            pédagogique est respecté et le suivi est très personnalisé."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-pink); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                T</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Thomas D.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Papa de Tom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"La
+                            micro-crèche permet vraiment une attention particulière pour chaque enfant. L'ambiance est
+                            douce et les repas sont de qualité."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-green); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                C</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Camille R.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Maman de Hugo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">
+                            "Professionnalisme et douceur sont au rendez-vous. Les locaux sont superbes et adaptés. Je
+                            recommande à 100% pour la tranquillité d'esprit."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-orange); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                M</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Marc L.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Papa de Zoé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Set 2 (Duplicate for Loop) -->
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"Une
+                            équipe formidable, bienveillante et à l'écoute. Notre fille s'y épanouit chaque jour et nous
+                            partons travailler l'esprit tranquille."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-blue-light); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                S</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Sophie M.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Maman de Léa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"Nous
+                            avons trouvé chez Les p'tits Babadins une vraie seconde famille pour Tom. Le projet
+                            pédagogique est respecté et le suivi est très personnalisé."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-pink); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                T</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Thomas D.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Papa de Tom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">"La
+                            micro-crèche permet vraiment une attention particulière pour chaque enfant. L'ambiance est
+                            douce et les repas sont de qualité."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-green); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                C</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Camille R.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Maman de Hugo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div style="color: var(--brand-orange); font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; color: var(--color-text-light); margin-bottom: 1.5rem;">
+                            "Professionnalisme et douceur sont au rendez-vous. Les locaux sont superbes et adaptés. Je
+                            recommande à 100% pour la tranquillité d'esprit."</p>
+                        <div style="display: flex; align-items: center;">
+                            <div
+                                style="width: 40px; height: 40px; background: var(--brand-orange); border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-weight: bold; margin-right: 10px;">
+                                M</div>
+                            <div>
+                                <strong style="display: block; color: var(--brand-blue-dark);">Marc L.</strong>
+                                <span style="font-size: 0.9rem; color: #999;">Papa de Zoé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Section: Recrutement -->
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section-bg-white">
+        <div class="container" style="max-width: 900px;">
+            <div class="text-center" style="margin-bottom: var(--spacing-xl);">
+                <h2 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem;">Questions Fréquentes</h2>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: var(--color-text-light);">
+                    Tout ce que vous devez savoir pour l'accueil de votre enfant.
+                </p>
+            </div>
+
+            <div class="faq-accordion" style="display: flex; flex-direction: column;">
+                <!-- Q1 -->
+                <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <summary
+                        style="font-weight: 600; color: var(--brand-blue-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
+                        <span style="font-size: 1.1rem;">Comment inscrire mon enfant ?</span>
+                        <span class="faq-icon"
+                            style="color: var(--brand-orange); font-size: 1.5rem; line-height: 1;">+</span>
+                    </summary>
+                    <p style="color: var(--color-text-light); margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+                        Vous pouvez effectuer une pré-inscription directement en ligne via notre formulaire dédié. C'est
+                        gratuit, rapide et sans engagement. Une fois la demande reçue, le directeur de la crèche
+                        concernée vous contactera pour faire le point sur vos besoins.
+                    </p>
+                </details>
+
+                <!-- Q2 -->
+                <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <summary
+                        style="font-weight: 600; color: var(--brand-blue-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
+                        <span style="font-size: 1.1rem;">Quel est le coût d'une place en micro-crèche ?</span>
+                        <span class="faq-icon"
+                            style="color: var(--brand-orange); font-size: 1.5rem; line-height: 1;">+</span>
+                    </summary>
+                    <p style="color: var(--color-text-light); margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+                        Le tarif dépend de vos revenus, du nombre d'enfants à charge et du volume d'heures de garde. En
+                        micro-crèche PAJE, vous avancez les frais mais bénéficiez du CMG (Complément de Libre Choix du
+                        Mode de Garde) de la CAF ainsi que d'un crédit d'impôt.
+                    </p>
+                </details>
+
+                <!-- Q3 -->
+                <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <summary
+                        style="font-weight: 600; color: var(--brand-blue-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
+                        <span style="font-size: 1.1rem;">À partir de quel âge accueillez-vous les enfants ?</span>
+                        <span class="faq-icon"
+                            style="color: var(--brand-orange); font-size: 1.5rem; line-height: 1;">+</span>
+                    </summary>
+                    <p style="color: var(--color-text-light); margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+                        Nous accueillons généralement les enfants dès la fin du congé maternité (soit environ 10
+                        semaines) et jusqu'à leur entrée à l'école maternelle (3-4 ans), voire jusqu'à 6 ans pour du
+                        périscolaire dans certaines structures.
+                    </p>
+                </details>
+
+                <!-- Q4 -->
+                <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <summary
+                        style="font-weight: 600; color: var(--brand-blue-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
+                        <span style="font-size: 1.1rem;">Les repas sont-ils fournis ?</span>
+                        <span class="faq-icon"
+                            style="color: var(--brand-orange); font-size: 1.5rem; line-height: 1;">+</span>
+                    </summary>
+                    <p style="color: var(--color-text-light); margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+                        Oui ! La majorité de nos crèches fournissent les repas, incluant le déjeuner et le goûter. Nous
+                        privilégions des produits frais, de saison et souvent bio, adaptés aux besoins nutritionnels de
+                        chaque âge et aux régimes spécifiques.
+                    </p>
+                </details>
+
+                <!-- Q5 -->
+                <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <summary
+                        style="font-weight: 600; color: var(--brand-blue-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; outline: none;">
+                        <span style="font-size: 1.1rem;">Proposez-vous une période d'adaptation ?</span>
+                        <span class="faq-icon"
+                            style="color: var(--brand-orange); font-size: 1.5rem; line-height: 1;">+</span>
+                    </summary>
+                    <p style="color: var(--color-text-light); margin-top: 1rem; line-height: 1.6; font-size: 1rem;">
+                        Absolument. La familiarisation est une étape clé pour le bien-être de l'enfant (et des parents
+                        !). Elle se déroule généralement sur une ou deux semaines, avec des temps de présence
+                        progressifs, pour permettre à l'enfant de découvrir son nouvel environnement en douceur.
+                    </p>
+                </details>
+            </div>
+            <style>
+                details>summary {
+                    list-style: none;
+                }
+
+                details>summary::-webkit-details-marker {
+                    display: none;
+                }
+            </style>
+        </div>
+        <style>
+            details>summary {
+                list-style: none;
+            }
+
+            details>summary::-webkit-details-marker {
+                display: none;
+            }
+        </style>
+    </section>
+
+    <section id="pre-inscription">
+        <div class="container">
+            <div
+                style="background: var(--brand-blue-light); border-radius: var(--radius-lg); padding: var(--spacing-xl); text-align: center; color: white;">
+                <h2 style="color: white; margin-bottom: var(--spacing-sm);">Prêt à nous rejoindre ?</h2>
+                <p
+                    style="font-size: 1.2rem; margin-bottom: var(--spacing-md); max-width: 700px; margin-left: auto; margin-right: auto;">
+                    Réservez dès maintenant une place pour votre enfant. Les places sont limitées dans nos micro-crèches
+                    pour garantir la qualité d'accueil.
+                </p>
+                <a href="pre-inscription.html" class="btn"
+                    style="background: white; color: var(--brand-blue-light);">Démarrer ma pré-inscription</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Les p’tits Babadins</h4>
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Familles</h4>
+                    <ul>
+                        <li><a href="#">Pourquoi nous choisir ?</a></li>
+                        <li><a href="#">Notre projet éducatif</a></li>
+                        <li><a href="#">Trouver une crèche</a></li>
+                        <li><a href="#">Pré-inscription</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseau</h4>
+                    <ul>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="entreprises.html">Offre Entreprise</a></li>
+                        <li><a href="#">Rejoindre le réseau</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>💌 contact@ce-lpbx.com</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_facebook.webp" alt="Facebook" width="20" height="20" loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_linkedin.webp" alt="LinkedIn" width="20" height="20" loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_instagram.webp" alt="Instagram" width="20" height="20" loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_youtube.webp" alt="YouTube" width="20" height="20" loading="lazy"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Les p’tits Babadins. Tous droits réservés. <a href="mentions-legales.html">Mentions
+                        Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="creches.html" class="btn btn-outline">🔍 Trouver ma crèche</a>
+        <a href="pre-inscription.html" class="btn btn-cta">✨ S'inscrire</a>
+    </div>
+
+</body>
+
+</html>
