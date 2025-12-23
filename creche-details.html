@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{Nom de la Crèche} | Micro-crèche à {Ville} Les p’tits Babadins</title>
+    <meta name="description"
+        content="Découvrez la micro-crèche {Nom} à {Ville}. Un accueil de proximité, une pédagogie active Reggio Emilia et un cadre sécurisant pour votre enfant. Inscriptions ouvertes." />
+
+    <!-- LLM Optimization & Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ChildCare",
+      "name": "Les p’tits Babadins {Nom}",
+      "description": "Micro-crèche à taille humaine située à {Ville}, axée sur la bienveillance et l'éveil de l'enfant.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{Ville}",
+        "addressCountry": "FR"
+      },
+      "openingHours": "Mo-Fr 07:30-18:30"
+    }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero.css">
+    <style>
+        .details-hero {
+            height: 40vh;
+            min-height: 300px;
+            background-color: var(--brand-blue-dark);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .details-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .details-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .details-container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            position: relative;
+            z-index: 3;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-card {
+            background: var(--color-beige-light);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .info-card h3 {
+            color: var(--brand-blue-dark);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--brand-blue-light);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 300px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="Les p’tits Babadins"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reseau.html">Nous découvrir</a></li>
+            <li><a href="creches.html" class="active">Nos Crèches</a></li>
+            <li><a href="pedagogie.html">Notre pédagogie</a></li>
+            <li><a href="entreprises.html">Vous êtes...</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+            </li>
+        </ul>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <!-- Content injected via JS -->
+    <div id="creche-detail-container">
+        <!-- JS will populate this -->
+        <div style="height: 60vh; display: flex; align-items: center; justify-content: center;">
+            <p>Chargement des informations...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Les p’tits Babadins</h4>
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Familles</h4>
+                    <ul>
+                        <li><a href="#">Pourquoi nous choisir ?</a></li>
+                        <li><a href="#">Notre projet éducatif</a></li>
+                        <li><a href="#">Trouver une crèche</a></li>
+                        <li><a href="#">Pré-inscription</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseau</h4>
+                    <ul>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="entreprises.html">Offre Entreprise</a></li>
+                        <li><a href="#">Rejoindre le réseau</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>💌 contact@ce-lpbx.com</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_facebook.webp" alt="Facebook"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_linkedin.webp" alt="LinkedIn"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_instagram.webp" alt="Instagram"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_youtube.webp" alt="YouTube"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Les p’tits Babadins. Tous droits réservés. Mentions Légales | Politique de
+                    Confidentialité</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="creches_data.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Petite Enfance & Pédagogie - Conseils Parents</title>
+    <meta name="description"
+        content="Sommeil, alimentation, éveil... Retrouvez nos conseils d'experts et astuces pour accompagner le développement de votre enfant au quotidien." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hero.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="Les p’tits Babadins"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reseau.html">Nous découvrir</a></li>
+            <li><a href="creches.html">Nos Crèches</a></li>
+            <li><a href="pedagogie.html">Notre pédagogie</a></li>
+            <li><a href="entreprises.html">Vous êtes...</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+            </li>
+        </ul>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <header
+        style="height: 50vh; min-height: 400px; position: relative; display: flex; align-items: center; justify-content: center; background-image: url('images/blog_parent_hero.webp'); background-size: cover; background-position: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4);"></div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+            <h1 style="color: white; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Le Blog des Parents
+            </h1>
+            <p style="font-size: 1.3rem; max-width: 700px; margin: 0 auto; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
+                Retrouvez ici nos conseils d'experts, idées d'activités et actualités sur le monde de la petite enfance.
+            </p>
+        </div>
+    </header>
+
+    <section class="section-bg-white">
+        <div class="container">
+            <!-- Blog Grid -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+
+                <!-- Article 1 -->
+                <article
+                    style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s;"
+                    class="blog-card">
+                    <div style="height: 200px; background-color: #eee;">
+                        <img src="images/blog_adaptation_creche.webp" alt="Premier jour crèche"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <span
+                            style="background: var(--brand-blue-light); color: white; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">Vie
+                            en crèche</span>
+                        <h3 style="margin-top: 0.5rem; font-size: 1.4rem;">Comment préparer l'adaptation en crèche ?
+                        </h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">L'entrée en crèche est une
+                            grande étape. Voici nos conseils pour une séparation en douceur pour bébé et parents.</p>
+                        <a href="blog-adaptation-creche.html" style="color: var(--brand-pink); font-weight: bold;">Lire
+                            la suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article
+                    style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s;"
+                    class="blog-card">
+                    <div style="height: 200px; background-color: #eee;">
+                        <img src="images/blog_motricite_libre.webp" alt="Motricité libre"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <span
+                            style="background: var(--brand-green); color: white; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">Pédagogie</span>
+                        <h3 style="margin-top: 0.5rem; font-size: 1.4rem;">Comprendre la motricité libre</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">Pourquoi est-il important de
+                            laisser l'enfant découvrir ses mouvements par lui-même ? Explications.</p>
+                        <a href="blog-motricite-libre.html" style="color: var(--brand-pink); font-weight: bold;">Lire la
+                            suite
+                            →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article
+                    style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s;"
+                    class="blog-card">
+                    <div style="height: 200px; background-color: #eee;">
+                        <img src="images/blog_sommeil_bebe.webp" alt="Sommeil bébé"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <span
+                            style="background: var(--brand-orange); color: white; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">Santé
+                            & Bien-être</span>
+                        <h3 style="margin-top: 0.5rem; font-size: 1.4rem;">Le sommeil de bébé : rythmes et rituels</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">Tout savoir sur les cycles de
+                            sommeil des tout-petits et comment mettre en place des rituels apaisants.</p>
+                        <a href="blog-sommeil-bebe.html" style="color: var(--brand-pink); font-weight: bold;">Lire la
+                            suite →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article
+                    style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s;"
+                    class="blog-card">
+                    <div style="height: 200px; background-color: #eee;">
+                        <img src="images/blog_alimentation_bebe.webp" alt="Alimentation"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <span
+                            style="background: var(--brand-blue-dark); color: white; padding: 0.2rem 0.6rem; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: bold;">Alimentation</span>
+                        <h3 style="margin-top: 0.5rem; font-size: 1.4rem;">La diversification alimentaire menée par
+                            l'enfant</h3>
+                        <p style="color: var(--color-text-light); margin-bottom: 1rem;">Qu'est-ce que la DME ? Quels
+                            sont les avantages et les précautions à prendre ?</p>
+                        <a href="blog-alimentation-dme.html" style="color: var(--brand-pink); font-weight: bold;">Lire
+                            la suite →</a>
+                    </div>
+                </article>
+
+            </div>
+
+            <div style="text-align: center; margin-top: var(--spacing-lg);">
+                <a href="#" class="btn btn-outline">Voir plus d'articles</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Les p’tits Babadins</h4>
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Familles</h4>
+                    <ul>
+                        <li><a href="#">Pourquoi nous choisir ?</a></li>
+                        <li><a href="#">Notre projet éducatif</a></li>
+                        <li><a href="#">Trouver une crèche</a></li>
+                        <li><a href="#">Pré-inscription</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseau</h4>
+                    <ul>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="entreprises.html">Offre Entreprise</a></li>
+                        <li><a href="#">Rejoindre le réseau</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>💌 contact@ce-lpbx.com</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_facebook.webp" alt="Facebook"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_linkedin.webp" alt="LinkedIn"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_instagram.webp" alt="Instagram"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_youtube.webp" alt="YouTube"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Les p’tits Babadins. Tous droits réservés. Mentions Légales | Politique de
+                    Confidentialité</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

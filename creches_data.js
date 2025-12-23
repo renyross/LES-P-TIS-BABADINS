@@ -1,0 +1,20 @@
+export const crechesData = [
+    { name: "Marssac sur Tarn", city: "Marssac sur Tarn", email: "direction.marssacsurtarn@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Mellac", city: "Mellac", email: "mellac@lespetitsbabadins.com", active: true },
+    { name: "Au Pays des Sens", city: "Saint Germain du Puy", email: "aupaysdessens@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Souppes", city: "Souppes-sur-Loing", email: "souppes@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins 79260 La Crèche", city: "La Crèche", email: "direction.lacreche@lespetitsbabadins.com", active: true },
+    { name: "La MC de St Quay Perros", city: "Saint-Quay-Perros", email: "stquayperros@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins Pordic", city: "Pordic", email: "pordic@lespetitsbabadins.com", active: true },
+    { name: "Crèche Expansion Savenay 2", city: "Savenay", email: "emilieguerin30@gmail.com", active: true },
+    { name: "Crèche Expansion Montluçon", city: "Montluçon", email: "montlucon@lespetitsbabadins.com", active: true },
+    { name: "Ptits Babadins Téloché", city: "Téloché", email: "teloche@lespetitsbabadins.com", active: true },
+    { name: "MC de Louargat", city: "Louargat", email: "stquayperros@lespetitsbabadins.com", active: true },
+    { name: "LPB Masny-Aniche", city: "Masny", email: "masny@lespetitsbabadins.com", active: true },
+    { name: "CRECHES EXPANSION Lorient", city: "Lorient", email: "mellac@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Pont Saint Esprit", city: "Pont-Saint-Esprit", email: "pontsaintesprit@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Sigournais", city: "Sigournais", email: "sigournais@lespetitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Bournezeau", city: "Bournezeau", email: "contact@lesptitsbabadins.com", active: true },
+    { name: "Les P’tits Babadins de Grosbreuil", city: "Grosbreuil", email: "sigournais@lespetitsbabadins.com", active: true },
+    { name: "Les p’tits Babadins de Saint Aubin du Cormier", city: "Saint-Aubin-du-Cormier", email: "questembert@lespetitsbabadins.com", active: true }
+];

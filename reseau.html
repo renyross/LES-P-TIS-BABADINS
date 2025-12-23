@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qui sommes-nous ? Le Réseau Les p’tits Babadins</title>
+    <meta name="description"
+        content="Découvrez l'histoire et les valeurs créatrices du réseau Les p’tits Babadins. 130 micro-crèches dédiées à l'autonomie, l'alimentation saine et la bienveillance parentale depuis 2006." />
+
+    <!-- LLM Optimization & Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est l'histoire du réseau Les p'tits Babadins ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fondé en 2006, le réseau Les p'tits Babadins compte aujourd'hui environ 130 micro-crèches en France. Sa mission est d'offrir un accueil de proximité, familial et hautement qualitatif pour les jeunes enfants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est l'âge d'accueil des enfants ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous accueillons les enfants de 10 semaines jusqu'à leur entrée à l'école maternelle (environ 4 ans)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles sont les valeurs clés du réseau ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nos valeurs reposent sur la bienveillance, le respect du rythme de l'enfant, l'alimentation saine et l'accompagnement personnalisé des familles dans leur parentalité."
+          }
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.webp" alt="Les p’tits Babadins"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reseau.html" class="active">Nous découvrir</a></li>
+            <li><a href="creches.html">Nos Crèches</a></li>
+            <li><a href="pedagogie.html">Notre pédagogie</a></li>
+            <li><a href="entreprises.html">Vous êtes...</a></li>
+            <li><a href="recrutement.html">Recrutement</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="btn btn-primary"
+                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+            </li>
+        </ul>
+        <div class="mobile-menu-btn">☰</div>
+    </nav>
+
+    <header
+        style="min-height: 400px; display: flex; align-items: center; justify-content: center; background-image: url('images/hero_reseau_community.webp'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4);"></div>
+        <div class="container" style="position: relative; z-index: 2; text-align: center; color: white;">
+            <h1 style="color: white; margin-bottom: 1rem;">Nous découvrir</h1>
+            <p style="font-size: 1.25rem; max-width: 600px; margin: 0 auto; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
+                Plus qu'un mode de garde, un véritable <a href="pedagogie.html"
+                    style="text-decoration: underline; color: white;">projet de vie</a> pour vos enfants.</p>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-xl); align-items: center;">
+                <div>
+                    <h2 id="presentation" style="color: var(--color-terracotta);">Présentation générale du réseau</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Depuis 2006, le réseau <strong>Les p'tits Babadins</strong> offre à votre enfant un cadre
+                        rassurant, comme à la maison. Avec nos 130 micro-crèches, nous accompagnons chaque enfant vers
+                        l'autonomie (nutrition, éveil, socialisation) tout en respectant son rythme individuel.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Accueillant les enfants de 10 semaines à 4 ans, notre structure favorise la mixité des âges,
+                        véritable richesse pour l'émulation et la bienveillance, à l'image d'une fratrie.
+                    </p>
+                    <p>
+                        C'est le lieu idéal pour une première socialisation en douceur, au sein d'une "petite famille".
+                        Nous vous aidons à concilier sereinement vie professionnelle et vie familiale, grâce à une
+                        équipe dévouée au bien-être global de votre enfant.
+                    </p>
+                </div>
+                <div>
+                    <img src="images/vision_home_atmosphere.webp" alt="Équipe bienveillante"
+                        style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bg-sage">
+        <div class="container">
+            <h2 id="valeurs" class="text-center" style="margin-bottom: var(--spacing-lg);">Nos valeurs</h2>
+            <div class="values-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+                <!-- Card 1: Pédagogie Active -->
+                <div class="value-card"
+                    style="background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="height: 200px; overflow: hidden; position: relative; flex-shrink: 0;">
+                        <img src="images/pedago_motricite.webp" alt="Pédagogie"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            🌟</div>
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3
+                            style="color: var(--color-text); font-size: 1.25rem; margin-bottom: 0.5rem; font-weight: 600;">
+                            <a href="pedagogie.html" style="color: inherit; text-decoration: none;">Pédagogie de la
+                                confiance</a>
+                        </h3>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 1rem;">Autonomie & Éveil</p>
+                        <ul
+                            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem; color: var(--color-text-light);">
+                            <li style="display: flex; gap: 10px; align-items: baseline;"><span
+                                    style="color: var(--brand-orange);">●</span> L’enfant acteur de son éveil</li>
+                            <li style="display: flex; gap: 10px; align-items: baseline;"><span
+                                    style="color: var(--brand-orange);">●</span> Respect des goûts et envies</li>
+                            <li style="display: flex; gap: 10px; align-items: baseline;"><span
+                                    style="color: var(--brand-orange);">●</span> Développement moteur libre</li>
+                            <li style="display: flex; gap: 10px; align-items: baseline;"><span
+                                    style="color: var(--brand-orange);">●</span> Environnement sécurisant</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bienveillance -->
+                <div class="value-card"
+                    style="background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="height: 200px; overflow: hidden; position: relative; flex-shrink: 0;">
+                        <img src="images/blog_adaptation_creche.webp" alt="Bienveillance"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            ❤️</div>
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3
+                            style="color: var(--color-text); font-size: 1.25rem; margin-bottom: 1.5rem; font-weight: 600;">
+                            Bienveillance Partagée</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div><strong style="color: var(--brand-pink); font-size: 0.9rem;">Envers
+                                    l'enfant</strong><br><span style="font-size: 0.9rem; color: #666;">Respect du rythme
+                                    et de l'identité.</span></div>
+                            <div><strong style="color: var(--brand-pink); font-size: 0.9rem;">Envers les
+                                    familles</strong><br><span style="font-size: 0.9rem; color: #666;">Respect des choix
+                                    éducatifs.</span></div>
+                            <div><strong style="color: var(--brand-pink); font-size: 0.9rem;">Envers
+                                    l'équipe</strong><br><span style="font-size: 0.9rem; color: #666;">Écoute et soutien
+                                    mutuel.</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Soutien à la Parentalité -->
+                <div class="value-card"
+                    style="background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); overflow: hidden; border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                    <div style="height: 200px; overflow: hidden; position: relative; flex-shrink: 0;">
+                        <img src="images/parentalite_support.webp" alt="Parentalité"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div
+                            style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.9); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                            👨‍👩‍👧‍👦</div>
+                    </div>
+                    <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3
+                            style="color: var(--color-text); font-size: 1.25rem; margin-bottom: 1.5rem; font-weight: 600;">
+                            Soutien à la Parentalité</h3>
+                        <ul
+                            style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem; color: var(--color-text-light);">
+                            <li style="display: flex; gap: 10px; align-items: start;"><span
+                                    style="color: var(--brand-blue-dark);">✓</span> Écoute et conseils au quotidien</li>
+                            <li style="display: flex; gap: 10px; align-items: start;"><span
+                                    style="color: var(--brand-blue-dark);">✓</span> Espaces de parole (cafés parents)
+                            </li>
+                            <li style="display: flex; gap: 10px; align-items: start;"><span
+                                    style="color: var(--brand-blue-dark);">✓</span> Interventions thématiques</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container text-center">
+            <h2 id="parentalite" style="color: var(--color-sage-dark);">La place des parents</h2>
+            <p style="max-width: 800px; margin: 0 auto var(--spacing-md);">
+                Nous considérons les parents comme de véritables partenaires. Des cafés-parents, des ateliers et des
+                temps d'échanges quotidiens sont organisés pour construire ensemble le parcours de votre enfant.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-outline" title="Contacter le siège">Rencontrer l'équipe
+                    siège</a>
+                <a href="creches.html" class="btn btn-primary" title="Voir nos crèches">Trouver ma crèche</a>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
+                Vous êtes une entreprise ? <a href="entreprises.html"
+                    style="text-decoration: underline; color: var(--brand-blue-dark);">Découvrez nos solutions de
+                    réservation de berceaux</a> pour vos salariés.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer same as index (simplified markup for brevity, in real project include file) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Les p’tits Babadins</h4>
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Familles</h4>
+                    <ul>
+                        <li><a href="#">Pourquoi nous choisir ?</a></li>
+                        <li><a href="#">Notre projet éducatif</a></li>
+                        <li><a href="#">Trouver une crèche</a></li>
+                        <li><a href="#">Pré-inscription</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Réseau</h4>
+                    <ul>
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="entreprises.html">Offre Entreprise</a></li>
+                        <li><a href="#">Rejoindre le réseau</a></li>
+                        <li><a href="#">Carrières</a></li>
+                        <li><a href="#">Presse</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>💌 contact@ce-lpbx.com</p>
+
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+                        <a href="https://facebook.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_facebook.webp" alt="Facebook"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://linkedin.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_linkedin.webp" alt="LinkedIn"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://instagram.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_instagram.webp" alt="Instagram"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                        <a href="https://youtube.com" target="_blank"
+                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            onmouseover="this.style.transform='scale(1.1)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="images/icon_youtube.webp" alt="YouTube"
+                                style="width: 100%; height: 100%; object-fit: contain;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Les p’tits Babadins. Tous droits réservés. Mentions Légales | Politique de
+                    Confidentialité</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-mobile-cta">
+        <a href="creches.html" class="btn btn-outline">🔍 Trouver ma crèche</a>
+        <a href="pre-inscription.html" class="btn btn-cta">✨ S'inscrire</a>
+    </div>
+
+</body>
+
+</html>

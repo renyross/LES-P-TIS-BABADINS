@@ -1,0 +1,134 @@
+/* Hero Specific Styles */
+.hero {
+    position: relative;
+    height: 80vh;
+    /* Taller for full impact */
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Shift background to show right side (child) more */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%), url('images/hero_child_right.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: var(--color-white);
+    padding-top: 80px;
+    /* Offset for fixed header if needed */
+    margin-top: -80px;
+    /* Pull up behind transparent header if we want that look, but sticking to standard for now */
+}
+
+/* Hero Container Grid Layout */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Remove explicit max-width to let grid control it, or keep it loosely */
+    width: 100%;
+    padding: var(--spacing-md) 0;
+    /* Reset margins */
+    margin: 0;
+    grid-column: 1;
+    /* Explicitly place in left column */
+}
+
+.hero h1 {
+    color: var(--color-white);
+    margin-bottom: var(--spacing-sm);
+    font-size: 3.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    color: var(--color-white-off);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+/* Update buttons in hero to pop against background */
+.hero .btn-outline {
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.hero .btn-outline:hover {
+    background-color: var(--color-white);
+    color: var(--brand-blue-dark);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.hero-content>* {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.hero-content h1 {
+    animation-delay: 0.1s;
+}
+
+.hero-content p {
+    animation-delay: 0.3s;
+}
+
+.hero-content .hero-actions {
+    animation-delay: 0.5s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+        /* Stack on mobile */
+        text-align: center;
+    }
+
+    .hero-content {
+        grid-column: auto;
+        /* Reset grid placement */
+    }
+
+    /* Center align content on mobile */
+    .hero-content .hero-actions {
+        justify-content: center !important;
+    }
+
+    .hero {
+        height: auto;
+        padding: 150px 0 100px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
