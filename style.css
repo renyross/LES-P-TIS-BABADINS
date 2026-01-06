@@ -799,4 +799,185 @@ img {
     .blog-header h1 {
         font-size: 1.8rem !important;
     }
+}/* --- FOOTER ENHANCEMENTS --- */
+
+/* Newsletter Field */
+.footer-newsletter input {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: var(--radius-sm);
+    border: none;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: inherit;
+}
+
+.footer-newsletter button {
+    width: 100%;
+    padding: 0.6rem;
+    background: var(--brand-orange);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.footer-newsletter button:hover {
+    background: #e69500;
+}
+
+/* Partners Section */
+.footer-partners {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer-partners-title {
+    color: var(--color-white);
+    opacity: 0.6;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.partner-logo {
+    display: inline-block;
+    color: white;
+    opacity: 0.4;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin: 0 0.5rem 0.5rem;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--brand-orange);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    /* Hidden by default via JS usually, or assume flex and hide opacity */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(20px);
+}
+
+#backToTop.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background-color: #e69500;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Accessibility: Improve footer contrast if needed */
+.footer-col a {
+    color: #e0e0e0;
+    /* Increase contrast from standard gray/white if needed */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 80px;
+        /* Above sticky bar */
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        font-size: 1.2rem;
+    }
+}
+/* Footer Enhancements */
+
+/* Newsletter Form in Footer */
+.footer-newsletter input[type="email"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.footer-newsletter button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: var(--brand-pink);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+    background-color: #d13d90;
+}
+
+/* Accessibility: Darker Text for Better Contrast */
+/* Updating --color-text-light to meet WCAG AA standards */
+:root {
+    --color-text-light: #4A5568 !important; /* Darker grey than #577083 */
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 90px; /* Above sticky footer on mobile */
+    right: 20px;
+    z-index: 999;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--brand-blue-light);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: opacity 0.3s, transform 0.3s;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#backToTop:hover {
+    background-color: var(--brand-blue-dark);
+    transform: translateY(-3px);
+}
+
+@media (min-width: 769px) {
+    #backToTop {
+        bottom: 30px; /* Normal position on desktop */
+    }
 }

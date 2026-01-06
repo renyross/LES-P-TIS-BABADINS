@@ -63,6 +63,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // LLM Optimization: Generate dynamic structured data for all crèches
     generateCrechesStructuredData();
 
+    // Back to Top Button Logic
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'flex';
+                // Small delay to allow display flex to apply before opacity transition if we wanted intricate anims
+                // But for now, simple display toggle is fine or we can use opacity
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
 
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
@@ -577,3 +598,24 @@ function generateCrechesStructuredData() {
     document.head.appendChild(script);
 }
 
+
+// --- BACK TO TOP FUNCTIONALITY ---
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});

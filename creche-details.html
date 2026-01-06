@@ -112,29 +112,39 @@
 
     <!-- Footer -->
     <!-- Footer -->
-                <footer>
+                    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Les p’tits Babadins</h4>
                     <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le respect du rythme de l'enfant.</p>
-                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                    
+                    <!-- Newsletter Section -->
+                    <div class="footer-newsletter" style="margin-top: 1.5rem; background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 16px;">
+                        <h5 style="color: white; margin-bottom: 0.5rem; font-size: 0.95rem;">Recevez nos conseils petite enfance</h5>
+                        <form action="#" method="POST" onsubmit="alert('Merci pour votre inscription ! (Simulation)'); return false;">
+                            <input type="email" placeholder="Votre email" required>
+                            <button type="submit">S'inscrire</button>
+                        </form>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://facebook.com" target="_blank"
-                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             onmouseover="this.style.transform='scale(1.1)'"
                             onmouseout="this.style.transform='scale(1)'">
                             <img src="images/icon_facebook.webp" alt="Facebook"
                                 style="width: 100%; height: 100%; object-fit: contain;">
                         </a>
                         <a href="https://linkedin.com" target="_blank"
-                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             onmouseover="this.style.transform='scale(1.1)'"
                             onmouseout="this.style.transform='scale(1)'">
                             <img src="images/icon_linkedin.webp" alt="LinkedIn"
                                 style="width: 100%; height: 100%; object-fit: contain;">
                         </a>
                         <a href="https://instagram.com" target="_blank"
-                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             onmouseover="this.style.transform='scale(1.1)'"
                             onmouseout="this.style.transform='scale(1)'">
                             <img src="images/icon_instagram.webp" alt="Instagram"
@@ -167,6 +177,7 @@
                         <li><a href="reseau.html">Le Réseau LPB</a></li>
                         <li><a href="recrutement.html">Travailler avec nous</a></li>
                         <li><a href="contact.html">Contact Siège</a></li>
+                        <li style="margin-top: 1rem;"><strong style="color: var(--brand-pink);">Partenaires :</strong><br><span style="font-size: 0.85rem; opacity: 0.8;">CAF, PMI, Ville de Paris</span></li>
                     </ul>
                 </div>
             </div>
@@ -175,6 +186,10 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Back to Top Button -->
+    
+    
 
     <script src="creches_data.js"></script>
     <script src="main.js"></script>
