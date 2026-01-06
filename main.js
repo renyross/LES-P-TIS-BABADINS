@@ -619,3 +619,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* --- Animated Counters Script --- */
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // Animation duration in ms
+                const increment = target / (duration / 16); // 60fps
+
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        // Add suffix if needed based on target
+                        if (target === 110 || target === 2000) counter.innerText += "+";
+                        if (target === 98) counter.innerText += "%";
+                        
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                        if (target === 110 || target === 2000) counter.innerText += "+";
+                        if (target === 98) counter.innerText += "%";
+                    }
+                };
+
+                updateCounter();
+                observer.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+});
