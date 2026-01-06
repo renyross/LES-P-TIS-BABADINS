@@ -229,61 +229,7 @@
                     <strong>Trouvez la structure idéale pour votre enfant.</strong>
                 </p>
 
-                <div
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: var(--spacing-lg);">
-                    <!-- Stat Card 1 -->
-                    <div
-                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border: 1px solid rgba(0,0,0,0.05);">
-                        <div
-                            style="width: 50px; height: 50px; background: var(--brand-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem; color: white;">
-                            📍</div>
-                        <div>
-                            <strong class="counter" data-target="110"
-                                style="display: block; font-size: 2rem; color: var(--brand-blue-dark); line-height: 1;">0</strong>
-                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Micro-crèches</span>
-                        </div>
-                    </div>
 
-                    <!-- Stat Card 2 -->
-                    <div
-                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border: 1px solid rgba(0,0,0,0.05);">
-                        <div
-                            style="width: 50px; height: 50px; background: var(--brand-orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem; color: white;">
-                            📅</div>
-                        <div>
-                            <strong class="counter" data-target="2006"
-                                style="display: block; font-size: 2rem; color: var(--brand-blue-dark); line-height: 1;">0</strong>
-                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Année de création</span>
-                        </div>
-                    </div>
-
-                    <!-- Stat Card 3 -->
-                    <div
-                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border: 1px solid rgba(0,0,0,0.05);">
-                        <div
-                            style="width: 50px; height: 50px; background: var(--brand-pink); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem; color: white;">
-                            👨‍👩‍👧‍👦</div>
-                        <div>
-                            <strong class="counter" data-target="2000"
-                                style="display: block; font-size: 2rem; color: var(--brand-blue-dark); line-height: 1;">0</strong>
-                            <span style="font-size: 0.95rem; color: var(--color-text-light);">Familles
-                                accompagnées</span>
-                        </div>
-                    </div>
-
-                    <!-- Stat Card 4 -->
-                    <div
-                        style="background: white; padding: 1.5rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; border: 1px solid rgba(0,0,0,0.05);">
-                        <div
-                            style="width: 50px; height: 50px; background: var(--brand-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 1rem; color: white;">
-                            ⭐</div>
-                        <div>
-                            <strong class="counter" data-target="98"
-                                style="display: block; font-size: 2rem; color: var(--brand-blue-dark); line-height: 1;">0</strong>
-                            <span style="font-size: 0.95rem; color: var(--color-text-light);">de Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
                 <form action="creches.html" method="get" class="search-bar"
                     style="max-width: 600px; margin: 0 auto; background: white; padding: 0.5rem; border-radius: 50px; box-shadow: var(--shadow-md); display: flex; gap: 0.5rem; border: 1px solid #eee;">
                     <input type="text" name="search" placeholder="Entrez votre ville ou code postal..."
@@ -675,7 +621,7 @@
             </div>
         </div>
         <script>
-            // No custom JS needed for pure CSS marquee, but keeping empty script in case needed later
+            // No custom JS needed foee, but keeping empty script in case needed later
         </script>
         <style>
             .reviews-marquee-container {
@@ -1112,8 +1058,7 @@
         </div>
 
         <script>
-            function scrollSocial(direction) {
-                const container = document.getElementById('social-track');
+            function scrollSocial(dir          const container = document.getElementById('social-track');
                 const scrollAmount = 300; // Card width + gap
                 container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
             }
@@ -1350,13 +1295,14 @@
             </div>
         </div>
     </section>
-            <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Les p’tits Babadins</h4>
-                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le respect du rythme de l'enfant.</p>
-                    
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
+                        respect du rythme de l'enfant.</p>
+
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://facebook.com" target="_blank"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
@@ -1410,18 +1356,20 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="plan-du-site.html">Plan du site</a></p>
+                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
+                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
+                        href="plan-du-site.html">Plan du site</a></p>
             </div>
         </div>
     </footer>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-    
-    
+
+
     <!-- Back to Top Button -->
-    
-    
+
+
 
     <!-- Back to Top Button -->
 
