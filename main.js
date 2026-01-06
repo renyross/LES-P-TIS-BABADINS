@@ -67,26 +67,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
+    let overlay = document.querySelector('.menu-overlay');
+
+    // Create overlay if it doesn't exist
+    if (!overlay) {
+        overlay = document.createElement('div');
+        overlay.className = 'menu-overlay';
+        document.body.appendChild(overlay);
+    }
 
     if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            const isVisible = navLinks.style.display === 'flex';
-            navLinks.style.display = isVisible ? 'none' : 'flex';
+        const toggleMenu = () => {
+            mobileBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        };
 
-            // Basic styling for mobile menu when active
-            if (!isVisible) {
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '2rem';
-                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                navLinks.style.textAlign = 'center';
-            } else {
-                navLinks.style = ''; // Reset to css defaults
-            }
+        mobileBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
         });
     }
 
@@ -311,8 +318,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
             detailContainer.innerHTML = `
-                <div class="details-hero" style="background-image: url('${imgUrl}');">
-                    <div class="details-hero-content">
+                <div class="page-header" style="background-image: url('${imgUrl}');">
+                    <div class="container">
                         <h1>${creche.name}</h1>
                         <p>${creche.city}</p>
                     </div>
