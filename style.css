@@ -564,39 +564,7 @@ img {
 
 /* --- CONVERSION & UX ENHANCEMENTS --- */
 
-/* Sticky Mobile CTA Bar */
-.sticky-mobile-cta {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 1rem;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 1000;
-    border-top: 1px solid #eee;
-}
 
-@media (max-width: 768px) {
-    .sticky-mobile-cta {
-        display: flex;
-        gap: 1rem;
-    }
-
-    .sticky-mobile-cta .btn {
-        flex: 1;
-        margin: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    body {
-        padding-bottom: 80px;
-        /* Space for sticky bar */
-    }
-}
 
 /* Trust Logos Grid */
 .trust-logos {
@@ -799,7 +767,9 @@ img {
     .blog-header h1 {
         font-size: 1.8rem !important;
     }
-}/* --- FOOTER ENHANCEMENTS --- */
+}
+
+/* --- FOOTER ENHANCEMENTS --- */
 
 /* Newsletter Field */
 .footer-newsletter input {
@@ -913,6 +883,7 @@ img {
         font-size: 1.2rem;
     }
 }
+
 /* Footer Enhancements */
 
 /* Newsletter Form in Footer */
@@ -945,14 +916,17 @@ img {
 /* Accessibility: Darker Text for Better Contrast */
 /* Updating --color-text-light to meet WCAG AA standards */
 :root {
-    --color-text-light: #4A5568 !important; /* Darker grey than #577083 */
+    --color-text-light: #4A5568 !important;
+    /* Darker grey than #577083 */
 }
 
 /* Back to Top Button */
 #backToTop {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
-    bottom: 90px; /* Above sticky footer on mobile */
+    bottom: 90px;
+    /* Above sticky footer on mobile */
     right: 20px;
     z-index: 999;
     font-size: 1.5rem;
@@ -963,7 +937,7 @@ img {
     cursor: pointer;
     padding: 12px;
     border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s, transform 0.3s;
     width: 50px;
     height: 50px;
@@ -978,33 +952,40 @@ img {
 
 @media (min-width: 769px) {
     #backToTop {
-        bottom: 30px; /* Normal position on desktop */
+        bottom: 30px;
+        /* Normal position on desktop */
     }
 }
 
 /* --- HOMEPAGE MOBILE OPTIMIZATIONS --- */
 @media (max-width: 768px) {
+
     /* Reduce typography sizes */
     h1 {
-        font-size: 2.2rem; /* Was 3.5rem */
+        font-size: 2.2rem;
+        /* Was 3.5rem */
     }
-    
+
     h2 {
-        font-size: 1.8rem; /* Was 2.5rem */
+        font-size: 1.8rem;
+        /* Was 2.5rem */
     }
-    
+
     h3 {
         font-size: 1.5rem;
     }
 
     /* Reduce spacing */
     :root {
-        --spacing-lg: 2.5rem; /* Was 4rem */
-        --spacing-xl: 3rem; /* Was 6rem */
+        --spacing-lg: 2.5rem;
+        /* Was 4rem */
+        --spacing-xl: 3rem;
+        /* Was 6rem */
     }
-    
+
     section {
-        padding: 3rem 0; /* consistent padding */
+        padding: 3rem 0;
+        /* consistent padding */
     }
 
     /* Hero adjustments */
@@ -1012,13 +993,13 @@ img {
         text-align: center;
         padding: 1rem;
     }
-    
+
     .hero-actions {
         justify-content: center !important;
         flex-direction: column;
         width: 100%;
     }
-    
+
     .hero-actions .btn {
         width: 100%;
     }
@@ -1026,10 +1007,11 @@ img {
     /* Stats Grid Optimization */
     /* Ensure 2 columns on mobile for stats if possible, or nice 1 col */
     .stats-grid {
-        grid-template-columns: 1fr 1fr !important; /* Force 2 columns for stats */
+        grid-template-columns: 1fr 1fr !important;
+        /* Force 2 columns for stats */
         gap: 1rem !important;
     }
-    
+
     /* If screen is VERY small, go 1 column */
     @media (max-width: 380px) {
         .stats-grid {
@@ -1038,7 +1020,7 @@ img {
     }
 
     /* Fix Stats Card Padding */
-    .counter + span {
+    .counter+span {
         font-size: 0.85rem !important;
     }
 
@@ -1046,17 +1028,18 @@ img {
     #avis-parents .container-fluid {
         padding: 0 1rem !important;
     }
-    
+
     /* Hide the big summary card on mobile to save space, or stack it? */
     /* Let's keep it but make it smaller/widen to 100% */
-    #avis-parents > div.container-fluid > div > div:first-child {
+    #avis-parents>div.container-fluid>div>div:first-child {
         flex: 1 1 100% !important;
         margin-bottom: 2rem;
     }
 
     /* Adjust Google Review Cards width */
     .google-review-card {
-        flex: 0 0 280px !important; /* Slightly narrower */
+        flex: 0 0 280px !important;
+        /* Slightly narrower */
         padding: 1rem !important;
     }
 }
