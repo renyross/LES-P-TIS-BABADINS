@@ -4,7 +4,7 @@ export const crechesData = [
     { name: "Au Pays des Sens", city: "Saint Germain du Puy", email: "aupaysdessens@lespetitsbabadins.com", active: true },
     { name: "Les P’tits Babadins de Souppes", city: "Souppes-sur-Loing", email: "souppes@lespetitsbabadins.com", active: true },
     { name: "Les P’tits Babadins 79260 La Crèche", city: "La Crèche", email: "direction.lacreche@lespetitsbabadins.com", active: true },
-    { name: "La MC de St Quay Perros", city: "Saint-Quay-Perros", email: "stquayperros@lespetitsbabadins.com", active: true },
+
     { name: "Les P’tits Babadins Pordic", city: "Pordic", email: "pordic@lespetitsbabadins.com", active: true },
     { name: "Crèche Expansion Savenay 2", city: "Savenay", email: "emilieguerin30@gmail.com", active: true },
     { name: "Crèche Expansion Montluçon", city: "Montluçon", email: "montlucon@lespetitsbabadins.com", active: true },

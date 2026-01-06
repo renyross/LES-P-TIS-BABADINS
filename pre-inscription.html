@@ -104,7 +104,8 @@
     <header class="section-bg-beige" style="padding: var(--spacing-xl) 0; text-align: center;">
         <div class="container">
             <h1>Réserver une place</h1>
-            <p style="max-width: 600px; margin: 0 auto;">C'est simple, rapide et sans engagement. Suivez les étapes pour
+            <p style="max-width: 600px; margin: 0 auto;">C'est simple, rapide et sans engagement.<br>Suivez les étapes
+                pour
                 valider votre demande.</p>
         </div>
     </header>
@@ -186,9 +187,21 @@
                     <div class="form-step" id="step-3">
                         <h3 class="form-section-title">Informations Foyer</h3>
                         <div class="form-group">
-                            <label class="form-label" for="address">Adresse postale complète</label>
-                            <textarea id="address" name="address" class="form-textarea" rows="2" required
-                                placeholder="Rue, Code Postal, Ville"></textarea>
+                            <label class="form-label" for="address">Adresse postale</label>
+                            <input type="text" id="address" name="address" class="form-input" required
+                                placeholder="Numéro et nom de rue">
+                        </div>
+                        <div class="responsive-grid-2">
+                            <div class="form-group">
+                                <label class="form-label" for="zipcode">Code Postal</label>
+                                <input type="text" id="zipcode" name="zipcode" class="form-input" required
+                                    placeholder="Ex: 75015">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="city">Ville</label>
+                                <input type="text" id="city" name="city" class="form-input" required
+                                    placeholder="Ex: Paris">
+                            </div>
                         </div>
                         <div class="form-group">
                             <label class="form-label" for="income">Revenu fiscal annuel du foyer (€)</label>
@@ -305,13 +318,6 @@
                             onmouseover="this.style.transform='scale(1.1)'"
                             onmouseout="this.style.transform='scale(1)'">
                             <img src="images/icon_instagram.webp" alt="Instagram"
-                                style="width: 100%; height: 100%; object-fit: contain;">
-                        </a>
-                        <a href="https://youtube.com" target="_blank"
-                            style="display: block; width: 20px; height: 20px; transition: transform 0.2s;"
-                            onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img src="images/icon_youtube.webp" alt="YouTube"
                                 style="width: 100%; height: 100%; object-fit: contain;">
                         </a>
                     </div>
