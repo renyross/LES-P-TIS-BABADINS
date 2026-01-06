@@ -1,59 +1,59 @@
 const crechesData = [
     // --- Group 1: From Initial Lists (Enriched) ---
-    { name: "Marssac sur Tarn", city: "Marssac sur Tarn", address: "1 Avenue d'Albi", zip: "81150", phone: "06 56 67 49 65", email: "direction.marssacsurtarn@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Mellac", city: "Mellac", address: "ZA de Kervidanou 3", zip: "29300", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "7h30 - 19h00" },
-    { name: "Au Pays des Sens", city: "Saint Germain du Puy", address: "Rue des Vignes", zip: "18390", phone: "06 89 32 30 91", email: "aupaysdessens@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Souppes", city: "Souppes-sur-Loing", address: "2 Rue du Roulis", zip: "77460", phone: "07 81 11 16 60", email: "souppes@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
-    { name: "Les P’tits Babadins 79260 La Crèche", city: "La Crèche", address: "ZA Baussais 7 rue Vasco de Gama", zip: "79260", phone: "06 19 64 60 89", email: "direction.lacreche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Marssac sur Tarn", link: "creche-marssac-sur-tarn.html", city: "Marssac sur Tarn", address: "1 Avenue d'Albi", zip: "81150", phone: "06 56 67 49 65", email: "direction.marssacsurtarn@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Mellac", link: "creche-les-ptits-babadins-de-mellac.html", city: "Mellac", address: "ZA de Kervidanou 3", zip: "29300", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "7h30 - 19h00" },
+    { name: "Au Pays des Sens", link: "creche-au-pays-des-sens.html", city: "Saint Germain du Puy", address: "Rue des Vignes", zip: "18390", phone: "06 89 32 30 91", email: "aupaysdessens@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Souppes", link: "creche-les-ptits-babadins-de-souppes.html", city: "Souppes-sur-Loing", address: "2 Rue du Roulis", zip: "77460", phone: "07 81 11 16 60", email: "souppes@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les P’tits Babadins 79260 La Crèche", link: "creche-les-ptits-babadins-79260-la-creche.html", city: "La Crèche", address: "ZA Baussais 7 rue Vasco de Gama", zip: "79260", phone: "06 19 64 60 89", email: "direction.lacreche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
 
-    { name: "Les P’tits Babadins Pordic", city: "Pordic", address: "Rue de la Ville És Lan", zip: "22590", phone: "06 59 04 57 39", email: "pordic@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Crèche Expansion Savenay 2", city: "Savenay", address: "Parc d'Activité de la Colleraye", zip: "44260", phone: "06 66 17 81 42", email: "emilieguerin30@gmail.com", active: true, hours: "7h30 - 19h00" },
-    { name: "Crèche Expansion Montluçon", city: "Montluçon", address: "217 Bis avenue John F Kennedy", zip: "03100", phone: "06 64 31 36 54", email: "montlucon@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Ptits Babadins Téloché", city: "Téloché", address: "ZA de la Bodinière", zip: "72220", phone: "07 81 01 88 22", email: "teloche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "MC de Louargat", city: "Louargat", address: "Rue de la Mairie", zip: "22540", phone: "06 23 98 80 51", email: "stquayperros@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "LPB Masny-Aniche", city: "Masny", address: "Rue de la Fabrique", zip: "59176", phone: "06 74 41 36 16", email: "masny@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
-    { name: "CRECHES EXPANSION Lorient", city: "Lorient", address: "1 Rue Jules Legrand", zip: "56100", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins de Pont Saint Esprit", city: "Pont-Saint-Esprit", address: "Avenue du Général de Gaulle", zip: "30130", phone: "06 82 96 24 00", email: "pontsaintesprit@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Sigournais", city: "Sigournais", address: "2 rue des Vignes, Actipôle de Benêtre", zip: "85110", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Bournezeau", city: "Bournezeau", address: "31 Rue de l'Oiselière", zip: "85480", phone: "06 98 39 42 91", email: "contact@lesptitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Grosbreuil", city: "Grosbreuil", address: "Rue des Sports", zip: "85440", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins de Saint Aubin du Cormier", city: "Saint-Aubin-du-Cormier", address: "ZA de la Motte", zip: "35140", phone: "07 56 27 77 70", email: "questembert@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Pordic", link: "creche-les-ptits-babadins-pordic.html", city: "Pordic", address: "Rue de la Ville És Lan", zip: "22590", phone: "06 59 04 57 39", email: "pordic@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Crèche Expansion Savenay 2", link: "creche-creche-expansion-savenay-2.html", city: "Savenay", address: "Parc d'Activité de la Colleraye", zip: "44260", phone: "06 66 17 81 42", email: "emilieguerin30@gmail.com", active: true, hours: "7h30 - 19h00" },
+    { name: "Crèche Expansion Montluçon", link: "creche-creche-expansion-montluon.html", city: "Montluçon", address: "217 Bis avenue John F Kennedy", zip: "03100", phone: "06 64 31 36 54", email: "montlucon@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Ptits Babadins Téloché", link: "creche-ptits-babadins-teloche.html", city: "Téloché", address: "ZA de la Bodinière", zip: "72220", phone: "07 81 01 88 22", email: "teloche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "MC de Louargat", link: "creche-mc-de-louargat.html", city: "Louargat", address: "Rue de la Mairie", zip: "22540", phone: "06 23 98 80 51", email: "stquayperros@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "LPB Masny-Aniche", link: "creche-lpb-masny-aniche.html", city: "Masny", address: "Rue de la Fabrique", zip: "59176", phone: "06 74 41 36 16", email: "masny@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
+    { name: "CRECHES EXPANSION Lorient", link: "creche-creches-expansion-lorient.html", city: "Lorient", address: "1 Rue Jules Legrand", zip: "56100", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins de Pont Saint Esprit", link: "creche-les-ptits-babadins-de-pont-saint-esprit.html", city: "Pont-Saint-Esprit", address: "Avenue du Général de Gaulle", zip: "30130", phone: "06 82 96 24 00", email: "pontsaintesprit@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Sigournais", link: "creche-les-ptits-babadins-de-sigournais.html", city: "Sigournais", address: "2 rue des Vignes, Actipôle de Benêtre", zip: "85110", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Bournezeau", link: "creche-les-ptits-babadins-de-bournezeau.html", city: "Bournezeau", address: "31 Rue de l'Oiselière", zip: "85480", phone: "06 98 39 42 91", email: "contact@lesptitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Grosbreuil", link: "creche-les-ptits-babadins-de-grosbreuil.html", city: "Grosbreuil", address: "Rue des Sports", zip: "85440", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins de Saint Aubin du Cormier", link: "creche-les-ptits-babadins-de-saint-aubin-du-cormier.html", city: "Saint-Aubin-du-Cormier", address: "ZA de la Motte", zip: "35140", phone: "07 56 27 77 70", email: "questembert@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
 
     // --- Group 2: New Additions (With Phone & Hours) ---
-    { name: "Les p’tits Babadins de Questembert", address: "Rue des Fougères", zip: "56230", city: "Questembert", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins d'Arzal", address: "Rue du Pont", zip: "56190", city: "Arzal", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins de Melesse", address: "3 Rue du Tertre", zip: "35520", city: "Melesse", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins de Pleuven", address: "7 Rue de l'Odet", zip: "29170", city: "Pleuven", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins de Questembert", link: "creche-les-ptits-babadins-de-questembert.html", address: "Rue des Fougères", zip: "56230", city: "Questembert", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins d'Arzal", link: "creche-les-ptits-babadins-darzal.html", address: "Rue du Pont", zip: "56190", city: "Arzal", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins de Melesse", link: "creche-les-ptits-babadins-de-melesse.html", address: "3 Rue du Tertre", zip: "35520", city: "Melesse", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins de Pleuven", link: "creche-les-ptits-babadins-de-pleuven.html", address: "7 Rue de l'Odet", zip: "29170", city: "Pleuven", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
 
-    { name: "La Maison des Petits Maraichins", address: "30 Rue du Maréchal Joffre", zip: "85300", city: "Challans", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
-    { name: "La Villa des Petits Garnachois", address: "Rue des Ciseleurs", zip: "85710", city: "La Garnache", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins de St Hilaire", address: "12 Rue de la Mignelle", zip: "85270", city: "Saint-Hilaire-de-Riez", phone: "02 79 40 08 86", active: true, hours: "7h30 - 19h00" },
+    { name: "La Maison des Petits Maraichins", link: "creche-la-maison-des-petits-maraichins.html", address: "30 Rue du Maréchal Joffre", zip: "85300", city: "Challans", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
+    { name: "La Villa des Petits Garnachois", link: "creche-la-villa-des-petits-garnachois.html", address: "Rue des Ciseleurs", zip: "85710", city: "La Garnache", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins de St Hilaire", link: "creche-les-ptits-babadins-de-st-hilaire.html", address: "12 Rue de la Mignelle", zip: "85270", city: "Saint-Hilaire-de-Riez", phone: "02 79 40 08 86", active: true, hours: "7h30 - 19h00" },
 
-    { name: "Les p'tits Babadins de Quéven", address: "34 Rue Fontaine de Barenton", zip: "56185", city: "Quéven", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
-    { name: "Crèches Expansion Saintes", address: "83 Cours Maréchal Leclerc", zip: "17100", city: "Saintes", phone: "06 00 00 00 00", active: true, hours: "7h30 - 18h30" },
-    { name: "Crèche Expansion Montbert", address: "Rue du Stade", zip: "44140", city: "Montbert", phone: "06 86 15 62 18", active: true, hours: "7h30 - 18h30" },
-    { name: "La Ville Dieu Crèche", address: "50 chemin de Champredon", zip: "7170", city: "Lavilledieu", phone: "06 07 06 47 44", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de la Roche", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins Saint-André d’Ornay", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "07 82 84 71 66", active: true, hours: "7h30 - 19h00" },
-    { name: "Micro-crèche de La Roche (Wilson)", address: "50 Rue du Président Wilson", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins Perpignan", address: "7 Allée Borée", zip: "66000", city: "Perpignan", phone: "06 81 30 04 27", active: true, hours: "7h30 - 19h00" },
-    { name: "Crèches Expansion Lorient", address: "1 Rue Jules Legrand", zip: "56100", city: "Lorient", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins St Vincent de Paul", address: "23 Rue des Deux Sèvres", zip: "33440", city: "Saint-Vincent-de-Paul", phone: "07 44 40 52 60", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins St-Aubin-sur-Scie", address: "35 Rue Neuve", zip: "76550", city: "Saint-Aubin-sur-Scie", phone: "07 66 91 96 65", active: true, hours: "7h30 - 18h30" },
-    { name: "Micro-crèche de Souppes", address: "02 Rue du Roulis", zip: "77460", city: "Souppes-sur-Loing", phone: "07 81 11 16 60", active: true, hours: "7h00 - 19h00" },
-    { name: "Micro-crèche Les P’tits Babadins d’Olivet", address: "29 Rue Jules Marie Simon", zip: "45160", city: "Olivet", phone: "07 56 10 73 77", active: true, hours: "7h00 - 19h00" },
-    { name: "Les P’tits Babadins de Tavers", address: "11 Rue des Grattelievres", zip: "45190", city: "Tavers", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Meung-sur-Loire", address: "3 Mail des Trois Roses", zip: "45130", city: "Meung-sur-Loire", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Pirates", address: "74 bis Rue de la Déhanne", zip: "22400", city: "Lamballe", phone: "06 02 71 58 96", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Coëtmieux", address: "30 bis rue de la Truite", zip: "22400", city: "Coëtmieux", phone: "06 02 71 58 96", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Avermes", city: "Avermes", address: "11 Rue des Saccarauds", zip: "03000", phone: "06 62 30 64 40", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Baldersheim", city: "Baldersheim", address: "ZA 10 Rue des Chasseurs", zip: "68390", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Quéven", link: "creche-les-ptits-babadins-de-queven.html", address: "34 Rue Fontaine de Barenton", zip: "56185", city: "Quéven", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
+    { name: "Crèches Expansion Saintes", link: "creche-creches-expansion-saintes.html", address: "83 Cours Maréchal Leclerc", zip: "17100", city: "Saintes", phone: "06 00 00 00 00", active: true, hours: "7h30 - 18h30" },
+    { name: "Crèche Expansion Montbert", link: "creche-creche-expansion-montbert.html", address: "Rue du Stade", zip: "44140", city: "Montbert", phone: "06 86 15 62 18", active: true, hours: "7h30 - 18h30" },
+    { name: "La Ville Dieu Crèche", link: "creche-la-ville-dieu-creche.html", address: "50 chemin de Champredon", zip: "7170", city: "Lavilledieu", phone: "06 07 06 47 44", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de la Roche", link: "creche-les-ptits-babadins-de-la-roche.html", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins Saint-André d’Ornay", link: "creche-les-ptits-babadins-saint-andre-dornay.html", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "07 82 84 71 66", active: true, hours: "7h30 - 19h00" },
+    { name: "Micro-crèche de La Roche (Wilson)", link: "creche-micro-creche-de-la-roche-wilson.html", address: "50 Rue du Président Wilson", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins Perpignan", link: "creche-les-ptits-babadins-perpignan.html", address: "7 Allée Borée", zip: "66000", city: "Perpignan", phone: "06 81 30 04 27", active: true, hours: "7h30 - 19h00" },
+    { name: "Crèches Expansion Lorient", link: "creche-creches-expansion-lorient.html", address: "1 Rue Jules Legrand", zip: "56100", city: "Lorient", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins St Vincent de Paul", link: "creche-les-ptits-babadins-st-vincent-de-paul.html", address: "23 Rue des Deux Sèvres", zip: "33440", city: "Saint-Vincent-de-Paul", phone: "07 44 40 52 60", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p’tits Babadins St-Aubin-sur-Scie", link: "creche-les-ptits-babadins-st-aubin-sur-scie.html", address: "35 Rue Neuve", zip: "76550", city: "Saint-Aubin-sur-Scie", phone: "07 66 91 96 65", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro-crèche de Souppes", link: "creche-micro-creche-de-souppes.html", address: "02 Rue du Roulis", zip: "77460", city: "Souppes-sur-Loing", phone: "07 81 11 16 60", active: true, hours: "7h00 - 19h00" },
+    { name: "Micro-crèche Les P’tits Babadins d’Olivet", link: "creche-micro-creche-les-ptits-babadins-dolivet.html", address: "29 Rue Jules Marie Simon", zip: "45160", city: "Olivet", phone: "07 56 10 73 77", active: true, hours: "7h00 - 19h00" },
+    { name: "Les P’tits Babadins de Tavers", link: "creche-les-ptits-babadins-de-tavers.html", address: "11 Rue des Grattelievres", zip: "45190", city: "Tavers", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Meung-sur-Loire", link: "creche-les-ptits-babadins-meung-sur-loire.html", address: "3 Mail des Trois Roses", zip: "45130", city: "Meung-sur-Loire", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Pirates", link: "creche-les-ptits-pirates.html", address: "74 bis Rue de la Déhanne", zip: "22400", city: "Lamballe", phone: "06 02 71 58 96", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Coëtmieux", link: "creche-les-ptits-babadins-de-cotmieux.html", address: "30 bis rue de la Truite", zip: "22400", city: "Coëtmieux", phone: "06 02 71 58 96", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Avermes", link: "creche-les-ptits-babadins-avermes.html", city: "Avermes", address: "11 Rue des Saccarauds", zip: "03000", phone: "06 62 30 64 40", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Baldersheim", link: "creche-les-ptits-babadins-baldersheim.html", city: "Baldersheim", address: "ZA 10 Rue des Chasseurs", zip: "68390", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
 
-    { name: "Les P’tits Babadins Grussenheim", city: "Grussenheim", address: "62 route de Colmar", zip: "68320", phone: "06 77 34 73 24", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Hegenheim", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Montivilliers", city: "Montivilliers", address: "3 impasse Edgar Degas", zip: "76290", phone: "09 73 39 65 98", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Pavilly", city: "Pavilly", address: "164 Boulevard Roger Fossé", zip: "76570", phone: "06 67 25 15 90", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Saint Chamond", city: "Saint Chamond", address: "2A rue Marc Seguin", zip: "42400", phone: "07 61 69 28 60", active: true, hours: "7h30 - 18h30" }
+    { name: "Les P’tits Babadins Grussenheim", link: "creche-les-ptits-babadins-grussenheim.html", city: "Grussenheim", address: "62 route de Colmar", zip: "68320", phone: "06 77 34 73 24", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Hegenheim", link: "creche-les-ptits-babadins-hegenheim.html", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Montivilliers", link: "creche-les-ptits-babadins-montivilliers.html", city: "Montivilliers", address: "3 impasse Edgar Degas", zip: "76290", phone: "09 73 39 65 98", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Pavilly", link: "creche-les-ptits-babadins-pavilly.html", city: "Pavilly", address: "164 Boulevard Roger Fossé", zip: "76570", phone: "06 67 25 15 90", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Saint Chamond", link: "creche-les-ptits-babadins-saint-chamond.html", city: "Saint Chamond", address: "2A rue Marc Seguin", zip: "42400", phone: "07 61 69 28 60", active: true, hours: "7h30 - 18h30" }
 ];
 
 
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                     <div style="margin-top: auto; padding-top: 1rem;">
-                        <a href="creche-details.html?name=${encodeURIComponent(c.name)}" class="btn btn-outline" style="display: block; text-align: center; width: 100%;">Voir la crèche</a>
+                        <a href="${creche.link}" class="btn btn-outline" style="display: block; text-align: center; width: 100%;">Voir la crèche</a>
                     </div>
                 </div>
             </div>
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                         <div style="padding: 1rem;">
                                             <h4 style="margin-bottom:0.5rem; color: var(--brand-blue-dark);">${related.name}</h4>
                                             <p style="font-size:0.9rem; color:#666;">${related.city}</p>
-                                            <a href="creche-details.html?name=${encodeURIComponent(related.name)}" style="display:block; margin-top:0.5rem; color:var(--brand-pink); font-weight:bold;">Voir la fiche →</a>
+                                            <a href="${creche.link}" style="display:block; margin-top:0.5rem; color:var(--brand-pink); font-weight:bold;">Voir la fiche →</a>
                                         </div>
                                     </div>
                                 `).join('')}
