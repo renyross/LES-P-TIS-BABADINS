@@ -981,3 +981,82 @@ img {
         bottom: 30px; /* Normal position on desktop */
     }
 }
+
+/* --- HOMEPAGE MOBILE OPTIMIZATIONS --- */
+@media (max-width: 768px) {
+    /* Reduce typography sizes */
+    h1 {
+        font-size: 2.2rem; /* Was 3.5rem */
+    }
+    
+    h2 {
+        font-size: 1.8rem; /* Was 2.5rem */
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Reduce spacing */
+    :root {
+        --spacing-lg: 2.5rem; /* Was 4rem */
+        --spacing-xl: 3rem; /* Was 6rem */
+    }
+    
+    section {
+        padding: 3rem 0; /* consistent padding */
+    }
+
+    /* Hero adjustments */
+    .hero-content {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .hero-actions {
+        justify-content: center !important;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    /* Stats Grid Optimization */
+    /* Ensure 2 columns on mobile for stats if possible, or nice 1 col */
+    .stats-grid {
+        grid-template-columns: 1fr 1fr !important; /* Force 2 columns for stats */
+        gap: 1rem !important;
+    }
+    
+    /* If screen is VERY small, go 1 column */
+    @media (max-width: 380px) {
+        .stats-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    /* Fix Stats Card Padding */
+    .counter + span {
+        font-size: 0.85rem !important;
+    }
+
+    /* Reviews Section */
+    #avis-parents .container-fluid {
+        padding: 0 1rem !important;
+    }
+    
+    /* Hide the big summary card on mobile to save space, or stack it? */
+    /* Let's keep it but make it smaller/widen to 100% */
+    #avis-parents > div.container-fluid > div > div:first-child {
+        flex: 1 1 100% !important;
+        margin-bottom: 2rem;
+    }
+
+    /* Adjust Google Review Cards width */
+    .google-review-card {
+        flex: 0 0 280px !important; /* Slightly narrower */
+        padding: 1rem !important;
+    }
+}
