@@ -24,10 +24,14 @@ const crechesData = [
     { name: "Les p’tits Babadins d'Arzal", link: "creche-les-ptits-babadins-darzal.html", address: "Rue du Pont", zip: "56190", city: "Arzal", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
     { name: "Les p’tits Babadins de Melesse", link: "creche-les-ptits-babadins-de-melesse.html", address: "3 Rue du Tertre", zip: "35520", city: "Melesse", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
     { name: "Les p’tits Babadins de Pleuven", link: "creche-les-ptits-babadins-de-pleuven.html", address: "7 Rue de l'Odet", zip: "29170", city: "Pleuven", phone: "07 56 27 77 70", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro crèche St agathon", link: "creche-micro-creche-st-agathon.html", address: "12 Rue d'Armor", zip: "22200", city: "Saint-Agathon", phone: "06 23 98 80 51", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro crèche de Saint Quay Perros", link: "creche-micro-creche-de-saint-quay-perros.html", address: "Rue de la Liberté", zip: "22700", city: "Saint-Quay-Perros", phone: "07 57 59 33 56", active: true, hours: "7h30 - 18h30" },
 
     { name: "La Maison des Petits Maraichins", link: "creche-la-maison-des-petits-maraichins.html", address: "30 Rue du Maréchal Joffre", zip: "85300", city: "Challans", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
     { name: "La Villa des Petits Garnachois", link: "creche-la-villa-des-petits-garnachois.html", address: "Rue des Ciseleurs", zip: "85710", city: "La Garnache", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
     { name: "Les P’tits Babadins de St Hilaire", link: "creche-les-ptits-babadins-de-st-hilaire.html", address: "12 Rue de la Mignelle", zip: "85270", city: "Saint-Hilaire-de-Riez", phone: "02 79 40 08 86", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins de St Jean de Monts", link: "creche-les-ptits-babadins-de-st-jean-de-monts.html", address: "11 Rue des Chevilles", zip: "85160", city: "Saint-Jean-de-Monts", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h30" },
+    { name: "Les P’tits Babadins d’Aizenay", link: "creche-les-ptits-babadins-daizenay.html", address: "1 Rue Mgr Gendreau", zip: "85190", city: "Aizenay", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
 
     { name: "Les p'tits Babadins de Quéven", link: "creche-les-ptits-babadins-de-queven.html", address: "34 Rue Fontaine de Barenton", zip: "56185", city: "Quéven", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
     { name: "Crèches Expansion Saintes", link: "creche-creches-expansion-saintes.html", address: "83 Cours Maréchal Leclerc", zip: "17100", city: "Saintes", phone: "06 00 00 00 00", active: true, hours: "7h30 - 18h30" },
@@ -48,6 +52,7 @@ const crechesData = [
     { name: "Les p'tits Babadins de Coëtmieux", link: "creche-les-ptits-babadins-de-cotmieux.html", address: "30 bis rue de la Truite", zip: "22400", city: "Coëtmieux", phone: "06 02 71 58 96", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Avermes", link: "creche-les-ptits-babadins-avermes.html", city: "Avermes", address: "11 Rue des Saccarauds", zip: "03000", phone: "06 62 30 64 40", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Baldersheim", link: "creche-les-ptits-babadins-baldersheim.html", city: "Baldersheim", address: "ZA 10 Rue des Chasseurs", zip: "68390", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Belleu", link: "creche-les-ptits-babadins-belleu.html", city: "Belleu", address: "62 route de Fère en Tardenois", zip: "02200", phone: "07 68 31 79 07", active: true, hours: "7h30 - 18h30" },
 
     { name: "Les P’tits Babadins Grussenheim", link: "creche-les-ptits-babadins-grussenheim.html", city: "Grussenheim", address: "62 route de Colmar", zip: "68320", phone: "06 77 34 73 24", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Hegenheim", link: "creche-les-ptits-babadins-hegenheim.html", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
@@ -248,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                     <div style="margin-top: auto; padding-top: 1rem;">
-                        <a href="${creche.link}" class="btn btn-outline" style="display: block; text-align: center; width: 100%;">Voir la crèche</a>
+                        <a href="${c.link}" class="btn btn-outline" style="display: block; text-align: center; width: 100%;">Voir la crèche</a>
                     </div>
                 </div>
             </div>
@@ -639,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         // Add suffix if needed based on target
                         if (target === 110 || target === 2000) counter.innerText += "+";
                         if (target === 98) counter.innerText += "%";
-                        
+
                         requestAnimationFrame(updateCounter);
                     } else {
                         counter.innerText = target;
