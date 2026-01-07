@@ -11,7 +11,7 @@ const crechesData = [
     { name: "Crèche Expansion Montluçon", link: "creche-creche-expansion-montluon.html", city: "Montluçon", address: "217 Bis avenue John F Kennedy", zip: "03100", phone: "06 64 31 36 54", email: "montlucon@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
     { name: "Ptits Babadins Téloché", link: "creche-ptits-babadins-teloche.html", city: "Téloché", address: "ZA de la Bodinière", zip: "72220", phone: "07 81 01 88 22", email: "teloche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
     { name: "MC de Louargat", link: "creche-mc-de-louargat.html", city: "Louargat", address: "Rue de la Mairie", zip: "22540", phone: "06 23 98 80 51", email: "stquayperros@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "LPB Masny-Aniche", link: "creche-lpb-masny-aniche.html", city: "Masny", address: "Rue de la Fabrique", zip: "59176", phone: "06 74 41 36 16", email: "masny@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les p'tits Babadins de Wargnies le Grand", link: "creche-wargnies-le-grand.html", city: "Wargnies-le-Grand", address: "ZA de la Vallée de l'Aunelle, 8 N Route nationale", zip: "59144", phone: "06 73 51 78.63", email: "creche.wargnies@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "CRECHES EXPANSION Lorient", link: "creche-creches-expansion-lorient.html", city: "Lorient", address: "1 Rue Jules Legrand", zip: "56100", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "7h30 - 19h00" },
     { name: "Les P’tits Babadins de Pont Saint Esprit", link: "creche-les-ptits-babadins-de-pont-saint-esprit.html", city: "Pont-Saint-Esprit", address: "Avenue du Général de Gaulle", zip: "30130", phone: "06 82 96 24 00", email: "pontsaintesprit@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins de Sigournais", link: "creche-les-ptits-babadins-de-sigournais.html", city: "Sigournais", address: "2 rue des Vignes, Actipôle de Benêtre", zip: "85110", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
@@ -40,7 +40,7 @@ const crechesData = [
     { name: "Les P’tits Babadins de la Roche", link: "creche-les-ptits-babadins-de-la-roche.html", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
     { name: "Les P’tits Babadins Saint-André d’Ornay", link: "creche-les-ptits-babadins-saint-andre-dornay.html", address: "3 Rue des Entrepreneurs", zip: "85000", city: "La Roche-sur-Yon", phone: "07 82 84 71 66", active: true, hours: "7h30 - 19h00" },
     { name: "Micro-crèche de La Roche (Wilson)", link: "creche-micro-creche-de-la-roche-wilson.html", address: "50 Rue du Président Wilson", zip: "85000", city: "La Roche-sur-Yon", phone: "06 62 10 19 83", active: true, hours: "7h30 - 19h00" },
-    { name: "Les P’tits Babadins Perpignan", link: "creche-les-ptits-babadins-perpignan.html", address: "7 Allée Borée", zip: "66000", city: "Perpignan", phone: "06 81 30 04 27", active: true, hours: "7h30 - 19h00" },
+    { name: "Les P’tits Babadins Perpignan", link: "creche-perpignan.html", address: "7 Allée Borée", zip: "66000", city: "Perpignan", phone: "06 81 30 04 27", email: "creche.perpignan@ce-lpbx.com", active: true, hours: "7h30 - 19h00" },
     { name: "Crèches Expansion Lorient", link: "creche-creches-expansion-lorient.html", address: "1 Rue Jules Legrand", zip: "56100", city: "Lorient", phone: "07 69 63 40 66", active: true, hours: "7h30 - 19h00" },
     { name: "Les P’tits Babadins St Vincent de Paul", link: "creche-les-ptits-babadins-st-vincent-de-paul.html", address: "23 Rue des Deux Sèvres", zip: "33440", city: "Saint-Vincent-de-Paul", phone: "07 44 40 52 60", active: true, hours: "7h30 - 18h30" },
     { name: "Les p’tits Babadins St-Aubin-sur-Scie", link: "creche-les-ptits-babadins-st-aubin-sur-scie.html", address: "35 Rue Neuve", zip: "76550", city: "Saint-Aubin-sur-Scie", phone: "07 66 91 96 65", active: true, hours: "7h30 - 18h30" },
@@ -55,10 +55,42 @@ const crechesData = [
     { name: "Les P’tits Babadins Belleu", link: "creche-les-ptits-babadins-belleu.html", city: "Belleu", address: "62 route de Fère en Tardenois", zip: "02200", phone: "07 68 31 79 07", active: true, hours: "7h30 - 18h30" },
 
     { name: "Les P’tits Babadins Grussenheim", link: "creche-les-ptits-babadins-grussenheim.html", city: "Grussenheim", address: "62 route de Colmar", zip: "68320", phone: "06 77 34 73 24", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Hegenheim", link: "creche-les-ptits-babadins-hegenheim.html", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Hégenheim 1", link: "creche-hegenheim-1.html", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", email: "creche.hegenheim1@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Montivilliers", link: "creche-les-ptits-babadins-montivilliers.html", city: "Montivilliers", address: "3 impasse Edgar Degas", zip: "76290", phone: "09 73 39 65 98", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Pavilly", link: "creche-les-ptits-babadins-pavilly.html", city: "Pavilly", address: "164 Boulevard Roger Fossé", zip: "76570", phone: "06 67 25 15 90", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Saint Chamond", link: "creche-les-ptits-babadins-saint-chamond.html", city: "Saint Chamond", address: "2A rue Marc Seguin", zip: "42400", phone: "07 61 69 28 60", active: true, hours: "7h30 - 18h30" }
+    { name: "Les P’tits Babadins Saint Chamond", link: "creche-les-ptits-babadins-saint-chamond.html", city: "Saint Chamond", address: "2A rue Marc Seguin", zip: "42400", phone: "07 61 69 28 60", active: true, hours: "7h30 - 18h30" },
+
+    // --- New Additions (2025 Refinement) ---
+    { name: "Les p'tits Babadins de Wargnies le Grand", link: "creche-wargnies-le-grand.html", city: "Wargnies-le-Grand", address: "ZA de la Vallée de l'Aunelle, 8 N Route nationale", zip: "59144", phone: "06.73.51.78.63", email: "creche.wargnies@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Hégenheim 1", link: "creche-hegenheim-1.html", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", email: "creche.hegenheim1@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Hégenheim 2", link: "creche-hegenheim-2.html", city: "Hegenheim", address: "30 A rue des Landes", zip: "68220", phone: "06 63 01 97 03", email: "creche.hegenheim2@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Au Saut du nid", link: "creche-au-saut-du-nid.html", city: "Tignieu-Jameyzieu", address: "38 boulevard Ampère", zip: "38230", phone: "06.70.03.61.55", email: "ausautdunid@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Tintinna Bulle", link: "creche-tintinna-bulle.html", city: "Tignieu-Jameyzieu", address: "Boulevard Ampère", zip: "38230", email: "tintinnabulle@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Faye d'Anjou", link: "creche-faye-danjou.html", city: "Faye d'Anjou", address: "4 ter rue des monts", zip: "49380", phone: "07 44 98 74 20", email: "creche.fayedanjou@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Miremont", link: "creche-miremont.html", city: "Miremont", address: "4 Voie Eris ZA Pompignal", zip: "31190", phone: "07.62.70.23.04", email: "creche.miremont@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits papailloux", link: "creche-les-ptits-papailloux.html", city: "Angers", address: "24, place Terra Botanica", zip: "49100", phone: "06.62.10.19.83", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits charrettes", link: "creche-les-ptits-charrettes.html", city: "La Roche-sur-Yon", address: "Résidence Le Tamaris, Les Prairies d’Eden", zip: "85000", email: "creche.bourgsouslaroche@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Masny", link: "creche-masny.html", city: "Masny", address: "9 bis Rue de Froissy", zip: "59176", phone: "06 74 41 36 16", email: "creche.masny@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Bababins d'Aniche", link: "creche-aniche.html", city: "Aniche", address: "Localisation en cours", zip: "59580", email: "creche.aniche@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Beuvry", link: "creche-beuvry.html", city: "Beuvry", address: "Localisation en cours", zip: "62660", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Etival lès le Mans", link: "creche-etival-les-le-mans.html", city: "Étival-lès-le-Mans", address: "7 Rue de Siedenburg", zip: "72700", phone: "07 81 01 88 22", email: "creche.etival@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Saint Nicolas de Redon", link: "creche-st-nicolas-de-redon.html", city: "Saint-Nicolas-de-Redon", address: "30 rue des roseaux", zip: "44460", phone: "06 76 79 63 22", email: "creche.sndr@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de PASQUIS Montluçon 2", link: "creche-montlucon-pasquis.html", city: "Montluçon", address: "48 rue de PASQUIS", zip: "03100", phone: "06.64.31.36.54", email: "creche.montlucon2@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Le Grandchamp des Enfants", link: "creche-grandchamp-enfants.html", city: "Grandchamp-des-Fontaines", address: "Parc d’activité de Bellevue", zip: "44119", phone: "06.14.17.72.84.", email: "grandchampsdesenfants@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les enfants des Fontaines", link: "creche-enfants-des-fontaines.html", city: "Grandchamp-des-Fontaines", address: "PA de Bellevue, 13 bis rue des sports", zip: "44119", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits babadins de Freneuse 1", link: "creche-freneuse-1.html", city: "Freneuse", address: "La Croix du Moulin - 19 rue des Bouderies", zip: "78840", phone: "06.68.74.03.33", email: "creche.freneuse1@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits babadins de Freneuse 2", link: "creche-freneuse-2.html", city: "Freneuse", address: "La Croix du Moulin - 19 rue des Bouderies", zip: "78840", email: "creche.freneuse2@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "A Petits Pas", link: "creche-auzeville-a-petits-pas.html", city: "Auzeville-Tolosane", address: "5 Av Daniel Brisebois", zip: "31320", phone: "06.24.51.09.60", email: "apetitspas@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les Lutins du Bois Joli", link: "creche-auzeville-lutins.html", city: "Auzeville-Tolosane", address: "3 Av Daniel Brisebois", zip: "31320", email: "leslutinsduboisjoli@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Saveuse", link: "creche-saveuse.html", city: "Saveuse", address: "Localisation en cours", zip: "80470", email: "creche.poulainville2@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tit Babadins de Poullainville 2", link: "creche-poulainville-2.html", city: "Poulainville", address: "Chemin de Longpré", zip: "80260", email: "creche.saveuse@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Aubenas", link: "creche-aubenas.html", city: "Aubenas", address: "72A Av. de Roqua", zip: "07200", email: "creche.aubenas@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro-crèche Les Singulières", link: "creche-montelier.html", city: "Montelier", address: "Rue des Charmilles", zip: "26120", phone: "06.38.01.95.38", email: "lessingulieres@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro-crèche Abolena", link: "creche-bollene.html", city: "Bollene", address: "183 avenue Georges Melies", zip: "84500", email: "abolena@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Bastida", link: "creche-bastida.html", city: "La Bâtie-Rolland", address: "725 route de Montélimar", zip: "26160", email: "bastida@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro-crèche Castel", link: "creche-chateauneuf-du-rhone.html", city: "Châteauneuf-du-Rhône", address: "240 Impasse des buis", zip: "26780", email: "castel@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Micro-crèche du Meyrol", link: "creche-montelimar.html", city: "Montélimar", address: "9 Allée de Barjac", zip: "26200", email: "meyrol@ce-lpbx.com", active: true, hours: "7h30 - 18h30" }
+
 ];
 
 
@@ -67,6 +99,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // LLM Optimization: Generate dynamic structured data for all crèches
     generateCrechesStructuredData();
+
+    // --- ANIMATED COUNTERS ---
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                // Handle non-numeric content if refresh happens
+                const currentText = counter.innerText.replace(/\D/g, '');
+                const count = +currentText;
+
+                // Lower inc to slow and higher to slow
+                const inc = target / speed;
+
+                if (count < target) {
+                    // Check if we need to add '%' or '+'
+                    if (target === 98) {
+                        counter.innerText = Math.ceil(count + inc) + "%";
+                    } else if (target === 110 || target === 2000) {
+                        counter.innerText = Math.ceil(count + inc) + "+";
+                    } else {
+                        counter.innerText = Math.ceil(count + inc);
+                    }
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target + (target === 98 ? "%" : (target === 110 || target === 2000 ? "+" : ""));
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Trigger animation when section is in view
+    let animated = false;
+    const sectionObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animateCounters();
+                animated = true;
+                observer.unobserve(entry.target); // Run once
+            }
+        });
+    }, { threshold: 0.5 }); // 50% of the section visible
+
+    // Observe the stats grid or a section containing counters
+    const statsSection = document.querySelector('.stats-grid');
+    if (statsSection) {
+        sectionObserver.observe(statsSection);
+    }
 
     // Back to Top Button Logic
     const backToTopBtn = document.getElementById('backToTop');
@@ -175,44 +258,112 @@ document.addEventListener('DOMContentLoaded', () => {
 `;
     document.head.appendChild(style);
 
+    // --- GEOGRAPHIC MAPPINGS ---
+    const DEPT_MAP = {
+        "02": "Aisne", "03": "Allier", "07": "Ardèche", "17": "Charente-Maritime",
+        "18": "Cher", "22": "Côtes-d'Armor", "26": "Drôme", "29": "Finistère",
+        "30": "Gard", "31": "Haute-Garonne", "33": "Gironde", "35": "Ille-et-Vilaine",
+        "38": "Isère", "42": "Loire", "44": "Loire-Atlantique", "45": "Loiret",
+        "49": "Maine-et-Loire", "56": "Morbihan", "59": "Nord", "62": "Pas-de-Calais",
+        "66": "Pyrénées-Orientales", "68": "Haut-Rhin", "71": "Saône-et-Loire",
+        "72": "Sarthe", "76": "Seine-Maritime", "77": "Seine-et-Marne", "78": "Yvelines",
+        "79": "Deux-Sèvres", "80": "Somme", "81": "Tarn", "84": "Vaucluse", "85": "Vendée"
+    };
+
+    const REGION_MAP = {
+        "Bretagne": ["22", "29", "35", "56"],
+        "Pays de la Loire": ["44", "49", "72", "85"],
+        "Occitanie": ["30", "31", "66", "81"],
+        "Nouvelle-Aquitaine": ["17", "33", "79"],
+        "Auvergne-Rhône-Alpes": ["03", "07", "26", "38", "42"],
+        "Hauts-de-France": ["02", "59", "62", "80"],
+        "Centre-Val de Loire": ["18", "45"],
+        "Grand Est": ["68"],
+        "Normandie": ["76"],
+        "Île-de-France": ["77", "78"],
+        "Bourgogne-Franche-Comté": ["71"],
+        "PACA": ["84"]
+    };
+
     // Dynamic Daycare Listing
     const crechesContainer = document.getElementById('creches-list-container');
+    const activeFiltersContainer = document.getElementById('active-filters');
+
+    let currentFilter = { value: "", type: "search", label: "" };
+
     if (crechesContainer) {
-        const creches = crechesData; // Use localized variable
+        const creches = crechesData;
         const searchInput = document.querySelector('.search-input');
-        const searchBtn = document.querySelector('.btn-primary'); // Search button
+        const searchBtn = document.getElementById('searchBtn');
+        const clearBtn = document.getElementById('clearSearch');
 
-        function renderCreches(filter = "") {
+        function renderCreches(filterValue = "", type = "search", label = "") {
             crechesContainer.innerHTML = '';
-            const lowerFilter = filter.toLowerCase();
+            const normalize = (str) => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            const lowerFilter = normalize(filterValue);
 
-            const filtered = creches.filter(c =>
-                c.name.toLowerCase().includes(lowerFilter) ||
-                c.city.toLowerCase().includes(lowerFilter)
-            );
+            // Save state
+            currentFilter = { value: filterValue, type: type, label: label || filterValue };
+            renderFilterChips();
+
+            // Toggle clear button visibility
+            if (clearBtn) {
+                if (filterValue.length > 0) {
+                    clearBtn.classList.add('active');
+                } else {
+                    clearBtn.classList.remove('active');
+                }
+            }
+
+            const filtered = creches.filter(c => {
+                if (!filterValue) return true;
+
+                if (type === "search") {
+                    return normalize(c.name).includes(lowerFilter) ||
+                        normalize(c.city).includes(lowerFilter) ||
+                        (c.zip && c.zip.includes(lowerFilter));
+                }
+
+                if (type === "region") {
+                    const deptsInRegion = REGION_MAP[filterValue] || [];
+                    let dept = c.zip ? c.zip.substring(0, 2) : "";
+                    if (c.zip && c.zip.length === 4) dept = "0" + c.zip.substring(0, 1);
+                    return deptsInRegion.includes(dept);
+                }
+
+                if (type === "dept") {
+                    let dept = c.zip ? c.zip.substring(0, 2) : "";
+                    if (c.zip && c.zip.length === 4) dept = "0" + c.zip.substring(0, 1);
+                    return dept === filterValue;
+                }
+
+                if (type === "city") {
+                    return c.city === filterValue;
+                }
+
+                return true;
+            });
 
             if (filtered.length === 0) {
-                crechesContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center;">Aucune crèche trouvée pour votre recherche.</p>';
+                crechesContainer.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 3rem 0;">
+                        <p style="font-size: 1.2rem; color: #666; margin-bottom: 1.5rem;">Aucune crèche trouvée pour cette sélection.</p>
+                        <button class="btn btn-outline" onclick="location.reload()">Voir toutes les crèches</button>
+                    </div>
+                `;
                 return;
             }
 
             filtered.forEach(c => {
                 const card = document.createElement('div');
-                card.className = 'creche-card'; // Reuse style
+                card.className = 'creche-card';
 
-                // Randomly select one of the available images
-                const images = ['images/hero_child.webp']; // Ideally we would have more images here
-                // Since we only have one image, we'll use it. 
-
-                // Generate a deterministic hash from the name to get a consistent unique image
-                // Generate a deterministic hash from the name to get a consistent unique image
                 let hash = 0;
                 for (let i = 0; i < c.name.length; i++) {
                     hash = c.name.charCodeAt(i) + ((hash << 5) - hash);
                 }
                 const lockId = Math.abs(hash % 1000);
 
-                // Check for specific daycares that should keep the Hero image
                 const specialDaycares = [
                     "CRECHES EXPANSION Lorient",
                     "Ptits Babadins Téloché",
@@ -227,34 +378,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (specialDaycares.includes(c.name)) {
                     imgUrl = 'images/hero_child_right.webp';
                 } else {
-                    // Use keywords combining "child" AND "daycare context"
-                    const keywords = ['child,daycare', 'toddler,nursery', 'baby,playing,daycare', 'kids,kindergarten', 'child,playgroup'];
+                    const keywords = ['child,daycare', 'toddler,nursery', 'baby', 'kids', 'playground'];
                     const keywordIndex = Math.abs(hash % keywords.length);
                     const category = keywords[keywordIndex];
                     imgUrl = `https://loremflickr.com/400/300/${category}?lock=${lockId}`;
                 }
 
+                // AI Simulated availability badge based on hash
+                const availScore = hash % 10;
+                let availHtml = "";
+                if (c.active) {
+                    if (availScore > 7) {
+                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-green); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Places dispos</span>';
+                    } else if (availScore > 4) {
+                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-orange); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Dernières places</span>';
+                    } else {
+                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: #666; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Liste d\'attente</span>';
+                    }
+                } else {
+                    availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-pink); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Bientôt disponible</span>';
+                }
+
                 card.innerHTML = `
             <div style="height: 200px; overflow: hidden; position: relative;">
-               <img src="${imgUrl}" alt="${c.name}" width="300" height="200" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+               ${availHtml}
+               <img src="${imgUrl}" alt="Micro-crèche Les p'tits Babadins - ${c.name} à ${c.city}" width="300" height="200" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 10px; color: white;">
                   <span style="font-weight: bold; font-size: 1.1rem;">${c.city}</span>
                </div>
             </div>
-            <div class="creche-content">
-                <h3 style="min-height: 3rem;">${c.name}</h3>
-                <div class="creche-meta" style="font-size: 0.95rem; line-height: 1.6;">
-                    ${c.address ? '📍 ' + c.address + '<br>' : ''}
-                    ${c.zip || c.city ? (c.zip ? c.zip + ' ' : '') + c.city + '<br>' : ''}
-                    ${c.phone ? '📞 ' + c.phone + '<br>' : ''}
-                    ${c.hours ? '⏰ ' + c.hours + '<br>' : ''}
-                    <div style="margin-top: 5px;">
+            <div class="creche-content" style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                <h3 style="min-height: 3rem; margin-bottom: 1rem; font-size: 1.25rem;">${c.name}</h3>
+                <div class="creche-meta" style="font-size: 0.95rem; line-height: 1.6; color: #577083;">
+                    ${c.address ? '<span title="Adresse">📍</span> ' + c.address + '<br>' : ''}
+                    ${c.zip || c.city ? '<span title="Code Postal / Ville">🏙️</span> ' + (c.zip ? c.zip + ' ' : '') + c.city + '<br>' : ''}
+                    ${c.phone ? '<span title="Téléphone">📞</span> ' + c.phone + '<br>' : ''}
+                    ${c.hours ? '<span title="Horaires">⏰</span> ' + c.hours + '<br>' : ''}
+                    <div style="margin-top: 8px;">
                         ${c.active ? '<span style="color:var(--brand-green); font-weight:bold;">● Ouverte</span>' : '<span style="color:var(--brand-orange); font-weight:bold;">● Bientôt</span>'}
                     </div>
                 </div>
-                    <div style="margin-top: auto; padding-top: 1rem;">
-                        <a href="${c.link}" class="btn btn-outline" style="display: block; text-align: center; width: 100%;">Voir la crèche</a>
-                    </div>
+                <div style="margin-top: auto; padding-top: 1.5rem;">
+                    <a href="${c.link}" class="btn btn-outline" style="display: block; text-align: center; width: 100%; border-radius: var(--radius-sm);">Voir la crèche</a>
                 </div>
             </div>
           `;
@@ -262,23 +427,126 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        function renderFilterChips() {
+            if (!activeFiltersContainer) return;
+            activeFiltersContainer.innerHTML = '';
+
+            if (!currentFilter.value) return;
+
+            const chip = document.createElement('div');
+            chip.style.cssText = "background: var(--brand-blue-dark); color: white; padding: 6px 16px; border-radius: 20px; display: flex; align-items: center; gap: 8px; font-size: 0.9rem; animation: fadeIn 0.3s ease;";
+
+            let typeLabel = "";
+            switch (currentFilter.type) {
+                case "search": typeLabel = "🔍 "; break;
+                case "region": typeLabel = "📍 "; break;
+                case "dept": typeLabel = "🇫🇷 "; break;
+                case "city": typeLabel = "🏙️ "; break;
+            }
+
+            chip.innerHTML = `<span>${typeLabel}${currentFilter.label}</span><span style="cursor:pointer; font-weight:800; padding: 0 4px;" title="Supprimer le filtre">✕</span>`;
+
+            chip.querySelector('span:last-child').onclick = () => {
+                if (currentFilter.type === "search") {
+                    searchInput.value = '';
+                }
+                renderCreches("", "search");
+            };
+
+            activeFiltersContainer.appendChild(chip);
+        }
+
+        function populateFilters() {
+            const regionContainer = document.getElementById('filter-regions');
+            const deptContainer = document.getElementById('filter-depts');
+            const cityContainer = document.getElementById('filter-cities');
+
+            if (!regionContainer || !deptContainer || !cityContainer) return;
+
+            // Stats extraction
+            const stats = { regions: {}, depts: {}, cities: {} };
+
+            creches.forEach(c => {
+                // City
+                stats.cities[c.city] = (stats.cities[c.city] || 0) + 1;
+
+                // Dept
+                let deptCode = c.zip ? c.zip.substring(0, 2) : "??";
+                if (c.zip && c.zip.length === 4) deptCode = "0" + c.zip.substring(0, 1);
+                stats.depts[deptCode] = (stats.depts[deptCode] || 0) + 1;
+
+                // Region
+                for (const [regName, deptList] of Object.entries(REGION_MAP)) {
+                    if (deptList.includes(deptCode)) {
+                        stats.regions[regName] = (stats.regions[regName] || 0) + 1;
+                        break;
+                    }
+                }
+            });
+
+            const createFilterLink = (label, value, type) => {
+                const a = document.createElement('a');
+                a.href = "#";
+                a.style.cssText = "color: #666; text-decoration: none; display: block; padding: 4px 8px; border-radius: 4px; transition: background 0.2s;";
+                a.innerHTML = label;
+                a.onmouseover = () => a.style.background = "#f8f9fa";
+                a.onmouseout = () => a.style.background = "transparent";
+                a.onclick = (e) => {
+                    e.preventDefault();
+                    // Extract clean label without count
+                    const cleanLabel = label.split(' (')[0];
+                    renderCreches(value, type, cleanLabel);
+                    // Close details
+                    const details = a.closest('details');
+                    if (details) details.removeAttribute('open');
+                    // Scroll to list
+                    document.getElementById('creches-list-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                };
+                return a;
+            };
+
+            // Populate Regions
+            Object.entries(stats.regions).sort().forEach(([reg, count]) => {
+                regionContainer.appendChild(createFilterLink(`${reg} (${count})`, reg, 'region'));
+            });
+
+            // Populate Depts
+            Object.entries(stats.depts).sort().forEach(([code, count]) => {
+                const name = DEPT_MAP[code] || "Inconnu";
+                deptContainer.appendChild(createFilterLink(`${name} (${code}) (${count})`, code, 'dept'));
+            });
+
+            // Populate Cities
+            Object.entries(stats.cities).sort().forEach(([city, count]) => {
+                cityContainer.appendChild(createFilterLink(`${city} (${count})`, city, 'city'));
+            });
+        }
+
+        populateFilters();
+
         // Initial Render
-        // Check for search param from index page
         const params = new URLSearchParams(window.location.search);
         const initialSearch = params.get('search') || "";
-
-        if (searchInput && initialSearch) {
-            searchInput.value = initialSearch;
-        }
-
+        if (searchInput && initialSearch) searchInput.value = initialSearch;
         renderCreches(initialSearch);
 
-        // Search Events
+        // Events
         if (searchInput) {
-            searchInput.addEventListener('input', (e) => renderCreches(e.target.value));
+            searchInput.addEventListener('input', (e) => {
+                if (e.target.value) {
+                    renderCreches(e.target.value, "search");
+                } else {
+                    renderCreches("", "search");
+                }
+            });
         }
-        if (searchBtn && searchInput) {
-            searchBtn.addEventListener('click', () => renderCreches(searchInput.value));
+        if (searchBtn && searchInput) searchBtn.addEventListener('click', () => renderCreches(searchInput.value, "search"));
+        if (clearBtn && searchInput) {
+            clearBtn.addEventListener('click', () => {
+                searchInput.value = '';
+                renderCreches('', 'search');
+                searchInput.focus();
+            });
         }
     }
 
@@ -372,12 +640,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             <button onclick="window.scrollContainer('gallery-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
                             <button onclick="window.scrollContainer('gallery-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
                         
-                            <div id="gallery-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
-                                <img src="images/pedago_motricite.webp" style="flex: 0 0 auto; width: 200px; height: 150px; object-fit: cover; border-radius: var(--radius-md); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/blog_alimentation_bebe.webp" style="flex: 0 0 auto; width: 200px; height: 150px; object-fit: cover; border-radius: var(--radius-md); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_art_painting.webp" style="flex: 0 0 auto; width: 200px; height: 150px; object-fit: cover; border-radius: var(--radius-md); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_story_time.webp" style="flex: 0 0 auto; width: 200px; height: 150px; object-fit: cover; border-radius: var(--radius-md); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_garden_activity.webp" style="flex: 0 0 auto; width: 200px; height: 150px; object-fit: cover; border-radius: var(--radius-md); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <div id="gallery-track" style="display: flex; gap: 0.8rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
+                                <img src="images/pedago_motricite.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/blog_alimentation_bebe.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/social_art_painting.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/social_story_time.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <img src="images/social_garden_activity.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                             </div>
                         </div>
                     </div>
@@ -418,16 +686,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             <button onclick="window.scrollContainer('related-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
                             <button onclick="window.scrollContainer('related-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
 
-                            <div id="related-track" style="display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
+                            <div id="related-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
                                 ${relatedDaycares.map(related => `
-                                    <div style="flex: 0 0 auto; width: 280px; scroll-snap-align: center; background: white; border: 1px solid #eee; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-sm);">
-                                        <div style="height: 150px; background: #eee;">
+                                    <div style="flex: 0 0 auto; width: 200px; scroll-snap-align: center; background: white; border: 1px solid #eee; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);">
+                                        <div style="height: 120px; background: #eee;">
                                             <img src="${related.imgUrl}" style="width:100%; height:100%; object-fit: cover;" alt="${related.name}" loading="lazy">
                                         </div>
-                                        <div style="padding: 1rem;">
-                                            <h4 style="margin-bottom:0.5rem; color: var(--brand-blue-dark);">${related.name}</h4>
-                                            <p style="font-size:0.9rem; color:#666;">${related.city}</p>
-                                            <a href="${creche.link}" style="display:block; margin-top:0.5rem; color:var(--brand-pink); font-weight:bold;">Voir la fiche →</a>
+                                        <div style="padding: 0.8rem;">
+                                            <h4 style="margin-bottom:0.3rem; color: var(--brand-blue-dark); font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${related.name}</h4>
+                                            <p style="font-size:0.8rem; color:#666;">${related.city}</p>
+                                            <a href="${creche.link}" style="display:block; margin-top:0.4rem; color:var(--brand-pink); font-weight:bold; font-size: 0.85rem;">Voir →</a>
                                         </div>
                                     </div>
                                 `).join('')}
@@ -442,41 +710,41 @@ document.addEventListener('DOMContentLoaded', () => {
                             <button onclick="window.scrollContainer('blog-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
                             <button onclick="window.scrollContainer('blog-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
 
-                            <div id="blog-track" style="display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
+                            <div id="blog-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
                                 <!-- Article 1 -->
-                                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_adaptation_creche.webp" style="width: 100%; height: 180px; object-fit: cover;" alt="Adaptation">
-                                    <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--brand-blue-dark);">Réussir l'adaptation</h4>
-                                        <p style="font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">Conseils pour une séparation en douceur pour bébé et parents.</p>
-                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.9rem; align-self: start;">Lire l'article</a>
+                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                                    <img src="images/blog_adaptation_creche.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Adaptation">
+                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
+                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">Réussir l'adaptation</h4>
+                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Conseils pour une séparation en douceur.</p>
+                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
                                     </div>
                                 </div>
                                 <!-- Article 2 -->
-                                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_motricite_libre.webp" style="width: 100%; height: 180px; object-fit: cover;" alt="Motricité">
-                                    <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--brand-blue-dark);">La motricité libre</h4>
-                                        <p style="font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">Pourquoi laisser l'enfant découvrir ses mouvements seul ?</p>
-                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.9rem; align-self: start;">Lire l'article</a>
+                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                                    <img src="images/blog_motricite_libre.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Motricité">
+                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
+                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">La motricité libre</h4>
+                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Découvrir ses mouvements seul.</p>
+                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
                                     </div>
                                 </div>
                                 <!-- Article 3 -->
-                                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_sommeil_bebe.webp" style="width: 100%; height: 180px; object-fit: cover;" alt="Sommeil">
-                                    <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--brand-blue-dark);">Le sommeil de bébé</h4>
-                                        <p style="font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">Comprendre les cycles et mettre en place des rituels.</p>
-                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.9rem; align-self: start;">Lire l'article</a>
+                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                                    <img src="images/blog_sommeil_bebe.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Sommeil">
+                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
+                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">Le sommeil de bébé</h4>
+                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Comprendre les cycles et rituels.</p>
+                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
                                     </div>
                                 </div>
                                 <!-- Article 4 -->
-                                <div style="flex: 0 0 auto; width: 300px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_alimentation_bebe.webp" style="width: 100%; height: 180px; object-fit: cover;" alt="Alimentation">
-                                    <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--brand-blue-dark);">L'alimentation</h4>
-                                        <p style="font-size: 0.9rem; margin-bottom: 1rem; flex: 1;">Diversification menée par l'enfant (DME) et repas bio.</p>
-                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.9rem; align-self: start;">Lire l'article</a>
+                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+                                    <img src="images/blog_alimentation_bebe.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Alimentation">
+                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
+                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">L'alimentation</h4>
+                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Diversification et repas bio.</p>
+                                        <a href="blog.html" class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
                                     </div>
                                 </div>
                             </div>

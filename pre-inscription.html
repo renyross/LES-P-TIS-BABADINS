@@ -84,7 +84,8 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins"></a>
+            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
+                    height="45"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
@@ -95,7 +96,7 @@
             <li><a href="recrutement.html">Recrutement</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html" class="btn btn-primary"
-                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a>
             </li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
@@ -103,7 +104,8 @@
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
+            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
+                style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Pré-inscription</span>
         </div>
     </div>
@@ -119,168 +121,129 @@
 
     <section>
         <div class="container">
-            <div class="form-container">
-                <!-- Progress Bar -->
-                <div class="progress-container">
-                    <div class="progress-bar">
-                        <div class="progress-step active" data-step="1">1</div>
-                        <div class="progress-step" data-step="2">2</div>
-                        <div class="progress-step" data-step="3">3</div>
-                        <div class="progress-step" data-step="4">4</div>
+            <form id="single-step-form" action="mailto:partenariat@ce-lpbx.com" method="POST" enctype="text/plain">
+                <!-- Antipourriel (Honeypot) -->
+                <div style="display:none;">
+                    <label>Si vous êtes un humain, laissez ce champ vide :</label>
+                    <input type="text" name="hp_field">
+                </div>
+
+                <!-- Section 1: L'Enfant -->
+                <h3 class="form-section-title" style="margin-top: 0.5rem;">L'Enfant</h3>
+                <div class="responsive-grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="child-name">Prénom et Nom de l'enfant</label>
+                        <input type="text" id="child-name" name="child-name" class="form-input" required
+                            placeholder="Ex: Lucas Durand">
+                        <small style="color: #999;">Ou "Enfant à naître"</small>
                     </div>
-                    <div
-                        style="display: flex; justify-content: space-between; max-width: 500px; margin: 0.5rem auto 0; font-size: 0.8rem; color: #999;">
-                        <span>Enfant</span>
-                        <span>Parents</span>
-                        <span>Foyer</span>
-                        <span>Planning</span>
+                    <div class="form-group">
+                        <label class="form-label" for="birthdate">Date de naissance (ou prévue)</label>
+                        <input type="date" id="birthdate" name="birthdate" class="form-input" required>
                     </div>
                 </div>
 
-                <form id="multi-step-form" action="mailto:partenariat@ce-lpbx.com" method="POST" enctype="text/plain">
-                    <!-- Antipourriel (Honeypot) -->
-                    <div style="display:none;">
-                        <label>Si vous êtes un humain, laissez ce champ vide :</label>
-                        <input type="text" name="hp_field">
+                <!-- Section 2: Les Parents -->
+                <h3 class="form-section-title">Coordonnées des parents</h3>
+                <div class="responsive-grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="parent1-name">Nom complet (Parent 1)</label>
+                        <input type="text" id="parent1-name" name="parent1-name" class="form-input" required>
                     </div>
-
-
-                    <!-- Step 1: L'Enfant -->
-                    <div class="form-step active" id="step-1">
-                        <h3 class="form-section-title">L'Enfant</h3>
-                        <div class="responsive-grid-2">
-                            <div class="form-group">
-                                <label class="form-label" for="child-name">Prénom et Nom de l'enfant</label>
-                                <input type="text" id="child-name" name="child-name" class="form-input" required
-                                    placeholder="Ex: Lucas Durand">
-                                <small style="color: #999;">Ou "Enfant à naître"</small>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="birthdate">Date de naissance (ou prévue)</label>
-                                <input type="date" id="birthdate" name="birthdate" class="form-input" required>
-                            </div>
-                        </div>
-                        <div class="step-actions">
-                            <div></div>
-                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
-                        </div>
+                    <div class="form-group">
+                        <label class="form-label" for="parent1-email">Email (Parent 1)</label>
+                        <input type="email" id="parent1-email" name="parent1-email" class="form-input" required
+                            placeholder="Parent1@exemple.com">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="parent1-phone">Téléphone (Parent 1)</label>
+                    <input type="tel" id="parent1-phone" name="parent1-phone" class="form-input" required>
+                </div>
 
-                    <!-- Step 2: Les Parents -->
-                    <div class="form-step" id="step-2">
-                        <h3 class="form-section-title">Coordonnées des parents</h3>
-                        <div class="responsive-grid-2">
-                            <div class="form-group">
-                                <label class="form-label" for="parent1-name">Nom complet (Parent 1)</label>
-                                <input type="text" id="parent1-name" name="parent1-name" class="form-input" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="parent1-email">Email (Parent 1)</label>
-                                <input type="email" id="parent1-email" name="parent1-email" class="form-input" required
-                                    placeholder="Parent1@exemple.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="parent1-phone">Téléphone (Parent 1)</label>
-                            <input type="tel" id="parent1-phone" name="parent1-phone" class="form-input" required>
-                        </div>
-                        <div class="step-actions">
-                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
-                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
-                        </div>
+                <!-- Section 3: Foyer -->
+                <h3 class="form-section-title">Informations Foyer</h3>
+                <div class="form-group">
+                    <label class="form-label" for="address">Adresse postale</label>
+                    <input type="text" id="address" name="address" class="form-input" required
+                        placeholder="Numéro et nom de rue">
+                </div>
+                <div class="responsive-grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="zipcode">Code Postal</label>
+                        <input type="text" id="zipcode" name="zipcode" class="form-input" required
+                            placeholder="Ex: 75015">
                     </div>
-
-                    <!-- Step 3: Foyer -->
-                    <div class="form-step" id="step-3">
-                        <h3 class="form-section-title">Informations Foyer</h3>
-                        <div class="form-group">
-                            <label class="form-label" for="address">Adresse postale</label>
-                            <input type="text" id="address" name="address" class="form-input" required
-                                placeholder="Numéro et nom de rue">
-                        </div>
-                        <div class="responsive-grid-2">
-                            <div class="form-group">
-                                <label class="form-label" for="zipcode">Code Postal</label>
-                                <input type="text" id="zipcode" name="zipcode" class="form-input" required
-                                    placeholder="Ex: 75015">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="city">Ville</label>
-                                <input type="text" id="city" name="city" class="form-input" required
-                                    placeholder="Ex: Paris">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="income">Revenu fiscal annuel du foyer (€)</label>
-                            <input type="number" id="income" name="income" class="form-input" placeholder="Ex: 45000">
-                            <small style="color: #999;">Optionnel - Utile pour estimer les aides CAF</small>
-                        </div>
-                        <div class="step-actions">
-                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
-                            <button type="button" class="btn btn-primary next-step">Continuer →</button>
-                        </div>
+                    <div class="form-group">
+                        <label class="form-label" for="city">Ville</label>
+                        <input type="text" id="city" name="city" class="form-input" required placeholder="Ex: Paris">
                     </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="income">Revenu fiscal annuel du foyer (€)</label>
+                    <input type="number" id="income" name="income" class="form-input" placeholder="Ex: 45000">
+                    <small style="color: #999;">Optionnel - Utile pour estimer les aides CAF</small>
+                </div>
 
-                    <!-- Step 4: Votre Recherche -->
-                    <div class="form-step" id="step-4">
-                        <h3 class="form-section-title">Votre Recherche & Planning</h3>
-                        <div class="responsive-grid-2">
-                            <div class="form-group">
-                                <label class="form-label" for="creche">Crèche souhaitée</label>
-                                <select id="creche" name="creche" class="form-select" required>
-                                    <option value="">-- Choisir une crèche --</option>
-                                    <option value="Paris 15">Paris 15</option>
-                                    <option value="Lyon 6">Lyon 6</option>
-                                    <option value="Bordeaux">Bordeaux</option>
-                                    <option value="unknown">Je ne sais pas encore</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="start-date">Date d'entrée souhaitée</label>
-                                <input type="date" id="start-date" name="start-date" class="form-input" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Jours d'accueil souhaités</label>
-                            <div class="checkbox-group">
-                                <label class="checkbox-label"><input type="checkbox" name="days" value="Lundi">
-                                    Lundi</label>
-                                <label class="checkbox-label"><input type="checkbox" name="days" value="Mardi">
-                                    Mardi</label>
-                                <label class="checkbox-label"><input type="checkbox" name="days" value="Mercredi">
-                                    Mercredi</label>
-                                <label class="checkbox-label"><input type="checkbox" name="days" value="Jeudi">
-                                    Jeudi</label>
-                                <label class="checkbox-label"><input type="checkbox" name="days" value="Vendredi">
-                                    Vendredi</label>
-                            </div>
-                        </div>
-
-                        <p
-                            style="font-size: 0.9rem; color: #666; margin: 1rem 0; padding: 1rem; background: #eef1f4; border-radius: 8px;">
-                            🛡️ <strong>Engagement :</strong> Vos données sont traitées avec soin. En cliquant sur
-                            valider, vous acceptez que l'équipe Les p'tits Babadins vous recontacte pour donner suite à
-                            votre dossier.
-                        </p>
-
-                        <div class="step-actions">
-                            <button type="button" class="btn btn-outline prev-step">← Précédent</button>
-                            <button type="submit" class="btn btn-primary">🚀 Finaliser ma demande</button>
-                        </div>
+                <!-- Section 4: Recherche & Planning -->
+                <h3 class="form-section-title">Votre Recherche & Planning</h3>
+                <div class="responsive-grid-2">
+                    <div class="form-group">
+                        <label class="form-label" for="creche">Crèche souhaitée</label>
+                        <select id="creche" name="creche" class="form-select" required>
+                            <option value="">-- Choisir une crèche --</option>
+                            <option value="Paris 15">Paris 15</option>
+                            <option value="Lyon 6">Lyon 6</option>
+                            <option value="Bordeaux">Bordeaux</option>
+                            <option value="unknown">Je ne sais pas encore</option>
+                        </select>
                     </div>
-                </form>
-            </div>
+                    <div class="form-group">
+                        <label class="form-label" for="start-date">Date d'entrée souhaitée</label>
+                        <input type="date" id="start-date" name="start-date" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Jours d'accueil souhaités</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label"><input type="checkbox" name="days" value="Lundi">
+                            Lundi</label>
+                        <label class="checkbox-label"><input type="checkbox" name="days" value="Mardi">
+                            Mardi</label>
+                        <label class="checkbox-label"><input type="checkbox" name="days" value="Mercredi">
+                            Mercredi</label>
+                        <label class="checkbox-label"><input type="checkbox" name="days" value="Jeudi">
+                            Jeudi</label>
+                        <label class="checkbox-label"><input type="checkbox" name="days" value="Vendredi">
+                            Vendredi</label>
+                    </div>
+                </div>
+
+                <p
+                    style="font-size: 0.9rem; color: #666; margin: 2rem 0 1.5rem; padding: 1rem; background: #eef1f4; border-radius: 8px;">
+                    🛡️ <strong>Engagement :</strong> Vos données sont traitées avec soin. En cliquant sur
+                    valider, vous acceptez que l'équipe Les p'tits Babadins vous recontacte pour donner suite à
+                    votre dossier.
+                </p>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary btn-cta"
+                        style="width: 100%; max-width: 400px; font-size: 1.1rem; padding: 1rem;">🚀 Finaliser ma
+                        demande</button>
+                </div>
+            </form>
         </div>
     </section>
 
-                            <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Les p’tits Babadins</h4>
-                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le respect du rythme de l'enfant.</p>
-                    
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
+                        respect du rythme de l'enfant.</p>
+
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://facebook.com" target="_blank"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
@@ -334,54 +297,27 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="plan-du-site.html">Plan du site</a></p>
+                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
+                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
+                        href="plan-du-site.html">Plan du site</a></p>
             </div>
         </div>
     </footer>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-    
-    
+
+
     <!-- Back to Top Button -->
-    
-    
-    
+
+
+
     <!-- Back to Top Button -->
-    
-    
+
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('multi-step-form');
-            const steps = Array.from(document.querySelectorAll('.form-step'));
-            const progressSteps = Array.from(document.querySelectorAll('.progress-step'));
-            const nextBtns = document.querySelectorAll('.next-step');
-            const prevBtns = document.querySelectorAll('.prev-step');
-
-            let currentStep = 1;
-
-            function updateForm() {
-                // Update steps visibility
-                steps.forEach(step => {
-                    step.classList.toggle('active', parseInt(step.id.split('-')[1]) === currentStep);
-                });
-
-                // Update progress bar
-                progressSteps.forEach(step => {
-                    const stepNum = parseInt(step.dataset.step);
-                    step.classList.toggle('active', stepNum === currentStep);
-                    step.classList.toggle('completed', stepNum < currentStep);
-
-                    // Replace number with checkmark if completed
-                    if (stepNum < currentStep) {
-                        step.innerHTML = '✓';
-                    } else {
-                        step.innerHTML = stepNum;
-                    }
-                });
-
-                window.scrollTo({ top: document.querySelector('.form-container').offsetTop - 100, behavior: 'smooth' });
-            }
+            const form = document.getElementById('single-step-form');
 
             form.addEventListener('submit', (e) => {
                 // Honeypot check
@@ -404,39 +340,6 @@
                         form.appendChild(tokenInput);
                         form.submit();
                     });
-                });
-            });
-
-            nextBtns.forEach(btn => {
-
-                btn.addEventListener('click', () => {
-                    // Basic validation for current step
-                    const currentSection = document.getElementById(`step-${currentStep}`);
-                    const inputs = currentSection.querySelectorAll('input[required], select[required], textarea[required]');
-                    let valid = true;
-
-                    inputs.forEach(input => {
-                        if (!input.value) {
-                            valid = false;
-                            input.style.borderColor = '#e64ea4';
-                        } else {
-                            input.style.borderColor = '#eee';
-                        }
-                    });
-
-                    if (valid && currentStep < steps.length) {
-                        currentStep++;
-                        updateForm();
-                    }
-                });
-            });
-
-            prevBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    if (currentStep > 1) {
-                        currentStep--;
-                        updateForm();
-                    }
                 });
             });
         });

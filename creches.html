@@ -49,19 +49,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/webp" href="images/logo.webp">
     <script src="main.js" defer></script>
     <style>
         .search-bar {
             max-width: 600px;
             margin: -30px auto var(--spacing-lg);
             background: white;
-            padding: 1rem;
+            padding: 0.8rem 1rem;
             border-radius: var(--radius-full);
             box-shadow: var(--shadow-md);
             display: flex;
-            gap: 1rem;
+            align-items: center;
+            gap: 0.5rem;
             position: relative;
             z-index: 10;
+            border: 1px solid #eee;
         }
 
         .search-input {
@@ -71,6 +74,30 @@
             padding: 0.5rem;
             outline: none;
             font-family: inherit;
+        }
+
+        .search-clear {
+            background: #f0f0f0;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+            transition: background 0.2s;
+        }
+
+        .search-clear:hover {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .search-clear.active {
+            display: flex;
         }
 
         .creche-card {
@@ -113,7 +140,8 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="200" height="60"></a>
+            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
+                    height="45"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
@@ -124,7 +152,7 @@
             <li><a href="recrutement.html">Recrutement</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html" class="btn btn-primary"
-                    style="padding: 0.5rem 1.5rem; color: white;">Contactez-nous</a>
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a>
             </li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
@@ -132,27 +160,24 @@
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
+            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
+                style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Nos Crèches</span>
         </div>
     </div>
 
 
-    <header class="page-header" style="height: 400px; background: #e0e0e0; padding: 0;">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2783.568297635676!2d4.835659!3d45.764043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea516e794303!2sLyon%2C%20France!5e0!3m2!1sen!2sfr!4v1646755500000!5m2!1sen!2sfr"
-            width="100%" height="400" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen=""
-            loading="lazy" title="Carte des crèches">
-        </iframe>
-        <div
-            style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.2); pointer-events: none;">
-        </div>
-        <div class="container" style="position: relative; z-index: 2; pointer-events: none;">
+    <header class="page-header"
+        style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/creche_paris_classroom.webp'); background-position: center; background-size: cover; min-height: 450px; display: flex; align-items: center; justify-content: flex-start;">
+        <div class="container">
             <div
-                style="background: rgba(255, 255, 255, 0.9); padding: 2rem; border-radius: var(--radius-lg); display: inline-block; box-shadow: var(--shadow-md); pointer-events: auto;">
-                <h1 style="color: var(--brand-blue-dark); margin-bottom: 0.5rem;">Trouver ma crèche</h1>
-                <p style="font-size: 1.2rem; color: var(--color-text-main);">Un réseau grandissant pour être au plus
-                    près de vous.</p>
+                style="background: rgba(255, 255, 255, 0.95); padding: 2.5rem; border-radius: var(--radius-lg); display: inline-block; box-shadow: var(--shadow-lg); text-align: left; max-width: 650px; position: relative; z-index: 10;">
+                <h1
+                    style="color: var(--brand-blue-dark) !important; margin-bottom: 0.5rem; font-size: 3.5rem; text-shadow: none;">
+                    Trouver ma crèche</h1>
+                <p
+                    style="font-size: 1.3rem; color: var(--color-text-main); font-weight: 700; text-shadow: none; margin: 0;">
+                    Un réseau grandissant pour être au plus près de vous.</p>
             </div>
         </div>
     </header>
@@ -160,7 +185,14 @@
     <div class="container">
         <div class="search-bar">
             <input type="text" class="search-input" placeholder="Entrez votre ville ou code postal...">
-            <button class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Rechercher</button>
+            <button class="search-clear" title="Effacer" id="clearSearch">✕</button>
+            <button class="btn btn-primary" id="searchBtn" style="padding: 0.5rem 1.5rem;">Rechercher</button>
+        </div>
+
+        <!-- Active Filters Display -->
+        <div id="active-filters"
+            style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; justify-content: center; min-height: 2rem;">
+            <!-- Tags will appear here -->
         </div>
 
         <!-- Minimalist Filters -->
@@ -174,24 +206,9 @@
                     📍 Par Région
                     <span style="font-size: 0.8rem;">▼</span>
                 </summary>
-                <div class="dropdown-content"
+                <div class="dropdown-content" id="filter-regions"
                     style="position: absolute; top: 110%; left: 0; background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 280px; z-index: 20; display: grid; gap: 0.5rem; max-height: 300px; overflow-y: auto;">
-                    <a href="?region=bretagne" style="color: #666; text-decoration: none; display: block;">Bretagne
-                        (6)</a>
-                    <a href="?region=pays-loire" style="color: #666; text-decoration: none; display: block;">Pays de la
-                        Loire (5)</a>
-                    <a href="?region=occitanie" style="color: #666; text-decoration: none; display: block;">Occitanie
-                        (2)</a>
-                    <a href="?region=idf" style="color: #666; text-decoration: none; display: block;">Île-de-France
-                        (1)</a>
-                    <a href="?region=auvergne"
-                        style="color: #666; text-decoration: none; display: block;">Auvergne-Rhône-Alpes (1)</a>
-                    <a href="?region=hauts-de-france"
-                        style="color: #666; text-decoration: none; display: block;">Hauts-de-France (1)</a>
-                    <a href="?region=nouvelle-aquitaine"
-                        style="color: #666; text-decoration: none; display: block;">Nouvelle-Aquitaine (1)</a>
-                    <a href="?region=centre" style="color: #666; text-decoration: none; display: block;">Centre-Val de
-                        Loire (1)</a>
+                    <!-- Dynamically populated -->
                 </div>
             </details>
 
@@ -202,22 +219,9 @@
                     🇫🇷 Par Département
                     <span style="font-size: 0.8rem;">▼</span>
                 </summary>
-                <div class="dropdown-content"
+                <div class="dropdown-content" id="filter-depts"
                     style="position: absolute; top: 110%; left: 50%; transform: translateX(-50%); background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 320px; z-index: 20; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; max-height: 400px; overflow-y: auto;">
-                    <a href="?dept=85" style="color: #666; text-decoration: none;">Vendée (85)</a>
-                    <a href="?dept=22" style="color: #666; text-decoration: none;">Côtes-d'Armor (22)</a>
-                    <a href="?dept=29" style="color: #666; text-decoration: none;">Finistère (29)</a>
-                    <a href="?dept=56" style="color: #666; text-decoration: none;">Morbihan (56)</a>
-                    <a href="?dept=35" style="color: #666; text-decoration: none;">Ille-et-Vilaine (35)</a>
-                    <a href="?dept=44" style="color: #666; text-decoration: none;">Loire-Atl. (44)</a>
-                    <a href="?dept=72" style="color: #666; text-decoration: none;">Sarthe (72)</a>
-                    <a href="?dept=81" style="color: #666; text-decoration: none;">Tarn (81)</a>
-                    <a href="?dept=30" style="color: #666; text-decoration: none;">Gard (30)</a>
-                    <a href="?dept=77" style="color: #666; text-decoration: none;">Seine-et-Marne (77)</a>
-                    <a href="?dept=59" style="color: #666; text-decoration: none;">Nord (59)</a>
-                    <a href="?dept=03" style="color: #666; text-decoration: none;">Allier (03)</a>
-                    <a href="?dept=18" style="color: #666; text-decoration: none;">Cher (18)</a>
-                    <a href="?dept=79" style="color: #666; text-decoration: none;">Deux-Sèvres (79)</a>
+                    <!-- Dynamically populated -->
                 </div>
             </details>
 
@@ -228,26 +232,9 @@
                     🏙️ Par Ville
                     <span style="font-size: 0.8rem;">▼</span>
                 </summary>
-                <div class="dropdown-content"
+                <div class="dropdown-content" id="filter-cities"
                     style="position: absolute; top: 110%; right: 0; background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 280px; z-index: 20; display: grid; gap: 0.5rem; max-height: 400px; overflow-y: auto;">
-                    <a href="?city=bournezeau" style="color: #666; text-decoration: none;">Bournezeau</a>
-                    <a href="?city=grosbreuil" style="color: #666; text-decoration: none;">Grosbreuil</a>
-                    <a href="?city=la-creche" style="color: #666; text-decoration: none;">La Crèche</a>
-                    <a href="?city=lorient" style="color: #666; text-decoration: none;">Lorient</a>
-                    <a href="?city=louargat" style="color: #666; text-decoration: none;">Louargat</a>
-                    <a href="?city=marssac" style="color: #666; text-decoration: none;">Marssac sur Tarn</a>
-                    <a href="?city=masny" style="color: #666; text-decoration: none;">Masny</a>
-                    <a href="?city=mellac" style="color: #666; text-decoration: none;">Mellac</a>
-                    <a href="?city=montlucon" style="color: #666; text-decoration: none;">Montluçon</a>
-                    <a href="?city=pont-saint-esprit" style="color: #666; text-decoration: none;">Pont-Saint-Esprit</a>
-                    <a href="?city=pordic" style="color: #666; text-decoration: none;">Pordic</a>
-                    <a href="?city=saint-aubin" style="color: #666; text-decoration: none;">Saint-Aubin-du-Cormier</a>
-                    <a href="?city=saint-germain" style="color: #666; text-decoration: none;">Saint Germain du Puy</a>
-
-                    <a href="?city=savenay" style="color: #666; text-decoration: none;">Savenay</a>
-                    <a href="?city=sigournais" style="color: #666; text-decoration: none;">Sigournais</a>
-                    <a href="?city=souppes" style="color: #666; text-decoration: none;">Souppes-sur-Loing</a>
-                    <a href="?city=teloche" style="color: #666; text-decoration: none;">Téloché</a>
+                    <!-- Dynamically populated -->
                 </div>
             </details>
         </div>
@@ -266,6 +253,7 @@
         </div>
     </div>
 
+    </div>
 
     <!-- Section: Partnership / Expansion -->
     <section class="section-bg-blue-light" style="padding: 4rem 0; text-align: center;">
@@ -288,13 +276,14 @@
 
 
 
-                            <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Les p’tits Babadins</h4>
-                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le respect du rythme de l'enfant.</p>
-                    
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
+                        respect du rythme de l'enfant.</p>
+
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://facebook.com" target="_blank"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
@@ -348,23 +337,25 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="plan-du-site.html">Plan du site</a></p>
+                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
+                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
+                        href="plan-du-site.html">Plan du site</a></p>
             </div>
         </div>
     </footer>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-    
-    
+
+
     <!-- Back to Top Button -->
-    
-    
-    
+
+
+
     <!-- Back to Top Button -->
-    
-    
-    
+
+
+
 
 </body>
 

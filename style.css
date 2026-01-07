@@ -1043,3 +1043,199 @@ img {
         padding: 1rem !important;
     }
 }
+
+/* --- PREMIUM DESIGN SYSTEM ADDITIONS --- */
+
+/* Glassmorphism Effect */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Redefined Sections */
+.section-padding {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.section-header h2 {
+    color: var(--brand-blue-dark);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+/* Premium Hero Overlay & Background */
+.hero-premium {
+    position: relative;
+    background: #fdfdfd;
+    overflow: hidden;
+}
+
+.hero-premium::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 60%;
+    height: 120%;
+    background: url('images/hero_child_right.webp') no-repeat center center;
+    background-size: cover;
+    mask-image: linear-gradient(to left, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+    z-index: 1;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+@media (max-width: 992px) {
+    .hero-premium::before {
+        display: none;
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center !important;
+    }
+}
+
+/* Modern Value Tooltip Cards */
+.feature-card {
+    background: var(--color-white);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--brand-blue-light);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Statistics Modern Grid */
+.stat-card-premium {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card-premium:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-blue-light);
+}
+
+.stat-icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+/* Map Section Premium Styling */
+.map-wrapper-premium {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 8px solid white;
+    position: relative;
+}
+
+.map-floating-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    max-width: 300px;
+}
+
+/* Micro-animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Pattern Backgrounds */
+.bg-pattern {
+    background-color: #fdfdfd;
+    background-image: radial-gradient(rgba(45, 170, 225, 0.05) 0.5px, transparent 0.5px), radial-gradient(rgba(45, 170, 225, 0.05) 0.5px, #fdfdfd 0.5px);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+}
+
+/* Refined CTA */
+.btn-cta-premium {
+    background: var(--gradient-orange);
+    color: white;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 20px rgba(245, 155, 0, 0.2);
+    border: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-cta-premium:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(245, 155, 0, 0.3);
+}
