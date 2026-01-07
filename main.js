@@ -358,31 +358,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('div');
                 card.className = 'creche-card';
 
-                let hash = 0;
-                for (let i = 0; i < c.name.length; i++) {
-                    hash = c.name.charCodeAt(i) + ((hash << 5) - hash);
-                }
-                const lockId = Math.abs(hash % 1000);
-
-                const specialDaycares = [
-                    "CRECHES EXPANSION Lorient",
-                    "Ptits Babadins Téloché",
-                    "Crèche Expansion Savenay 2",
-                    "Les P’tits Babadins 79260 La Crèche",
-                    "Les P’tits Babadins d’Aizenay",
-                    "Les p'tits Babadins de Quéven",
-                    "Micro-crèche de La Roche (Wilson)"
-                ];
-
-                let imgUrl;
-                if (specialDaycares.includes(c.name)) {
-                    imgUrl = 'images/hero_child_right.webp';
-                } else {
-                    const keywords = ['child,daycare', 'toddler,nursery', 'baby', 'kids', 'playground'];
-                    const keywordIndex = Math.abs(hash % keywords.length);
-                    const category = keywords[keywordIndex];
-                    imgUrl = `https://loremflickr.com/400/300/${category}?lock=${lockId}`;
-                }
+                imgUrl = 'images/hero_child_right.webp';
 
                 // AI Simulated availability badge based on hash
                 const availScore = hash % 10;
