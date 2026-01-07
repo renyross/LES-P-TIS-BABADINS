@@ -360,18 +360,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 imgUrl = 'images/hero_child_right.webp';
 
-                // AI Simulated availability badge based on hash
-                const availScore = hash % 10;
                 let availHtml = "";
-                if (c.active) {
-                    if (availScore > 7) {
-                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-green); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Places dispos</span>';
-                    } else if (availScore > 4) {
-                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-orange); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Dernières places</span>';
-                    } else {
-                        availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: #666; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Liste d\'attente</span>';
-                    }
-                } else {
+                if (!c.active) {
                     availHtml = '<span style="position: absolute; top: 10px; right: 10px; background: var(--brand-pink); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 5;">Bientôt disponible</span>';
                 }
 
