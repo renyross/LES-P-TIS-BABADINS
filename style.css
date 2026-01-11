@@ -253,19 +253,14 @@ section {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
-    flex: 1;
     align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* Allows the nav to take up remaining space and center strictly */
 }
 
-.nav-links li:nth-child(1) {
-    margin-left: auto;
-}
-
-.nav-links li:nth-child(7) {
-    margin-right: auto;
-}
 
 .nav-links li:last-child {
     margin-right: 4rem;
@@ -422,7 +417,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 3.5rem;
         transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1);
         z-index: 1001;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
@@ -500,10 +495,22 @@ footer {
 }
 
 /* responsive utilities for forms and layouts */
-.responsive-grid-2 {
+.responsive-grid-2,
+.grid-2-cols {
+    display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .responsive-grid-2,
+    .grid-2-cols {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -684,6 +691,135 @@ img {
     justify-content: space-between;
     gap: 1rem;
     margin-top: 2rem;
+}
+
+/* Hero Message Box (for Creches page) */
+.hero-msg-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    display: inline-block;
+    box-shadow: var(--shadow-lg);
+    text-align: left;
+    max-width: 650px;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .hero-msg-box {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* Filter Dropdown responsive grid */
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+    .dropdown-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Timeline */
+.timeline-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e0e0e0;
+    transform: translateX(-50%);
+    border-radius: 4px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    align-items: center;
+    position: relative;
+}
+
+.timeline-item.left {
+    justify-content: flex-start;
+}
+
+.timeline-item.right {
+    justify-content: flex-end;
+}
+
+.timeline-content {
+    width: 45%;
+    position: relative;
+}
+
+.timeline-item.left .timeline-content {
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.timeline-item.right .timeline-content {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px var(--brand-orange);
+    /* Default color, overridden inline or via specific classes */
+    z-index: 1;
+}
+
+/* Timeline Mobile Responsive */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-item {
+        margin-bottom: 2rem;
+        justify-content: flex-start !important;
+        /* Force all to left alignment */
+    }
+
+    .timeline-marker {
+        left: 20px;
+        transform: none;
+    }
+
+    .timeline-content {
+        width: calc(100% - 50px);
+        /* Full width minus marker space */
+        margin-left: 50px;
+        text-align: left !important;
+        /* Force left align text */
+        padding-right: 0 !important;
+        padding-left: 1rem !important;
+    }
 }
 
 /* Page Headers */
@@ -1300,6 +1436,7 @@ img {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 15px 30px rgba(245, 155, 0, 0.3);
 }
+
 /* --- MODERN FOOTER --- */
 footer {
     background-color: #2d3e50;
@@ -1379,10 +1516,10 @@ footer {
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3.5rem;
         text-align: center;
     }
-    
+
     .footer-col h4::after {
         left: 50%;
         transform: translateX(-50%);

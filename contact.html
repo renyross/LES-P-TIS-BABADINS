@@ -19,7 +19,7 @@
       "@type": "ContactPage",
       "name": "Contact Les p’tits Babadins",
       "description": "Formulaire de contact pour le réseau national de micro-crèches Les p’tits Babadins.",
-      "url": "https://lespetitsbabadins.com/contact.html",
+      "url": "https://lespetitsbabadins.com/contact",
       "mainEntity": {
         "@type": "Organization",
         "name": "Les p’tits Babadins",
@@ -43,28 +43,24 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
-                    height="45"></a>
-        </div>
+        <div class="logo"><a href="/"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
+                    height="45"></a></div>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="reseau.html">Nous découvrir</a></li>
-            <li><a href="creches.html">Nos Crèches</a></li>
-            <li><a href="pedagogie.html">Notre pédagogie</a></li>
-            <li><a href="entreprises.html">Vous êtes...</a></li>
-            <li><a href="recrutement.html">Recrutement</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="btn btn-primary"
-                    style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a>
-            </li>
+            <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="contact" class="btn btn-primary"
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
     </nav>
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
+            <a href="/" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Contact</span>
         </div>
     </div>
@@ -73,14 +69,18 @@
     <header class="page-header section-bg-blue-light"
         style="background-image: linear-gradient(rgba(45, 170, 225, 0.8), rgba(0, 77, 113, 0.9)), url('images/professional_support.webp'); background-size: cover; background-position: center;">
         <div class="container">
-            <h1>Contactez-nous</h1>
-            <p>Une question ? Envie d'en savoir plus ? Notre équipe est à votre écoute.</p>
+            <h1
+                style="color: white !important; margin-bottom: 0.5rem; font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
+                Contactez-nous</h1>
+            <p
+                style="font-size: 1.2rem; color: white; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.2); margin: 0;">
+                Une question ? Envie d'en savoir plus ? Notre équipe est à votre écoute.</p>
         </div>
     </header>
 
     <section>
         <div class="container">
-            <div class="responsive-grid-2" style="gap: var(--spacing-xl);">
+            <div class="grid-2-cols" style="align-items: start;">
                 <!-- Infos -->
                 <div>
                     <h2 style="color: var(--color-terracotta);">Nos Coordonnées</h2>
@@ -189,13 +189,14 @@
     </script>
 
 
-                <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <h4>Les p’tits Babadins</h4>
-                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le respect du rythme de l'enfant.</p>
-                    
+                    <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
+                        respect du rythme de l'enfant.</p>
+
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://facebook.com" target="_blank"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
@@ -223,48 +224,50 @@
                 <div class="footer-col">
                     <h4>Familles</h4>
                     <ul>
-                        <li><a href="creches.html">Trouver ma crèche</a></li>
-                        <li><a href="pedagogie.html">Le projet pédagogique</a></li>
-                        <li><a href="pre-inscription.html">Inscription en ligne</a></li>
+                        <li><a href="creches">Trouver ma crèche</a></li>
+                        <li><a href="pedagogie">Le projet pédagogique</a></li>
+                        <li><a href="pre-inscription">Inscription en ligne</a></li>
                         <li><a href="index.html#reseau-preview">Pourquoi nous choisir ?</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme.html">Alimentation & DME</a></li>
-                        <li><a href="blog-sommeil-bebe.html">Sommeil de bébé</a></li>
-                        <li><a href="blog-motricite-libre.html">Motricité libre</a></li>
-                        <li><a href="blog-adaptation-creche.html">Adaptation en douceur</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation & DME</a></li>
+                        <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
+                        <li><a href="blog-motricite-libre">Motricité libre</a></li>
+                        <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="entreprises.html">Offres Entreprises</a></li>
-                        <li><a href="reseau.html">Le Réseau LPB</a></li>
-                        <li><a href="recrutement.html">Travailler avec nous</a></li>
-                        <li><a href="contact.html">Contact Siège</a></li>
+                        <li><a href="entreprises">Offres Entreprises</a></li>
+                        <li><a href="reseau">Le Réseau LPB</a></li>
+                        <li><a href="recrutement">Travailler avec nous</a></li>
+                        <li><a href="contact">Contact Siège</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a href="politique-confidentialite.html">Politique de Confidentialité</a> | <a href="plan-du-site.html">Plan du site</a></p>
+                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a href="plan-du-site">Plan
+                        du site</a></p>
             </div>
         </div>
     </footer>
-    
+
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-    
-    
+
+
     <!-- Back to Top Button -->
-    
-    
-    
+
+
+
     <!-- Back to Top Button -->
-    
-    
+
+
 </body>
 
 </html>

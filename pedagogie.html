@@ -58,29 +58,24 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
-                    height="45"></a>
-        </div>
+        <div class="logo"><a href="/"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
+                    height="45"></a></div>
         <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="reseau.html">Nous découvrir</a></li>
-            <li><a href="creches.html">Nos Crèches</a></li>
-            <li><a href="pedagogie.html" class="active">Notre pédagogie</a></li>
-            <li><a href="entreprises.html">Vous êtes...</a></li>
-            <li><a href="recrutement.html">Recrutement</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html" class="btn btn-primary"
-                    style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a>
-            </li>
+                        <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a href="contact" class="btn btn-primary"
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
     </nav>
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
-                style="margin: 0 0.5rem; color: #ccc;">/</span>
+            <a href="/" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Notre pédagogie</span>
         </div>
     </div>
@@ -89,15 +84,12 @@
     <header class="page-header"
         style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/pedago_motricite.webp'); background-position: center; background-size: cover; min-height: 450px; display: flex; align-items: center; justify-content: flex-start;">
         <div class="container">
-            <div
-                style="background: rgba(255, 255, 255, 0.95); padding: 2.5rem; border-radius: var(--radius-lg); display: inline-block; box-shadow: var(--shadow-lg); text-align: left; max-width: 650px; position: relative; z-index: 10;">
-                <h1
-                    style="color: var(--brand-blue-dark) !important; margin-bottom: 0.5rem; font-size: 3rem; text-shadow: none;">
-                    Notre Pédagogie Active & Bienveillante</h1>
-                <p
-                    style="font-size: 1.2rem; color: var(--color-text-main); font-weight: 700; text-shadow: none; margin: 0;">
-                    Une approche active, bienveillante et respectueuse du développement de l'enfant.</p>
-            </div>
+            <h1
+                style="color: white !important; margin-bottom: 0.5rem; font-size: 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                Notre Pédagogie Active & Bienveillante</h1>
+            <p
+                style="font-size: 1.2rem; color: white; font-weight: 700; text-shadow: 0 1px 3px rgba(0,0,0,0.5); margin: 0;">
+                Une approche active, bienveillante et respectueuse du développement de l'enfant.</p>
         </div>
     </header>
 
@@ -325,8 +317,7 @@
                 micro-crèches ?
             </h2>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: var(--spacing-lg); margin-top: 2rem;">
+            <div class="grid-2-cols" style="margin-top: 2rem; align-items: start;">
 
                 <!-- Card 1 -->
                 <div class="value-card"
@@ -383,7 +374,7 @@
                     <h3 style="font-size: 1.25rem; color: var(--color-text); margin-bottom: 0.5rem;">Autonomie et
                         Créativité</h3>
                     <p style="color: var(--color-text-light); font-size: 0.95rem;">Encourager l'enfant à <a
-                            href="blog-motricite-libre.html" style="color: inherit; text-decoration: underline;">faire
+                            href="blog-motricite-libre" style="color: inherit; text-decoration: underline;">faire
                             par lui-même</a> et à explorer son imagination.</p>
                 </div>
 
@@ -460,7 +451,7 @@
                         qualité des repas.
                         Des menus variés, sains et équilibrés pour accompagner la diversification de votre enfant. Nous
                         encourageons notamment la
-                        <a href="blog-alimentation-dme.html"
+                        <a href="blog-alimentation-dme"
                             style="color: inherit; text-decoration: underline;">Diversification Menée par l'Enfant
                             (DME)</a>.
                     </p>
@@ -517,37 +508,29 @@
         <div class="container">
             <h2 class="text-center" style="margin-bottom: 3rem;">Une journée type en micro-crèche</h2>
 
-            <div style="max-width: 900px; margin: 0 auto; position: relative; padding: 2rem 0;">
+            <div class="timeline-container">
                 <!-- Vertical Line -->
-                <div
-                    style="position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; background: #e0e0e0; transform: translateX(-50%); border-radius: 4px;">
-                </div>
+                <div class="timeline-line"></div>
 
                 <!-- Timeline Item 1 -->
-                <div
-                    style="display: flex; margin-bottom: 3rem; align-items: center; justify-content: flex-start; position: relative;">
-                    <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
                         <span
                             style="font-weight: 800; color: var(--brand-orange); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">08h30</span>
                         <h3 style="color: var(--color-text); margin-bottom: 0.5rem;">Accueil & Transmissions</h3>
                         <p style="color: var(--color-text-light); margin: 0;">Arrivée échelonnée des enfants.<br>Temps
-                            d'échange privilégié avec les parents pour une <a href="blog-adaptation-creche.html"
+                            d'échange privilégié avec les parents pour une <a href="blog-adaptation-creche"
                                 style="color: inherit; text-decoration: underline;">transition en douceur</a>.</p>
                     </div>
-                    <div
-                        style="position: absolute; left: 50%; width: 20px; height: 20px; background: var(--brand-orange); border-radius: 50%; transform: translateX(-50%); border: 4px solid white; box-shadow: 0 0 0 2px var(--brand-orange);">
-                    </div>
-                    <div style="width: 45%; padding-left: 2rem;"></div>
+                    <div class="timeline-marker"
+                        style="background: var(--brand-orange); box-shadow: 0 0 0 2px var(--brand-orange);"></div>
                 </div>
 
                 <!-- Timeline Item 2 -->
-                <div
-                    style="display: flex; margin-bottom: 3rem; align-items: center; justify-content: flex-end; position: relative;">
-                    <div style="width: 45%; text-align: right; padding-right: 2rem;"></div>
-                    <div
-                        style="position: absolute; left: 50%; width: 20px; height: 20px; background: var(--brand-pink); border-radius: 50%; transform: translateX(-50%); border: 4px solid white; box-shadow: 0 0 0 2px var(--brand-pink);">
-                    </div>
-                    <div style="width: 45%; padding-left: 2rem;">
+                <div class="timeline-item right">
+                    <div class="timeline-marker"
+                        style="background: var(--brand-pink); box-shadow: 0 0 0 2px var(--brand-pink);"></div>
+                    <div class="timeline-content">
                         <span
                             style="font-weight: 800; color: var(--brand-pink); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">09h30</span>
                         <h3 style="color: var(--color-text); margin-bottom: 0.5rem;">Éveil & Ateliers</h3>
@@ -557,33 +540,28 @@
                 </div>
 
                 <!-- Timeline Item 3 -->
-                <div
-                    style="display: flex; margin-bottom: 3rem; align-items: center; justify-content: flex-start; position: relative;">
-                    <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
                         <span
                             style="font-weight: 800; color: var(--brand-green); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">11h30</span>
                         <h3 style="color: var(--color-text); margin-bottom: 0.5rem;">Le Repas</h3>
                         <p style="color: var(--color-text-light); margin: 0;">Moment convivial de partage et de
                             découverte des goûts.<br>Accompagnement vers l'autonomie.</p>
                     </div>
-                    <div
-                        style="position: absolute; left: 50%; width: 20px; height: 20px; background: var(--brand-green); border-radius: 50%; transform: translateX(-50%); border: 4px solid white; box-shadow: 0 0 0 2px var(--brand-green);">
-                    </div>
-                    <div style="width: 45%; padding-left: 2rem;"></div>
+                    <div class="timeline-marker"
+                        style="background: var(--brand-green); box-shadow: 0 0 0 2px var(--brand-green);"></div>
                 </div>
 
                 <!-- Timeline Item 4 -->
-                <div
-                    style="display: flex; margin-bottom: 3rem; align-items: center; justify-content: flex-end; position: relative;">
-                    <div style="width: 45%; text-align: right; padding-right: 2rem;"></div>
-                    <div
-                        style="position: absolute; left: 50%; width: 20px; height: 20px; background: var(--brand-blue-light); border-radius: 50%; transform: translateX(-50%); border: 4px solid white; box-shadow: 0 0 0 2px var(--brand-blue-light);">
+                <div class="timeline-item right">
+                    <div class="timeline-marker"
+                        style="background: var(--brand-blue-light); box-shadow: 0 0 0 2px var(--brand-blue-light);">
                     </div>
-                    <div style="width: 45%; padding-left: 2rem;">
+                    <div class="timeline-content">
                         <span
                             style="font-weight: 800; color: var(--brand-blue-light); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">13h00</span>
                         <h3 style="color: var(--color-text); margin-bottom: 0.5rem;">Sieste & Temps Calme</h3>
-                        <p style="color: var(--color-text-light); margin: 0;"><a href="blog-sommeil-bebe.html"
+                        <p style="color: var(--color-text-light); margin: 0;"><a href="blog-sommeil-bebe"
                                 style="color: inherit; text-decoration: underline;">Respect du sommeil</a> de
                             chacun.<br>Réveil
                             échelonné tout en douceur.</p>
@@ -591,18 +569,16 @@
                 </div>
 
                 <!-- Timeline Item 5 -->
-                <div style="display: flex; align-items: center; justify-content: flex-start; position: relative;">
-                    <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
                         <span
                             style="font-weight: 800; color: var(--brand-blue-dark); font-size: 1.5rem; display: block; margin-bottom: 0.5rem;">16h30</span>
                         <h3 style="color: var(--color-text); margin-bottom: 0.5rem;">Goûter & Retrouvailles</h3>
                         <p style="color: var(--color-text-light); margin: 0;">Dernier temps fort de la journée avant
                             l'arrivée des parents et les transmissions du soir.</p>
                     </div>
-                    <div
-                        style="position: absolute; left: 50%; width: 20px; height: 20px; background: var(--brand-blue-dark); border-radius: 50%; transform: translateX(-50%); border: 4px solid white; box-shadow: 0 0 0 2px var(--brand-blue-dark);">
-                    </div>
-                    <div style="width: 45%; padding-left: 2rem;"></div>
+                    <div class="timeline-marker"
+                        style="background: var(--brand-blue-dark); box-shadow: 0 0 0 2px var(--brand-blue-dark);"></div>
                 </div>
 
             </div>
@@ -616,8 +592,8 @@
                     dans toutes nos structures. Trouvez celle qui est la plus proche de votre domicile ou lieu de
                     travail.</p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="creches.html" class="btn btn-outline">Trouver une crèche à proximité</a>
-                    <a href="pre-inscription.html" class="btn btn-primary">S'inscrire maintenant</a>
+                    <a href="creches" class="btn btn-outline">Trouver une crèche à proximité</a>
+                    <a href="pre-inscription" class="btn btn-primary">S'inscrire maintenant</a>
                 </div>
             </div>
         </div>
@@ -658,35 +634,35 @@
                 <div class="footer-col">
                     <h4>Familles</h4>
                     <ul>
-                        <li><a href="creches.html">Trouver ma crèche</a></li>
-                        <li><a href="pedagogie.html">Le projet pédagogique</a></li>
-                        <li><a href="pre-inscription.html">Inscription en ligne</a></li>
+                        <li><a href="creches">Trouver ma crèche</a></li>
+                        <li><a href="pedagogie">Le projet pédagogique</a></li>
+                        <li><a href="pre-inscription">Inscription en ligne</a></li>
                         <li><a href="index.html#reseau-preview">Pourquoi nous choisir ?</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme.html">Alimentation & DME</a></li>
-                        <li><a href="blog-sommeil-bebe.html">Sommeil de bébé</a></li>
-                        <li><a href="blog-motricite-libre.html">Motricité libre</a></li>
-                        <li><a href="blog-adaptation-creche.html">Adaptation en douceur</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation & DME</a></li>
+                        <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
+                        <li><a href="blog-motricite-libre">Motricité libre</a></li>
+                        <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="entreprises.html">Offres Entreprises</a></li>
-                        <li><a href="reseau.html">Le Réseau LPB</a></li>
-                        <li><a href="recrutement.html">Travailler avec nous</a></li>
-                        <li><a href="contact.html">Contact Siège</a></li>
+                        <li><a href="entreprises">Offres Entreprises</a></li>
+                        <li><a href="reseau">Le Réseau LPB</a></li>
+                        <li><a href="recrutement">Travailler avec nous</a></li>
+                        <li><a href="contact">Contact Siège</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
-                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
-                        href="plan-du-site.html">Plan du site</a></p>
+                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a href="plan-du-site">Plan
+                        du site</a></p>
             </div>
         </div>
     </footer>
