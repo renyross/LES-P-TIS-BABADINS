@@ -1524,4 +1524,9 @@ footer {
         left: 50%;
         transform: translateX(-50%);
     }
+
+    /* Center social icons */
+    .footer-col>div {
+        justify-content: center;
+    }
 }
