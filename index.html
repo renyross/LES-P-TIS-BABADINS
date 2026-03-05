@@ -1,17 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <title>Micro-crèches Les p’tits Babadins | Réseau National Bienveillant</title>
-    <meta name="description"
-        content="Les p’tits Babadins est un réseau national de micro-crèches privées proposant un accueil personnalisé et une pédagogie active (Reggio Emilia). Découvrez nos crèches pour familles et entreprises partout en France." />
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';"
+        http-equiv="Content-Security-Policy" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="1; mode=block" http-equiv="X-XSS-Protection" />
+    <title>Réseau National de Micro-Crèches | Les p’tits Babadins</title>
+    <meta
+        content="Trouvez votre place en micro-crèche avec Les p’tits Babadins. Réseau national, pédagogie bienveillante et repas bio. Inscrivez-vous en ligne dès maintenant !"
+        name="description">
     <!-- LLM Optimization & Structured Data -->
     <script type="application/ld+json">
     {
@@ -49,13 +51,368 @@
       }
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="hero.css" />
-    <link rel="preload" as="image" href="images/hero_child_right.webp" fetchpriority="high">
-    <script src="main.js" defer></script>
+    <!-- Font Preloading -->
+    <link as="font" crossorigin="" href="https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaB.woff2"
+        rel="preload" type="font/woff2" />
+    <link as="font" crossorigin="" href="https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIO-aB.woff2"
+        rel="preload" type="font/woff2" />
+    <link as="font" crossorigin="" href="https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofIMeaB.woff2"
+        rel="preload" type="font/woff2" />
+
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Critical CSS Inlined for LCP Optimization -->
+    <style>
+        :root {
+            --brand-blue-dark: #004d71;
+            --brand-blue-light: #2daae1;
+            --brand-pink: #e64ea4;
+            --brand-green: #9bc53d;
+            --brand-orange: #f59b00;
+            --color-beige-light: #F9F7F2;
+            --color-white-off: #FFFCF8;
+            --color-white: #FFFFFF;
+            --color-text-main: var(--brand-blue-dark);
+            --color-text-light: #577083;
+            --spacing-md: 2rem;
+            --spacing-sm: 1rem;
+            --spacing-xs: 0.5rem;
+            --spacing-lg: 4rem;
+            --radius-full: 9999px;
+            --radius-lg: 32px;
+            --font-main: 'Nunito', sans-serif;
+            --shadow-sm: 0 4px 12px rgba(0, 77, 113, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-white-off);
+            color: var(--color-text-main);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-weight: 800;
+            line-height: 1.2;
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem var(--spacing-md);
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 3rem;
+        }
+
+        .logo img {
+            height: 65px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+            list-style: none;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 4rem;
+        }
+
+        .nav-links a {
+            font-weight: 700;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.6rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--brand-blue-light);
+            color: var(--color-white);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--brand-blue-light);
+            color: var(--brand-blue-light);
+            background: transparent;
+        }
+
+        .btn-cta {
+            background-color: var(--brand-orange);
+            color: var(--color-white);
+            box-shadow: 0 4px 12px rgba(245, 155, 0, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            height: 88vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            color: var(--color-white);
+            padding-top: 80px;
+            margin-top: -80px;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: #f0f0f0;
+            background: url('/images/hero_child_right.webp') right center / cover no-repeat;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: right center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: fadeLoop 18s infinite;
+        }
+
+        .slide:nth-child(1) {
+            animation-delay: 0s;
+            animation-name: fadeLoopFirst;
+            opacity: 1;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            grid-column: 1;
+            width: 100%;
+        }
+
+        .hero p {
+            color: var(--color-white-off);
+            font-size: 1.4rem;
+            margin-bottom: var(--spacing-lg);
+            font-weight: 500;
+            max-width: 90%;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .btn-outline {
+            color: var(--color-white);
+            border-color: var(--color-white);
+        }
+
+        @keyframes fadeLoopFirst {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            33% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            38% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+
+            95% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeLoop {
+            0% {
+                opacity: 0;
+                transform: scale(1);
+            }
+
+            5% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            33% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            38% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .logo {
+                margin-left: 1rem;
+            }
+
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                grid-column: auto;
+                margin-left: 0 !important;
+                padding: 1rem !important;
+            }
+
+            .hero {
+                padding: 120px 0 60px;
+                height: auto;
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem !important;
+            }
+
+            .hero p {
+                font-size: 1.1rem !important;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 100%;
+            }
+
+            .hero-actions {
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        /* Search Bar Critical Styles */
+        .search-bar {
+            background: white;
+            padding: 0.6rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            gap: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            outline: none;
+            font-size: 1rem;
+        }
+    </style>
+    <!-- Async Load CSS for non-critical styles -->
+    <script>
+        function loadDeferredStyles() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement);
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        }
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function () { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <noscript id="deferred-styles">
+        <link href="style.css?v=1.2" rel="stylesheet" />
+        <link href="hero.css?v=1.3" rel="stylesheet" />
+    </noscript>
+    <link as="image" fetchpriority="high" href="/images/hero_child_right.webp" rel="preload" />
+    <script defer="" src="main.js?v=19.0"></script>
     <style>
         /* Values Section */
         .values-grid {
@@ -89,13 +446,38 @@
             color: var(--color-terracotta);
         }
     </style>
+    </meta>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
 
 <body>
-    <nav class="navbar"><div class="logo"><a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150" height="45"></a></div><ul class="nav-links"><li><a href="creches">Nos Crèches</a></li><li><a href="pedagogie">Notre pédagogie</a></li><li><a href="entreprises">Vous êtes...</a></li><li><a href="recrutement">Recrutement</a></li><li><a href="reseau">Nous découvrir</a></li><li><a href="blog">Blog</a></li><li><a href="contact" class="btn btn-primary" style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li></ul><div class="mobile-menu-btn"><span></span><span></span><span></span></div></nav>
-
-    <header class="hero"
-        style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%), url('images/hero_child_right.webp'); background-position: center; background-size: cover; height: 90vh; min-height: 750px; display: flex; align-items: center; justify-content: flex-start;">
+    <nav class="navbar">
+        <div class="logo"><a href="index"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
+                    src="/images/logo.webp" width="150" /></a></div>
+        <ul class="nav-links">
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a class="btn btn-primary" href="contact"
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
+        </ul>
+        <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
+    </nav>
+    <header class="hero">
+        <div class="hero-slider">
+            <div class="slide"
+                style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%), url('/images/hero_child_right.webp'); background-size: cover; background-position: center;">
+            </div>
+            <div class="slide"
+                style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%), url('/images/hero_pedagogie_montessori.webp'); background-size: cover; background-position: center;">
+            </div>
+            <div class="slide"
+                style="background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%), url('/images/toddler_playing.webp'); background-size: cover; background-position: center;">
+            </div>
+        </div>
         <div class="container">
             <div
                 style="padding: 0; text-align: left; max-width: 720px; position: relative; z-index: 10; margin-left: -2rem;">
@@ -110,21 +492,18 @@
                     à 4 ans, basé sur la bienveillance et la pédagogie active Reggio Emilia.
                 </p>
                 <div class="hero-actions" style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
-                    <a href="pre-inscription" class="btn btn-cta">Réserver ma place en 2 min</a>
-                    <a href="creches" class="btn btn-outline" style="border-color: white; color: white;">Trouver ma
+                    <a class="btn btn-cta" href="pre-inscription">Réserver ma place en 2 min</a>
+                    <a class="btn btn-outline" href="creches" style="border-color: white; color: white;">Trouver ma
                         crèche</a>
                 </div>
             </div>
         </div>
     </header>
-
-
-
-    <section id="reseau-preview" class="section-padding section-bg-blue-light">
+    <section class="section-padding section-bg-blue-light" id="reseau-preview">
         <div class="container">
             <div class="section-header">
                 <h2>Qui sommes-nous ?</h2>
-                <p>Les p'tits Babadins est un acteur majeur de la petite enfance en France depuis 2006.<br>
+                <p>Les p'tits Babadins est un acteur majeur de la petite enfance en France depuis 2006.<br />
                     Notre réseau regroupe des structures à taille humaine (micro-crèches) conçues pour offrir un cadre
                     rassurant, proche de l'environnement familial.</p>
                 <blockquote
@@ -133,7 +512,6 @@
                     son rythme au centre de notre projet pédagogique."
                 </blockquote>
             </div>
-
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                 <!-- Card 1: Bienveillance -->
                 <div class="feature-card">
@@ -142,7 +520,6 @@
                     <p>Le respect du rythme, des envies et de l’identité de l’enfant. Une écoute bienveillante qui
                         s'étend aux familles et à nos équipes pour un soutien mutuel.</p>
                 </div>
-
                 <!-- Card 2: Sécurité -->
                 <div class="feature-card">
                     <div class="feature-icon" style="background: #e6f3ff;">🛡️</div>
@@ -150,7 +527,6 @@
                     <p>Un environnement sécurisant qui permet à l’enfant d’explorer et d’acquérir de nouvelles
                         compétences librement, favorisant un développement psychomoteur libre.</p>
                 </div>
-
                 <!-- Card 3: Pédagogie Active -->
                 <div class="feature-card">
                     <div class="feature-icon" style="background: #e6fffa;">🌱</div>
@@ -161,7 +537,6 @@
             </div>
         </div>
     </section>
-
     <!-- Key Figures Section -->
     <section class="section-padding bg-pattern">
         <div class="container">
@@ -174,21 +549,18 @@
                     <strong class="counter" data-target="110">0</strong>
                     <span>Micro-crèches</span>
                 </div>
-
                 <!-- Stat Card 2 -->
                 <div class="stat-card-premium">
                     <div class="stat-icon-circle" style="background: var(--brand-orange);">📅</div>
                     <strong class="counter" data-target="2006">0</strong>
                     <span>Année de création</span>
                 </div>
-
                 <!-- Stat Card 3 -->
                 <div class="stat-card-premium">
                     <div class="stat-icon-circle" style="background: var(--brand-pink);">👨‍👩‍👧‍👦</div>
                     <strong class="counter" data-target="2000">0</strong>
                     <span>Familles accompagnées</span>
                 </div>
-
                 <!-- Stat Card 4 -->
                 <div class="stat-card-premium">
                     <div class="stat-icon-circle" style="background: var(--brand-green);">⭐</div>
@@ -198,44 +570,42 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Nos Crèches -->
-    <section id="nos-creches" class="section-padding bg-pattern">
+    <section class="section-padding bg-pattern" id="nos-creches">
         <div class="container">
             <div class="section-header">
                 <h2>Trouver ma crèche</h2>
                 <p>Un réseau grandissant pour être au plus près de vous.</p>
             </div>
-
             <div class="map-wrapper-premium" style="margin-bottom: 2.5rem;">
-                <iframe
+                <iframe allowfullscreen="" height="500" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5799.306041132629!2d2.3470438!3d46.227638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54a02933785731%3A0x6bfd3f96c747d9f7!2sFrance!5e0!3m2!1sfr!2sfr!4v1650000000000!5m2!1sfr!2sfr"
-                    width="100%" height="500" style="border:0; filter: grayscale(0.2) contrast(1.1);" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                    title="Carte du réseau Les p'tits Babadins">
+                    style="border:0; filter: grayscale(0.2) contrast(1.1);" title="Carte du réseau Les p'tits Babadins"
+                    width="100%">
                 </iframe>
             </div>
-
             <div class="text-center">
-                <form action="creches" method="get" class="search-bar"
+                <form action="creches" class="search-bar" method="get"
                     style="max-width: 650px; margin: 0 auto; background: white; padding: 0.6rem; border-radius: 50px; box-shadow: var(--shadow-md); display: flex; gap: 0.5rem; border: 1px solid rgba(0,0,0,0.05);">
-                    <input type="text" name="search" placeholder="Ville, code postal ou région..."
-                        style="flex: 1; border: none; padding: 0.8rem 1.8rem; border-radius: 50px; outline: none; font-size: 1rem;">
-                    <button type="submit" class="btn btn-primary"
-                        style="padding: 0.8rem 2.2rem; border-radius: 50px;">Rechercher</button>
+                    <input name="search" placeholder="Ville, code postal ou région..."
+                        style="flex: 1; border: none; padding: 0.8rem 1.8rem; border-radius: 50px; outline: none; font-size: 1rem;"
+                        type="text" />
+                    <button class="btn btn-primary" style="padding: 0.8rem 2.2rem; border-radius: 50px;"
+                        type="submit">Rechercher</button>
                 </form>
             </div>
         </div>
     </section>
-
-    <section id="callout" class="section-padding section-bg-green-light">
+    <section class="section-padding section-bg-green-light" id="callout">
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
                 <div style="flex: 1; min-width: 300px;">
                     <div
                         style="width: 100%; height: 400px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <img loading="lazy" src="images/hero_pedagogie_montessori.webp" alt="Activités d'éveil"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 70%;">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="400" loading="lazy" src="/images/hero_pedagogie_montessori.webp"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 70%;"
+                            width="600" />
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
@@ -260,18 +630,15 @@
                             Développement psychomoteur libre
                         </li>
                     </ul>
-                    <a href="pedagogie" class="btn btn-cta"
+                    <a class="btn btn-cta" href="pedagogie"
                         style="background: var(--brand-green); box-shadow: 0 4px 12px rgba(155, 197, 61, 0.3);">Découvrir
                         notre approche</a>
                 </div>
             </div>
         </div>
     </section>
-
-
-
     <!-- Section: Avis Parents -->
-    <section id="avis-parents" class="section-padding bg-pattern">
+    <section class="section-padding bg-pattern" id="avis-parents">
         <div class="container">
             <div class="section-header">
                 <h2>Ce qu'en pensent les familles</h2>
@@ -281,7 +648,6 @@
         </div>
         <div class="container-fluid" style="max-width: 100%; padding: 0 2% 0 5%;">
             <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; justify-content: center;">
-
                 <!-- Summary Card -->
                 <div
                     style="flex: 0 0 250px; text-align: center; padding: 1rem; background: #f8fafc; border-radius: 1rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); height: fit-content; z-index: 2; border: 1px solid #e2e8f0;">
@@ -297,9 +663,9 @@
                         <strong>48 avis</strong>
                     </p>
                     <div style="display: flex; justify-content: center; margin-bottom: 1rem;">
-                        <img loading="lazy"
-                            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google"
-                            style="height: 24px;">
+                        <img alt="Google" height="24" loading="lazy"
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            style="height: 24px; width: auto;" width="120" />
                     </div>
                     <div style="text-align: center; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem;">
                         <span
@@ -310,7 +676,6 @@
                         </span>
                     </div>
                 </div>
-
                 <!-- Infinite Carousel Wrapper -->
                 <div class="reviews-marquee-container"
                     style="flex: 1; min-width: 300px; overflow: hidden; position: relative; mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);">
@@ -319,22 +684,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/65.jpg"
-                                        alt="Sophie Martin" class="avatar">
+                                    <img alt="Sophie Martin" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/65.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/65.jpg" width="40" />
                                     <div>
                                         <div class="name">Sophie Martin</div>
                                         <div class="date">il y a 1 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Excellent travail de l'équipe des p'tits Babadins ! Des experts en petite enfance. Notre
@@ -351,15 +717,15 @@
                                         <div class="date">il y a 2 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Des professionnels de la petite enfance au service des familles 👍. Nous avons trouvé
@@ -370,22 +736,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/42.jpg"
-                                        alt="Camille" class="avatar">
+                                    <img alt="Camille" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/42.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/42.jpg" width="40" />
                                     <div>
                                         <div class="name">Camille</div>
                                         <div class="date">il y a 3 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Très satisfaite de la micro-crèche ! Ils ont mis en place un système d'accueil
@@ -402,15 +769,15 @@
                                         <div class="date">il y a 4 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Excellente expérience ! Gestion bienveillante et locaux superbes. Je recommande à 100%
@@ -421,22 +788,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/20.jpg"
-                                        alt="Aurélie" class="avatar">
+                                    <img alt="Aurélie" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/20.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/20.jpg" width="40" />
                                     <div>
                                         <div class="name">Aurélie</div>
                                         <div class="date">il y a 2 semaines</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Une équipe en or ! Mon bébé a été accueilli avec tellement de douceur. Les activités
@@ -453,15 +821,15 @@
                                         <div class="date">il y a 3 semaines</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Très bon contact avec la directrice. On sent que le bien-être des enfants est la
@@ -472,22 +840,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/8.jpg"
-                                        alt="Elodie Garcia" class="avatar">
+                                    <img alt="Elodie Garcia" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/8.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/8.jpg" width="40" />
                                     <div>
                                         <div class="name">Elodie Garcia</div>
                                         <div class="date">il y a 1 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Locaux propres, lumineux et sécurisés. Les repas bio sont un vrai plus. Ma fille ne veut
@@ -504,15 +873,15 @@
                                         <div class="date">il y a 2 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Une ambiance familiale qu'on ne trouve pas dans les grandes crèches. On est ravis de
@@ -524,22 +893,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/65.jpg"
-                                        alt="Sophie Martin" class="avatar">
+                                    <img alt="Sophie Martin" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/65.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/65.jpg" width="40" />
                                     <div>
                                         <div class="name">Sophie Martin</div>
                                         <div class="date">il y a 1 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Excellent travail de l'équipe des p'tits Babadins ! Des experts en petite enfance. Notre
@@ -556,15 +926,15 @@
                                         <div class="date">il y a 2 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Des professionnels de la petite enfance au service des familles 👍. Nous avons trouvé
@@ -575,22 +945,23 @@
                         <div class="google-review-card">
                             <div class="card-header">
                                 <div class="user-info">
-                                    <img loading="lazy" src="https://randomuser.me/api/portraits/women/42.jpg"
-                                        alt="Camille" class="avatar">
+                                    <img alt="Camille" class="lazy-img avatar" height="40" loading="lazy"
+                                        src="https://randomuser.me/api/portraits/women/42.jpg"
+                                        data-src="https://randomuser.me/api/portraits/women/42.jpg" width="40" />
                                     <div>
                                         <div class="name">Camille</div>
                                         <div class="date">il y a 3 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Très satisfaite de la micro-crèche ! Ils ont mis en place un système d'accueil
@@ -607,15 +978,15 @@
                                         <div class="date">il y a 4 mois</div>
                                     </div>
                                 </div>
-                                <img loading="lazy"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-                                    alt="G" class="google-icon">
+                                <img alt="G" class="google-icon" loading="lazy"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" />
                             </div>
                             <div class="stars">
                                 <span class="star-rating">★★★★★</span>
-                                <img loading="lazy"
+                                <img alt="Verified" class="lazy-img verified-badge" height="16" loading="lazy"
                                     src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
-                                    alt="Verified" class="verified-badge">
+                                    data-src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Twitter_Verified_Badge.svg"
+                                    width="16" />
                             </div>
                             <p class="review-text">
                                 Excellente expérience ! Gestion bienveillante et locaux superbes. Je recommande à 100%
@@ -748,23 +1119,22 @@
             }
         </style>
     </section>
-
-
     <!-- New Section: Parents -->
-    <section id="parents" class="section-bg-orange-light">
+    <section class="section-bg-orange-light" id="parents">
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
                 <div style="flex: 1; min-width: 300px;">
                     <div
                         style="width: 100%; height: 400px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <img src="images/blog_parent_hero.webp" alt="Parents en crèche" width="600" height="400"
-                            loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="400" loading="lazy" src="/images/blog_parent_hero.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" width="600" />
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
                     <h2 style="color: var(--color-terracotta);">La place des parents</h2>
                     <p style="margin-bottom: var(--spacing-md); font-size: 1.1rem; color: var(--color-text-light);">
-                        Nous considérons les parents comme de véritables partenaires.<br>Au-delà de l'accueil de votre
+                        Nous considérons les parents comme de véritables partenaires.<br />Au-delà de l'accueil de votre
                         enfant, nous construisons ensemble une relation de confiance.
                     </p>
                     <ul style="list-style: none; margin-bottom: var(--spacing-md);">
@@ -773,40 +1143,34 @@
                                 style="background: var(--brand-orange); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
                             Écoute et conseils quotidiens
                         </li>
-
                         <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
                             <span
                                 style="background: var(--brand-orange); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
                             Ateliers thématiques (santé, alimentation, éveil)
                         </li>
                     </ul>
-                    <a href="reseau" class="btn btn-primary"
+                    <a class="btn btn-primary" href="reseau"
                         style="background: var(--brand-orange); color: white; border-color: var(--brand-orange);">Rencontrer
                         l'équipe</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Section: Avis Parents (Moved Up for Social Proof) -->
     <!-- Note: Content will be moved here in a separate step or via full file rewrite if too complex, but using chunks logic: -->
     <!-- Actually, I will insert the *content* of Avis Parents here first, then remove it from below. -->
-
-
-
-
-
     <!-- B2B Section (Merged) -->
-    <section id="b2b-opportunities" class="section-bg-blue-light">
+    <section class="section-bg-blue-light" id="b2b-opportunities">
         <!-- Entreprises Part -->
-        <div id="entreprises" class="container" style="margin-bottom: var(--spacing-xl);">
+        <div class="container" id="entreprises" style="margin-bottom: var(--spacing-xl);">
             <div
                 style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg); flex-direction: row-reverse;">
                 <div style="flex: 1; min-width: 300px;">
                     <div
                         style="width: 100%; height: 400px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <img src="images/hero_entreprises_office.webp" width="600" height="400" loading="lazy"
-                            alt="Espace Entreprise" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="400" loading="lazy" src="/images/hero_entreprises_office.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" width="600" />
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
@@ -821,7 +1185,7 @@
                         <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
                             <span
                                 style="background: var(--brand-blue-light); color: white; border-radius: 50%; width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; font-size: 0.8rem;">✓</span>
-                            Performance de l'entreprise & Sérénité des équipes
+                            Performance de l'entreprise &amp; Sérénité des équipes
                         </li>
                         <li style="margin-bottom: 0.8rem; display: flex; align-items: center;">
                             <span
@@ -834,54 +1198,53 @@
                             Coût réel inférieur à 25% grâce aux avantages fiscaux
                         </li>
                     </ul>
-                    <a href="entreprises" class="btn btn-outline"
+                    <a class="btn btn-outline" href="entreprises"
                         style="border-color: var(--brand-blue-dark); color: var(--brand-blue-dark);">Découvrir l'offre
                         entreprise</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Recrutement Section (Moved Here) -->
-    <section id="recrutement-home" class="section-bg-white">
+    <section class="section-bg-white" id="recrutement-home">
         <div class="container">
             <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg);">
                 <div style="flex: 1; min-width: 300px;">
                     <div
                         style="width: 100%; height: 550px; background-color: #eee; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
-                        <img loading="lazy" src="images/social_story_time.webp"
-                            alt="Éducatrice petite enfance racontant une histoire"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+                        <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" loading="lazy"
+                            src="/images/social_story_time.webp" data-src="images/social_story_time.webp"
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center;" /
+                            class="lazy-img">
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
                     <h2 style="color: var(--brand-pink); margin-bottom: 1rem;">Construisez votre carrière avec nous</h2>
                     <p
                         style="font-size: 1.1rem; color: var(--color-text-light); margin-bottom: 2rem; line-height: 1.6;">
-                        Vous êtes passionné(e) par la Petite Enfance ? <br>
+                        Vous êtes passionné(e) par la Petite Enfance ? <br />
                         Intégrez un réseau qui valorise votre expertise et vous accompagne au quotidien.
                     </p>
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="recrutement" class="btn btn-secondary">Voir nos offres</a>
-
+                        <a class="btn btn-secondary" href="recrutement">Voir nos offres</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Partenariat Section (New Section Wrapper) -->
-    <section id="partenariat-section" class="section-bg-blue-light">
-
+    <section class="section-bg-blue-light" id="partenariat-section">
         <!-- Partenariat Part -->
-        <div id="partenariat" class="container">
+        <div class="container" id="partenariat">
             <div
                 style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-lg); flex-direction: row-reverse;">
                 <div style="flex: 1; min-width: 300px;">
                     <div
                         style="width: 100%; height: 400px; background-color: #fff; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid rgba(255,255,255,0.6);">
-                        <img src="images/corporate_collaboration.webp" width="600" height="400" loading="lazy"
-                            alt="Ouvrir sa crèche" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="400" loading="lazy" src="/images/corporate_collaboration.webp"
+                            data-src="images/corporate_collaboration.webp"
+                            style="width: 100%; height: 100%; object-fit: cover;" width="600" / class="lazy-img">
                     </div>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
@@ -908,45 +1271,40 @@
                             Droit d'entrée accessible
                         </li>
                     </ul>
-                    <a href="reseau" class="btn btn-primary" title="Devenir partenaire">Rejoindre le réseau</a>
+                    <a class="btn btn-primary" href="reseau" title="Devenir partenaire">Rejoindre le réseau</a>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- New Section: Recrutement -->
-
-
-
-
-
     <!-- Social Wall Section -->
-    <section id="social-wall" class="section-bg-pink-light" style="padding-bottom: 0;">
+    <section class="section-bg-pink-light" id="social-wall" style="padding-bottom: 0;">
         <div class="container text-center">
             <h2 style="color: var(--brand-orange); margin-bottom: 2rem;">Au cœur de nos crèches</h2>
             <p style="margin-bottom: var(--spacing-lg);">Suivez le quotidien joyeux de nos petits explorateurs sur
                 nos
                 réseaux.</p>
         </div>
-
         <!-- Manual Scroll Container -->
         <div class="social-carousel-wrapper" style="position: relative; padding: 2rem 0; background: transparent;">
-
             <button onclick="scrollSocial(-1)"
-                style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
+                style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">‹</button>
             <button onclick="scrollSocial(1)"
-                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
-
-            <div id="social-track" class="social-track"
+                style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">›</button>
+            <div class="social-track" id="social-track"
                 style="display: flex; gap: 1.5rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 2rem; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none;">
                 <!-- Item 1 -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_music_workshop.webp" alt="Atelier musique"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/social_music_workshop.webp"
+                        data-src="images/social_music_workshop.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_instagram.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -955,11 +1313,15 @@
                 <!-- Item 2 -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_garden_activity.webp" alt="Jardinage"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/social_garden_activity.webp"
+                        data-src="images/social_garden_activity.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_facebook.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -968,11 +1330,15 @@
                 <!-- Item 3 -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/blog_motricite_libre.webp" alt="Motricité"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/blog_motricite_libre.webp"
+                        data-src="images/blog_motricite_libre.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_instagram.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -981,11 +1347,16 @@
                 <!-- Item 4 (Fake Video) -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/blog_adaptation_creche.webp" alt="Accueil"
-                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/blog_adaptation_creche.webp"
+                        data-src="images/blog_adaptation_creche.webp"
+                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);" width="280" /
+                        class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_facebook.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -998,11 +1369,15 @@
                 <!-- Item 5 -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/blog_alimentation_bebe.webp" alt="Repas"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/blog_alimentation_bebe.webp"
+                        data-src="images/blog_alimentation_bebe.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_instagram.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -1011,11 +1386,14 @@
                 <!-- Item 6: Art -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_art_painting.webp" alt="Peinture"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/social_art_painting.webp" data-src="images/social_art_painting.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_facebook.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -1024,11 +1402,15 @@
                 <!-- Item 7: Play (Fake Video) -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_outdoor_play.webp" alt="Jeux extérieur"
-                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/social_outdoor_play.webp" data-src="images/social_outdoor_play.webp"
+                        style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.9);" width="280" /
+                        class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_instagram.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(255,255,255,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
@@ -1041,11 +1423,14 @@
                 <!-- Item 8: Story -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_story_time.webp" alt="Lecture"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" height="280"
+                        loading="lazy" src="/images/social_story_time.webp" data-src="images/social_story_time.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_facebook.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -1054,11 +1439,15 @@
                 <!-- Item 9: Halloween -->
                 <div class="social-card"
                     style="flex: 0 0 auto; width: 280px; height: 280px; border-radius: 20px; overflow: hidden; position: relative; box-shadow: var(--shadow-md); scroll-snap-align: center;">
-                    <img loading="lazy" src="images/social_halloween_party.webp" alt="Fête"
-                        style="width: 100%; height: 100%; object-fit: cover;">
+                    <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                        height="280" loading="lazy" src="/images/social_halloween_party.webp"
+                        data-src="images/social_halloween_party.webp"
+                        style="width: 100%; height: 100%; object-fit: cover;" width="280" / class="lazy-img">
                     <div style="position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;">
-                        <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">
+                        <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                            height="24" loading="lazy" src="/images/icon_instagram.webp"
+                            style="width: 20px; height: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));"
+                            width="24" />
                     </div>
                     <div
                         style="position: absolute; bottom: 10px; left: 10px; background: rgba(255,255,255,0.8); padding: 5px 10px; border-radius: 15px; font-size: 0.8rem; font-weight: bold;">
@@ -1066,7 +1455,6 @@
                 </div>
             </div>
         </div>
-
         <script>
             function scrollSocial(direction) {
                 const container = document.getElementById('social-track');
@@ -1074,7 +1462,6 @@
                 container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
             }
         </script>
-
         <style>
             /* Hide scrollbar for clean look */
             .social-track::-webkit-scrollbar {
@@ -1086,9 +1473,8 @@
             }
         </style>
     </section>
-
     <!-- Blog Preview Section -->
-    <section id="blog-preview" class="section-bg-white">
+    <section class="section-bg-white" id="blog-preview">
         <div class="container">
             <div class="text-center" style="margin-bottom: var(--spacing-lg);">
                 <h2 style="color: var(--brand-green);">Nos conseils d'experts</h2>
@@ -1096,15 +1482,16 @@
                     Pédagogie, santé, alimentation... Retrouvez nos articles pour vous accompagner au quotidien.
                 </p>
             </div>
-
             <div class="grid-3"
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: var(--spacing-lg);">
                 <!-- Article 1: Adaptation -->
                 <article
                     style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
                     <div style="height: 200px; overflow: hidden;">
-                        <img loading="lazy" src="images/blog_adaptation_creche.webp" alt="Adaptation en crèche"
-                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" loading="lazy"
+                            src="/images/blog_adaptation_creche.webp" data-src="images/blog_adaptation_creche.webp"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" /
+                            class="lazy-img">
                     </div>
                     <div style="padding: 1.5rem;">
                         <span
@@ -1116,16 +1503,17 @@
                         </p>
                         <a href="blog-adaptation-creche"
                             style="color: var(--brand-green); font-weight: 700; text-decoration: none;">Lire l'article
-                            &rarr;</a>
+                            →</a>
                     </div>
                 </article>
-
                 <!-- Article 2: Sommeil -->
                 <article
                     style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
                     <div style="height: 200px; overflow: hidden;">
-                        <img loading="lazy" src="images/blog_sommeil_bebe.webp" alt="Sommeil de bébé"
-                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" loading="lazy"
+                            src="/images/blog_sommeil_bebe.webp" data-src="images/blog_sommeil_bebe.webp"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" /
+                            class="lazy-img">
                     </div>
                     <div style="padding: 1.5rem;">
                         <span
@@ -1137,16 +1525,17 @@
                         </p>
                         <a href="blog-sommeil-bebe"
                             style="color: var(--brand-green); font-weight: 700; text-decoration: none;">Lire l'article
-                            &rarr;</a>
+                            →</a>
                     </div>
                 </article>
-
                 <!-- Article 3: Alimentation -->
                 <article
                     style="background: white; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.3s ease;">
                     <div style="height: 200px; overflow: hidden;">
-                        <img loading="lazy" src="images/blog_alimentation_bebe.webp" alt="Alimentation DME"
-                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                        <img alt="Atelier d'éveil sensoriel pour enfants chez Les P'tits Babadins" loading="lazy"
+                            src="/images/blog_alimentation_bebe.webp" data-src="images/blog_alimentation_bebe.webp"
+                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;" /
+                            class="lazy-img">
                     </div>
                     <div style="padding: 1.5rem;">
                         <span
@@ -1159,19 +1548,18 @@
                         </p>
                         <a href="blog-alimentation-dme"
                             style="color: var(--brand-green); font-weight: 700; text-decoration: none;">Lire l'article
-                            &rarr;</a>
+                            →</a>
                     </div>
                 </article>
             </div>
             <div class="text-center">
-                <a href="blog" class="btn btn-outline"
+                <a class="btn btn-outline" href="blog"
                     style="border-color: var(--brand-green); color: var(--brand-green);">Voir tous les articles</a>
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
-    <section id="faq" class="section-bg-white">
+    <section class="section-bg-white" id="faq">
         <div class="container" style="max-width: 900px;">
             <div class="text-center" style="margin-bottom: var(--spacing-xl);">
                 <h2 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem;">Questions Fréquentes</h2>
@@ -1179,7 +1567,6 @@
                     Tout ce que vous devez savoir pour l'accueil de votre enfant.
                 </p>
             </div>
-
             <div class="faq-accordion" style="display: flex; flex-direction: column;">
                 <!-- Q1 -->
                 <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
@@ -1197,7 +1584,6 @@
                         concernée vous contactera pour faire le point sur vos besoins.
                     </p>
                 </details>
-
                 <!-- Q2 -->
                 <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
                     <summary
@@ -1216,7 +1602,6 @@
                         Mode de Garde) de la CAF ainsi que d'un crédit d'impôt.
                     </p>
                 </details>
-
                 <!-- Q3 -->
                 <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
                     <summary
@@ -1233,7 +1618,6 @@
                         périscolaire dans certaines structures.
                     </p>
                 </details>
-
                 <!-- Q4 -->
                 <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
                     <summary
@@ -1252,7 +1636,6 @@
                         chaque âge et aux régimes spécifiques.
                     </p>
                 </details>
-
                 <!-- Q5 -->
                 <details class="faq-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
                     <summary
@@ -1289,7 +1672,6 @@
             }
         </style>
     </section>
-
     <section id="pre-inscription">
         <div class="container">
             <div
@@ -1301,14 +1683,13 @@
                     micro-crèches
                     pour garantir la qualité d'accueil.
                 </p>
-                <a href="pre-inscription" class="btn"
+                <a class="btn" href="pre-inscription"
                     style="background: white; color: var(--brand-blue-light);">Démarrer ma pré-inscription</a>
             </div>
         </div>
     </section>
-
     <!-- Newsletter Section -->
-    <section id="newsletter" class="section-bg-pink-light" style="padding: 4rem 0;">
+    <section class="section-bg-pink-light" id="newsletter" style="padding: 4rem 0;">
         <div class="container">
             <div
                 style="background: white; border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-md); max-width: 800px; margin: 0 auto; text-align: center;">
@@ -1320,14 +1701,15 @@
                     Rejoignez notre communauté de parents et recevez chaque mois des astuces d'experts, des idées
                     d'activités et nos actualités.
                 </p>
-
                 <form action="#" method="POST"
                     onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');"
                     style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto 1rem; flex-wrap: wrap;">
-                    <input type="email" placeholder="Votre adresse email" required
-                        style="flex: 1; padding: 1rem 1.5rem; border: 2px solid #eee; border-radius: 50px; outline: none; transition: border-color 0.3s; min-width: 250px;">
-                    <button type="submit" class="btn btn-secondary"
-                        style="padding: 1rem 2rem; border-radius: 50px; border: none; cursor: pointer; font-weight: 700;">Je
+                    <input placeholder="Votre adresse email" required=""
+                        style="flex: 1; padding: 1rem 1.5rem; border: 2px solid #eee; border-radius: 50px; outline: none; transition: border-color 0.3s; min-width: 250px;"
+                        type="email" />
+                    <button class="btn btn-secondary"
+                        style="padding: 1rem 2rem; border-radius: 50px; border: none; cursor: pointer; font-weight: 700;"
+                        type="submit">Je
                         m'inscris</button>
                 </form>
                 <p style="font-size: 0.85rem; color: #aaa; margin-top: 1rem;">
@@ -1343,28 +1725,30 @@
                     <h4>Les p’tits Babadins</h4>
                     <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
                         respect du rythme de l'enfant.</p>
-
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                        <a href="https://facebook.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://facebook.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                                height="24" loading="lazy" src="/images/icon_facebook.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://linkedin.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_linkedin.webp" alt="LinkedIn"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                                height="24" loading="lazy" src="/images/icon_linkedin.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://instagram.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://instagram.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Réseau National de Micro-Crèches"
+                                height="24" loading="lazy" src="/images/icon_instagram.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
                     </div>
                 </div>
@@ -1380,7 +1764,7 @@
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme">Alimentation & DME</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation &amp; DME</a></li>
                         <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
                         <li><a href="blog-motricite-libre">Motricité libre</a></li>
                         <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
@@ -1395,28 +1779,20 @@
                         <li><a href="contact">Contact Siège</a></li>
                     </ul>
                 </div>
+                
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
-                        href="politique-confidentialite">Politique de Confidentialité</a> | <a href="plan-du-site">Plan
+                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a
+                        href="plan-du-site">Plan
                         du site</a></p>
             </div>
         </div>
     </footer>
-
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-
-
     <!-- Back to Top Button -->
-
-
-
     <!-- Back to Top Button -->
-
-
-
-
 </body>
 
 </html>

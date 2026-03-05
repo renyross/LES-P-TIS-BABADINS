@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';"
+        http-equiv="Content-Security-Policy" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="1; mode=block" http-equiv="X-XSS-Protection" />
     <title>Pré-inscription Crèche - Demande de Place en Ligne | Les p’tits Babadins</title>
-    <meta name="description"
-        content="Formulaire de pré-inscription gratuit et sans engagement. Réservez votre place en micro-crèche en quelques clics. Réponse personnalisée." />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" async
-        defer></script>
-    <script type="module" src="main.js" defer></script>
-
+    <meta
+        content="Formulaire de pré-inscription gratuit et sans engagement. Réservez votre place en micro-crèche en quelques clics. Réponse personnalisée."
+        name="description">
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script defer="" src="main.js?v=11.1" type="module"></script>
     <style>
         .form-container {
             background: white;
@@ -79,182 +80,207 @@
             cursor: pointer;
         }
     </style>
+    </meta>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
 
 <body>
-    <nav class="navbar"><div class="logo"><a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150" height="45"></a></div><ul class="nav-links"><li><a href="creches">Nos Crèches</a></li><li><a href="pedagogie">Notre pédagogie</a></li><li><a href="entreprises">Vous êtes...</a></li><li><a href="recrutement">Recrutement</a></li><li><a href="reseau">Nous découvrir</a></li><li><a href="blog">Blog</a></li><li><a href="contact" class="btn btn-primary" style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li></ul><div class="mobile-menu-btn"><span></span><span></span><span></span></div></nav>
+    <nav class="navbar">
+        <div class="logo"><a href="index"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
+                    src="/images/logo.webp" width="150" /></a></div>
+        <ul class="nav-links">
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a class="btn btn-primary" href="contact"
+                    style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
+        </ul>
+        <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
+    </nav>
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
+            <a href="index" style="color: #6c757d;">Accueil</a> <span
                 style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Pré-inscription</span>
         </div>
     </div>
-
-
-    <header class="page-header section-bg-green-light"
-        style="background-image: linear-gradient(rgba(155, 197, 61, 0.8), rgba(0, 77, 113, 0.9));">
+    <header class="page-header"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/hero_child.webp'); background-position: center; background-size: cover; min-height: 350px; display: flex; align-items: center; justify-content: center; text-align: center; color: white;">
         <div class="container">
-            <h1>Réserver une place</h1>
-            <p>C'est simple, rapide et sans engagement.<br>Suivez les étapes pour valider votre demande.</p>
+            <h1 style="color: white; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Réserver une place
+            </h1>
+            <p style="font-size: 1.25rem; font-weight: 600; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">C'est simple,
+                rapide et sans engagement.<br />Suivez les étapes pour valider votre demande.</p>
         </div>
     </header>
-
     <section>
         <div class="container">
-            <form id="single-step-form" action="mailto:partenariat@ce-lpbx.com" method="POST" enctype="text/plain">
+            <form id="single-step-form">
                 <!-- Antipourriel (Honeypot) -->
                 <div style="display:none;">
                     <label>Si vous êtes un humain, laissez ce champ vide :</label>
-                    <input type="text" name="hp_field">
+                    <input name="hp_field" type="text" />
                 </div>
-
                 <!-- Section 1: L'Enfant -->
                 <h3 class="form-section-title" style="margin-top: 0.5rem;">L'Enfant</h3>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="child-name">Prénom et Nom de l'enfant</label>
-                        <input type="text" id="child-name" name="child-name" class="form-input" required
-                            placeholder="Ex: Lucas Durand">
+                        <input class="form-input" id="child-name" name="child-name" placeholder="Ex: Lucas Durand"
+                            required="" type="text" />
                         <small style="color: #999;">Ou "Enfant à naître"</small>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="birthdate">Date de naissance (ou prévue)</label>
-                        <input type="date" id="birthdate" name="birthdate" class="form-input" required>
+                        <input class="form-input" id="birthdate" name="birthdate" required="" type="date" />
                     </div>
                 </div>
-
                 <!-- Section 2: Les Parents -->
                 <h3 class="form-section-title">Coordonnées des parents</h3>
-
                 <h4
                     style="margin-bottom: 1rem; color: var(--brand-blue-dark); font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
                     Parent 1</h4>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="parent1-name">Nom complet (Parent 1)</label>
-                        <input type="text" id="parent1-name" name="parent1-name" class="form-input" required>
+                        <input class="form-input" id="parent1-name" name="parent1-name" required="" type="text" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="parent1-job">Profession (Parent 1)</label>
-                        <input type="text" id="parent1-job" name="parent1-job" class="form-input"
-                            placeholder="Ex: Cadre, Employé(e)...">
+                        <input class="form-input" id="parent1-job" name="parent1-job"
+                            placeholder="Ex: Cadre, Employé(e)..." type="text" />
                     </div>
                 </div>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="parent1-email">Email (Parent 1)</label>
-                        <input type="email" id="parent1-email" name="parent1-email" class="form-input" required
-                            placeholder="email@exemple.com">
+                        <input class="form-input" id="parent1-email" name="parent1-email"
+                            placeholder="email@exemple.com" required="" type="email" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="parent1-phone">Téléphone (Parent 1)</label>
-                        <input type="tel" id="parent1-phone" name="parent1-phone" class="form-input" required>
+                        <input class="form-input" id="parent1-phone" name="parent1-phone" required="" type="tel" />
                     </div>
                 </div>
-
                 <h4
                     style="margin: 2rem 0 1rem; color: var(--brand-blue-dark); font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
                     Parent 2</h4>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="parent2-name">Nom complet (Parent 2)</label>
-                        <input type="text" id="parent2-name" name="parent2-name" class="form-input">
+                        <input class="form-input" id="parent2-name" name="parent2-name" type="text" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="parent2-job">Profession (Parent 2)</label>
-                        <input type="text" id="parent2-job" name="parent2-job" class="form-input"
-                            placeholder="Ex: Artisan, Enseignant...">
+                        <input class="form-input" id="parent2-job" name="parent2-job"
+                            placeholder="Ex: Artisan, Enseignant..." type="text" />
                     </div>
                 </div>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="parent2-email">Email (Parent 2)</label>
-                        <input type="email" id="parent2-email" name="parent2-email" class="form-input"
-                            placeholder="email@exemple.com">
+                        <input class="form-input" id="parent2-email" name="parent2-email"
+                            placeholder="email@exemple.com" type="email" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="parent2-phone">Téléphone (Parent 2)</label>
-                        <input type="tel" id="parent2-phone" name="parent2-phone" class="form-input">
+                        <input class="form-input" id="parent2-phone" name="parent2-phone" type="tel" />
                     </div>
                 </div>
-
                 <!-- Section 3: Foyer -->
                 <h3 class="form-section-title">Informations Foyer</h3>
                 <div class="form-group">
                     <label class="form-label" for="address">Adresse postale</label>
-                    <input type="text" id="address" name="address" class="form-input" required
-                        placeholder="Numéro et nom de rue">
+                    <input class="form-input" id="address" name="address" placeholder="Numéro et nom de rue" required=""
+                        type="text" />
                 </div>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="zipcode">Code Postal</label>
-                        <input type="text" id="zipcode" name="zipcode" class="form-input" required
-                            placeholder="Ex: 75015">
+                        <input class="form-input" id="zipcode" name="zipcode" placeholder="Ex: 75015" required=""
+                            type="text" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="city">Ville</label>
-                        <input type="text" id="city" name="city" class="form-input" required placeholder="Ex: Paris">
+                        <input class="form-input" id="city" name="city" placeholder="Ex: Paris" required=""
+                            type="text" />
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="income">Revenu fiscal annuel du foyer (€)</label>
-                    <input type="number" id="income" name="income" class="form-input" placeholder="Ex: 45000">
+                    <input class="form-input" id="income" name="income" placeholder="Ex: 45000" type="number" />
                     <small style="color: #999;">Optionnel - Utile pour estimer les aides CAF</small>
                 </div>
-
                 <!-- Section 4: Recherche & Planning -->
-                <h3 class="form-section-title">Votre Recherche & Planning</h3>
+                <h3 class="form-section-title">Votre Recherche &amp; Planning</h3>
                 <div class="responsive-grid-2">
                     <div class="form-group">
                         <label class="form-label" for="creche">Crèche souhaitée</label>
-                        <select id="creche" name="creche" class="form-select" required>
+                        <select class="form-select" id="creche" name="creche" required="">
                             <option value="">-- Choisir une crèche --</option>
-                            <option value="Paris 15">Paris 15</option>
-                            <option value="Lyon 6">Lyon 6</option>
-                            <option value="Bordeaux">Bordeaux</option>
                             <option value="unknown">Je ne sais pas encore</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="start-date">Date d'entrée souhaitée</label>
-                        <input type="date" id="start-date" name="start-date" class="form-input" required>
+                        <input class="form-input" id="start-date" name="start-date" required="" type="date" />
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label class="form-label">Jours d'accueil souhaités</label>
                     <div class="checkbox-group">
-                        <label class="checkbox-label"><input type="checkbox" name="days" value="Lundi">
+                        <label class="checkbox-label"><input name="days" type="checkbox" value="Lundi" />
                             Lundi</label>
-                        <label class="checkbox-label"><input type="checkbox" name="days" value="Mardi">
+                        <label class="checkbox-label"><input name="days" type="checkbox" value="Mardi" />
                             Mardi</label>
-                        <label class="checkbox-label"><input type="checkbox" name="days" value="Mercredi">
+                        <label class="checkbox-label"><input name="days" type="checkbox" value="Mercredi" />
                             Mercredi</label>
-                        <label class="checkbox-label"><input type="checkbox" name="days" value="Jeudi">
+                        <label class="checkbox-label"><input name="days" type="checkbox" value="Jeudi" />
                             Jeudi</label>
-                        <label class="checkbox-label"><input type="checkbox" name="days" value="Vendredi">
+                        <label class="checkbox-label"><input name="days" type="checkbox" value="Vendredi" />
                             Vendredi</label>
                     </div>
                 </div>
-
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label" style="font-weight: 600;">
+                            <input name="rgpd-consent" required="" type="checkbox" />
+                            J'accepte que mes données soient transmises à la micro-crèche concernée. *
+                        </label>
+                    </div>
+                </div>
                 <p
-                    style="font-size: 0.9rem; color: #666; margin: 2rem 0 1.5rem; padding: 1rem; background: #eef1f4; border-radius: 8px;">
-                    🛡️ <strong>Engagement :</strong> Vos données sont traitées avec soin. En cliquant sur
-                    valider, vous acceptez que l'équipe Les p'tits Babadins vous recontacte pour donner suite à
+                    style="font-size: 0.9rem; color: #666; margin: 1rem 0 1.5rem; padding: 1rem; background: #eef1f4; border-radius: 8px;">
+                    🛡️ <strong>RGPD :</strong> Votre demande sera transmise uniquement à la micro-crèche concernée. Vos
+                    données sont traitées avec soin. En cliquant sur
+                    valider, vous acceptez que l'équipe Les p'tits Babadins ou la crèche sélectionnée vous recontacte
+                    pour donner suite à
                     votre dossier.
                 </p>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <button type="submit" class="btn btn-primary btn-cta"
-                        style="width: 100%; max-width: 400px; font-size: 1.1rem; padding: 1rem;">🚀 Finaliser ma
+                <div id="submit-container" style="text-align: center; margin-top: 2rem;">
+                    <button class="btn btn-primary btn-cta" id="submit-btn"
+                        style="width: 100%; max-width: 400px; font-size: 1.1rem; padding: 1rem;" type="submit">Finaliser
+                        ma
                         demande</button>
+                </div>
+                <!-- Success Message -->
+                <div id="success-message"
+                    style="display: none; margin-top: 2rem; padding: 2rem; background: #fff; color: #155724; border-radius: var(--radius-md); border: 2px solid #28a745; text-align: center; box-shadow: var(--shadow-md); animation: fadeIn 0.5s ease;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                    <h3 style="margin-bottom: 1rem; color: #155724; font-size: 1.5rem;">✓ Demande préparée !</h3>
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">Votre logiciel de messagerie (Outlook,
+                        Mail, Gmail...) va s'ouvrir pour envoyer le formulaire directement à la crèche.</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">Si rien ne se passe, veuillez nous
+                        contacter directement à :<br><strong
+                            style="color: var(--brand-blue-dark);">contact@ce-lpbx.com</strong></p>
                 </div>
             </form>
         </div>
     </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -262,28 +288,30 @@
                     <h4>Les p’tits Babadins</h4>
                     <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
                         respect du rythme de l'enfant.</p>
-
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                        <a href="https://facebook.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://facebook.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                                height="24" loading="lazy" src="/images/icon_facebook.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://linkedin.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_linkedin.webp" alt="LinkedIn"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                                height="24" loading="lazy" src="/images/icon_linkedin.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://instagram.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://instagram.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                                height="24" loading="lazy" src="/images/icon_instagram.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
                     </div>
                 </div>
@@ -299,7 +327,7 @@
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme">Alimentation & DME</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation &amp; DME</a></li>
                         <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
                         <li><a href="blog-motricite-libre">Motricité libre</a></li>
                         <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
@@ -316,54 +344,108 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
                         href="politique-confidentialite">Politique de Confidentialité</a> | <a
                         href="plan-du-site">Plan du site</a></p>
             </div>
         </div>
     </footer>
-
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-
-
     <!-- Back to Top Button -->
-
-
-
     <!-- Back to Top Button -->
-
-
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.getElementById('single-step-form');
 
             form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
                 // Honeypot check
                 const hp = form.querySelector('input[name="hp_field"]').value;
                 if (hp) {
-                    e.preventDefault();
                     console.warn("Spam detected");
                     return;
                 }
 
-                // reCAPTCHA Token generation (v3)
-                e.preventDefault();
-                grecaptcha.ready(function () {
-                    grecaptcha.execute('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', { action: 'submit' }).then(function (token) {
-                        // Add token to form and submit
-                        const tokenInput = document.createElement('input');
-                        tokenInput.type = 'hidden';
-                        tokenInput.name = 'recaptcha_token';
-                        tokenInput.value = token;
-                        form.appendChild(tokenInput);
-                        form.submit();
-                    });
-                });
+                // Gather form data
+                const formData = new FormData(form);
+                let body = "Nouvelle pré-inscription :\n\n";
+
+                // Section 1: L'Enfant
+                body += "--- L'ENFANT ---\n";
+                body += `Prénom et Nom: ${formData.get('child-name')}\n`;
+                body += `Date de naissance: ${formData.get('birthdate')}\n\n`;
+
+                // Section 2: Les Parents
+                body += "--- PARENT 1 ---\n";
+                body += `Nom: ${formData.get('parent1-name')}\n`;
+                body += `Profession: ${formData.get('parent1-job')}\n`;
+                body += `Email: ${formData.get('parent1-email')}\n`;
+                body += `Téléphone: ${formData.get('parent1-phone')}\n\n`;
+
+                if (formData.get('parent2-name')) {
+                    body += "--- PARENT 2 ---\n";
+                    body += `Nom: ${formData.get('parent2-name')}\n`;
+                    body += `Profession: ${formData.get('parent2-job')}\n`;
+                    body += `Email: ${formData.get('parent2-email')}\n`;
+                    body += `Téléphone: ${formData.get('parent2-phone')}\n\n`;
+                }
+
+                // Section 3: Foyer
+                body += "--- FOYER ---\n";
+                body += `Adresse: ${formData.get('address')}, ${formData.get('zipcode')} ${formData.get('city')}\n`;
+                body += `Revenu fiscal: ${formData.get('income')} €\n\n`;
+
+                // Section 4: Recherche
+                body += "--- RECHERCHE ---\n";
+                const crecheSelect = document.getElementById('creche');
+                const selectedOption = crecheSelect.options[crecheSelect.selectedIndex];
+                const crecheName = selectedOption ? selectedOption.text : formData.get('creche');
+                const recipientEmail = selectedOption ? selectedOption.getAttribute('data-email') : 'contact@ce-lpbx.com';
+
+                body += `Crèche: ${crecheName}\n`;
+                body += `Date d'entrée: ${formData.get('start-date')}\n`;
+
+                const days = [];
+                form.querySelectorAll('input[name="days"]:checked').forEach(cb => days.push(cb.value));
+                body += `Jours souhaités: ${days.join(', ')}\n\n`;
+
+                body += "--- METADONNÉES ---\n";
+                body += `Date/Heure soumission: ${new Date().toLocaleString()}\n`;
+                body += `URL d'origine: ${window.location.href}\n`;
+
+                // Automation Webhook JSON (Logged for future use)
+                const webhookPayload = {
+                    "parent_name": formData.get('parent1-name'),
+                    "parent_email": formData.get('parent1-email'),
+                    "parent_phone": formData.get('parent1-phone'),
+                    "code_postal": formData.get('zipcode'),
+                    "message": formData.get('income') ? `Revenu: ${formData.get('income')}€` : "N/A",
+                    "creche_selected": crecheName,
+                    "page_url": window.location.href,
+                    "date_submitted": new Date().toISOString(),
+                    "recipient_email": recipientEmail
+                };
+                console.log("Webhook Payload Preview:", webhookPayload);
+
+                const subject = `Pré-inscription Crèche - ${formData.get('parent1-name')}`;
+                const mailtoUrl = `mailto:${recipientEmail || 'contact@ce-lpbx.com'}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                // Show success message and update UI
+                const successMsg = document.getElementById('success-message');
+                const submitContainer = document.getElementById('submit-container');
+
+                if (successMsg) successMsg.style.display = 'block';
+                if (submitContainer) submitContainer.style.display = 'none';
+
+                // Small delay to let user see the UI change before redirect
+                setTimeout(() => {
+                    window.location.href = mailtoUrl;
+                }, 500);
             });
         });
     </script>
 </body>
 
 </html>
-```

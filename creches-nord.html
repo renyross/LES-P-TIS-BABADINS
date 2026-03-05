@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nos micro-crèches dans le Nord (59) | Les p’tits Babadins</title>
+<meta content="Trouvez une place en micro-crèche dans le Nord (59). Découvrez nos structures à Masny, Aniche, Wargnies-le-Grand et plus. Pédagogie active et bienveillante." name="description">
+<link href="https://lespetitsbabadins.com/creches-nord" rel="canonical"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<link href="hero.css" rel="stylesheet"/>
+<script defer="" src="main.js?v=11.1"></script>
+</meta>    <link rel="icon" type="image/png" href="/images/favicon.png" />
+</head>
+<body>
+<nav class="navbar">
+<div class="logo"><a href="index"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45" src="/images/logo.webp" width="150"/></a></div>
+<ul class="nav-links">
+<li><a href="reseau">Nous découvrir</a></li>
+<li><a class="active" href="creches">Nos Crèches</a></li>
+<li><a href="pedagogie">Notre pédagogie</a></li>
+<li><a href="entreprises">Vous êtes...</a></li>
+<li><a href="recrutement">Recrutement</a></li>
+<li><a class="btn btn-primary" href="contact" style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
+</ul>
+<div class="mobile-menu-btn"><span></span><span></span><span></span></div>
+</nav>
+<header class="page-header" style="background-image: url('/images/hero_reseau_community.webp');">
+<div class="container">
+<h1>Micro-crèches dans le Nord</h1>
+<p>Découvrez nos structures d'accueil dans le 59</p>
+</div>
+</header>
+<section>
+<div class="container">
+<div class="creches-grid" id="creches-list-container"></div>
+</div>
+</section>
+<footer>
+<div class="container">
+<div class="footer-bottom">
+<p>© 2026 Les p’tits Babadins.</p>
+</div>
+</div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof renderCreches === 'function') {
+                setTimeout(() => { renderCreches("59", "dept", "Nord"); }, 100);
+            }
+        });
+    </script>
+</body>
+</html>

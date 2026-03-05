@@ -1,17 +1,27 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-    <title>Trouver une micro-crèche Les p'tits Babadins | Carte & Inscriptions</title>
-    <meta name="description"
-        content="Trouvez la micro-crèche la plus proche de chez vous parmi nos plus de 110 structures en France. Inscription en ligne, pédagogie active et accueil de qualité pour votre enfant." />
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self';"
+        http-equiv="Content-Security-Policy" />
+    <meta content="strict-origin-when-cross-origin" name="referrer" />
+    <meta content="1; mode=block" http-equiv="X-XSS-Protection" />
+    <title>Micro-crèches Les p'tits Babadins : Trouvez votre place en crèche partout en France</title>
+    <meta
+        content="Découvrez notre réseau de +110 micro-crèches en France. Accueil bienveillant, pédagogie CGAP et Reggio Emilia et repas bio. Trouvez votre place et inscrivez-vous en ligne dès maintenant."
+        name="description">
+    <!-- Open Graph / Facebook -->
+    <meta content="website" property="og:type" />
+    <meta content="https://www.ce-lpbx.com/creches.html" property="og:url" />
+    <meta content="Micro-crèches Les p'tits Babadins : Trouvez votre place en crèche" property="og:title" />
+    <meta
+        content="Découvrez notre réseau de +110 micro-crèches. Accueil bienveillant, pédagogie CGAP et Reggio Emilia et repas bio."
+        property="og:description" />
+    <meta content="https://www.ce-lpbx.com/images/hero_creche_premium.webp" property="og:image" />
     <!-- LLM Optimization & Structured Data -->
     <script type="application/ld+json">
     {
@@ -45,12 +55,14 @@
       ]
     }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/webp" href="images/logo.webp">
-    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="/images/logo.webp" rel="icon" type="image/webp" />
+    <link as="image" fetchpriority="high" href="/images/hero_creche_premium.webp" rel="preload" />
+    <script defer="" src="main.js?v=19.0"></script>
     <style>
         .search-bar {
             max-width: 600px;
@@ -134,21 +146,91 @@
             color: var(--color-text-light);
             margin-bottom: 1rem;
         }
+
+        /* Filter Pills Styling */
+        .region-scroller {
+            display: flex;
+            gap: 0.8rem;
+            padding: 0.5rem 0 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .region-scroller::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .region-scroller::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 4px;
+        }
+
+        .region-pill {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 50px;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            color: #555;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: inherit;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+            white-space: nowrap;
+        }
+
+        .region-pill:hover {
+            border-color: var(--brand-blue-light);
+            color: var(--brand-blue-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .region-pill.active {
+            background: var(--brand-blue-dark);
+            color: white;
+            border-color: var(--brand-blue-dark);
+            box-shadow: 0 4px 12px rgba(45, 62, 80, 0.3);
+            font-weight: 600;
+        }
+
+        /* Animation for pills appearing */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .region-pill {
+            animation: fadeIn 0.4s ease backwards;
+        }
     </style>
+    </meta>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html"><img loading="lazy" src="images/logo.webp" alt="Les p’tits Babadins" width="150"
-                    height="45"></a></div>
+        <div class="logo"><a href="index"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
+                    src="/images/logo.webp" width="150" /></a></div>
         <ul class="nav-links">
-                        <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="creches">Nos Crèches</a></li>
             <li><a href="pedagogie">Notre pédagogie</a></li>
             <li><a href="entreprises">Vous êtes...</a></li>
             <li><a href="recrutement">Recrutement</a></li>
-            <li><a href="reseau">Nous découvrir</a></li>
             <li><a href="blog">Blog</a></li>
-            <li><a href="contact" class="btn btn-primary"
+            <li><a class="btn btn-primary" href="contact"
                     style="padding: 0.4rem 1.2rem; color: white;">Contactez‑nous</a></li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
@@ -156,14 +238,13 @@
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span style="margin: 0 0.5rem; color: #ccc;">/</span>
+            <a href="index" style="color: #6c757d;">Accueil</a> <span
+                style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Nos Crèches</span>
         </div>
     </div>
-
-
     <header class="page-header"
-        style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/creche_paris_classroom.webp'); background-position: center; background-size: cover; min-height: 450px; display: flex; align-items: center; justify-content: flex-start;">
+        style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('/images/hero_creche_premium.webp'); background-position: center; background-size: cover; background-repeat: no-repeat; background-color: #2d3e50; min-height: 450px; display: flex; align-items: center; justify-content: flex-start;">
         <div class="container">
             <h1
                 style="color: white !important; margin-bottom: 0.5rem; font-size: 3.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
@@ -173,78 +254,39 @@
                 Un réseau grandissant pour être au plus près de vous.</p>
         </div>
     </header>
-
     <div class="container">
         <div class="search-bar">
-            <input type="text" class="search-input" placeholder="Entrez votre ville ou code postal...">
-            <button class="search-clear" title="Effacer" id="clearSearch">✕</button>
-            <button class="btn btn-primary" id="searchBtn" style="padding: 0.5rem 1.5rem;">Rechercher</button>
+            <input class="search-input" placeholder="Ville, code postal ou région..." type="text" />
+            <button class="search-clear" id="clearSearch" title="Effacer">✕</button>
+            <div style="height: 24px; width: 1px; background: #eee; margin: 0 0.5rem;"></div>
+            <button class="btn btn-outline" id="geoBtn"
+                style="border: none; padding: 0.5rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; width: 40px; height: 40px;"
+                title="Autour de moi">
+                📍
+            </button>
+            <button class="btn btn-primary" id="searchBtn"
+                style="padding: 0.5rem 1.5rem; border-radius: 2rem; margin-left: 0.5rem;">Rechercher</button>
         </div>
-
         <!-- Active Filters Display -->
         <div id="active-filters"
-            style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; justify-content: center; min-height: 2rem;">
+            style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; justify-content: center; min-height: 0;">
             <!-- Tags will appear here -->
         </div>
-
-        <!-- Minimalist Filters -->
-        <div class="filters-container"
-            style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
-
-            <!-- Filter: Régions -->
-            <details class="filter-dropdown" style="position: relative;">
-                <summary class="btn btn-outline"
-                    style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid #eee; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: 600; color: var(--brand-blue-dark);">
-                    📍 Par Région
-                    <span style="font-size: 0.8rem;">▼</span>
-                </summary>
-                <div class="dropdown-content" id="filter-regions"
-                    style="position: absolute; top: 110%; left: 0; background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 280px; z-index: 20; display: grid; gap: 0.5rem; max-height: 300px; overflow-y: auto;">
-                    <!-- Dynamically populated -->
-                </div>
-            </details>
-
-            <!-- Filter: Départements -->
-            <details class="filter-dropdown" style="position: relative;">
-                <summary class="btn btn-outline"
-                    style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid #eee; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: 600; color: var(--brand-blue-dark);">
-                    🇫🇷 Par Département
-                    <span style="font-size: 0.8rem;">▼</span>
-                </summary>
-                <div class="dropdown-content dropdown-grid" id="filter-depts"
-                    style="position: absolute; top: 110%; left: 50%; transform: translateX(-50%); background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 320px; z-index: 20;">
-                    <!-- Dynamically populated -->
-                </div>
-            </details>
-
-            <!-- Filter: Villes -->
-            <details class="filter-dropdown" style="position: relative;">
-                <summary class="btn btn-outline"
-                    style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; background: white; border: 1px solid #eee; padding: 0.5rem 1.5rem; border-radius: 2rem; font-weight: 600; color: var(--brand-blue-dark);">
-                    🏙️ Par Ville
-                    <span style="font-size: 0.8rem;">▼</span>
-                </summary>
-                <div class="dropdown-content" id="filter-cities"
-                    style="position: absolute; top: 110%; right: 0; background: white; border: 1px solid #eee; border-radius: 1rem; padding: 1rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); width: 280px; z-index: 20; display: grid; gap: 0.5rem; max-height: 400px; overflow-y: auto;">
-                    <!-- Dynamically populated -->
-                </div>
-            </details>
+        <!-- Region Pills Scroller -->
+        <div class="region-scroller" id="region-pills" style="margin-bottom: 2.5rem;">
+            <!-- Dynamically populated -->
         </div>
-
         <div style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">
-            <p>Découvrez nos structures d'accueil partout en France. <br>
+            <p>Découvrez nos structures d'accueil partout en France. <br />
                 Vous ne trouvez pas de crèche à proximité ? <a href="pre-inscription"
                     style="color: var(--brand-blue-dark); font-weight: bold; text-decoration: underline;">Faites une
                     demande spontanée</a>, nous ouvrons régulièrement de nouvelles crèches !</p>
         </div>
-
         <div id="creches-list-container"
             style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--spacing-md); margin-bottom: var(--spacing-xl); min-height: 500px;">
             <!-- Content will be loaded dynamically via main.js -->
             <p>Chargement des crèches...</p>
         </div>
-    </div>
-
     </div>
 
     <!-- Section: Partnership / Expansion -->
@@ -257,17 +299,14 @@
                 Babadins dans votre commune.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="contact.html?subject=local" class="btn btn-primary"
+                <a class="btn btn-primary" href="contact.html?subject=local"
                     style="background: var(--brand-orange); border-color: var(--brand-orange);">Proposer un local</a>
-                <a href="entreprises" class="btn btn-outline"
+                <a class="btn btn-outline" href="entreprises"
                     style="color: var(--brand-blue-dark); border-color: var(--brand-blue-dark);">Devenir
                     partenaire</a>
             </div>
         </div>
     </section>
-
-
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -275,28 +314,27 @@
                     <h4>Les p’tits Babadins</h4>
                     <p>Réseau de micro-crèches modernes et bienveillantes. Partout en France. Une approche axée sur le
                         respect du rythme de l'enfant.</p>
-
                     <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                        <a href="https://facebook.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://facebook.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_facebook.webp" alt="Facebook"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Facebook" height="24" loading="lazy" src="/images/icon_facebook.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://linkedin.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://linkedin.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_linkedin.webp" alt="LinkedIn"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="LinkedIn" height="24" loading="lazy" src="/images/icon_linkedin.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
-                        <a href="https://instagram.com" target="_blank"
-                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                        <a href="https://instagram.com" onmouseout="this.style.transform='scale(1)'"
                             onmouseover="this.style.transform='scale(1.1)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img loading="lazy" src="images/icon_instagram.webp" alt="Instagram"
-                                style="width: 100%; height: 100%; object-fit: contain;">
+                            style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
+                            target="_blank">
+                            <img alt="Instagram" height="24" loading="lazy" src="/images/icon_instagram.webp"
+                                style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
                     </div>
                 </div>
@@ -312,7 +350,7 @@
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme">Alimentation & DME</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation &amp; DME</a></li>
                         <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
                         <li><a href="blog-motricite-libre">Motricité libre</a></li>
                         <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
@@ -329,26 +367,17 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
-                        href="politique-confidentialite">Politique de Confidentialité</a> | <a href="plan-du-site">Plan
+                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a
+                        href="plan-du-site">Plan
                         du site</a></p>
             </div>
         </div>
     </footer>
-
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-
-
     <!-- Back to Top Button -->
-
-
-
     <!-- Back to Top Button -->
-
-
-
-
 </body>
 
 </html>
