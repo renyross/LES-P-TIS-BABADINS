@@ -46,7 +46,7 @@ let crechesData = [
 
     { name: "Les P’tits Babadins Grussenheim", slug: "les-ptits-babadins-grussenheim", link: "creche-les-ptits-babadins-grussenheim", city: "Grussenheim", address: "62 route de Colmar", zip: "68320", phone: "03.89.27.55.17", email: "creche.grussenheim@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits Babadins de Hégenheim 1", slug: "les-ptits-babadins-de-hegenheim-1", link: "creche-les-ptits-babadins-de-hegenheim-1", city: "Hegenheim", address: "30 rue des Landes", zip: "68220", phone: "06 63 01 97 03", email: "creche.hegenheim1@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Montivilliers", slug: "les-ptits-babadins-montivilliers", link: "creche-les-ptits-babadins-montivilliers", city: "Montivilliers", address: "3 impasse Edgar Degas", zip: "76290", phone: "09 73 39 65 98", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins Montivilliers", slug: "les-ptits-babadins-montivilliers", link: "creche-les-ptits-babadins-montivilliers", city: "Montivilliers", address: "3 impasse Edgar Degas", zip: "76290", phone: "09 73 39 65 98", email: "creche.montivilliers@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Saint Chamond", slug: "les-ptits-babadins-saint-chamond", link: "creche-les-ptits-babadins-saint-chamond", city: "Saint Chamond", address: "2A rue Marc Seguin", zip: "42400", phone: "07 61 69 28 60", active: true, hours: "7h30 - 18h30" },
 
     // --- New Additions (2025 Refinement) ---
