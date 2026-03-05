@@ -93,7 +93,7 @@ let crechesData = [
     { name: "Coccinelle", slug: "coccinelle", link: "creche-coccinelle", city: "St Barthelemy d'Anjou", address: "2 rue de la Morellerie", zip: "49124", phone: "06.15.52.90.31", email: "eva.zara@hotmail.fr", active: true, hours: "7h30 - 18h30" },
     { name: "Micro- Crèche La Fayette", slug: "micro--creche-la-fayette", link: "creche-micro-creche-la-fayette", city: "Angers", address: "26 rue de Brissac", zip: "49000", active: true, hours: "7h30 - 18h30" },
     { name: "La Cabane des doudous", slug: "la-cabane-des-doudous", link: "creche-la-cabane-des-doudous", city: "St Jean de Boiseau", address: "Impasse des Forgerons", zip: "44640", phone: "06.60.39.21.07", email: "olivier.landrieau@bbox.fr", active: true, hours: "7h45 à 18h30" },
-    { name: "Choupie et Bibou", slug: "choupie-et-bibou", link: "creche-choupie-et-bibou", city: "St Jean de Boiseau", address: "Impasse des Forgerons", zip: "44640", active: true, hours: "7h45 à 18h30" },
+    { name: "Choupie et Bibou", slug: "choupie-et-bibou", link: "creche-choupie-et-bibou", city: "St Jean de Boiseau", address: "Impasse des Forgerons", zip: "44640", email: "olivier.landrieau@bbox.fr", active: true, hours: "7h45 à 18h30" },
     { name: "Lililou Micro-Creche", slug: "lililou-micro-creche", link: "creche-lililou-micro-creche", city: "La Chapelle sur Erdre", address: "1 bis rue Newton", zip: "44240", phone: "06.86.15.62.18", email: "lachapellesurerdre@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
 
     // --- New Additions (Image Source 2026) ---
