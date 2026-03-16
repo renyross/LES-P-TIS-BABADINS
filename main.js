@@ -1,13 +1,13 @@
 let crechesData = [
     // --- Group 1: From Initial Lists (Enriched) ---
-    { name: "Les P'tits Babadins de Marssac sur Tarn", slug: "marssac-sur-tarn", link: "creche-marssac-sur-tarn", city: "Marssac sur Tarn", address: "9 avenue de la Pelatié", zip: "81150", phone: "09 70 75 65 39", email: "direction.marssacsurtarn@lespetitsbabadins.com", active: true, hours: "07h30 - 19h00" },
+    { name: "Les P'tits Babadins de Marssac sur Tarn", slug: "marssac-sur-tarn", link: "creche-marssac-sur-tarn", city: "Marssac sur Tarn", address: "Zac Rieumas, 9 avenue de la Pelatié", zip: "81150", phone: "06.56.67.49.65", email: "creche.marssac@ce-lpbx.com", active: true, hours: "07h30 - 19h00" },
     { name: "Les P’tits Babadins de Mellac", slug: "les-ptits-babadins-de-mellac", link: "creche-les-ptits-babadins-de-mellac", city: "Mellac", address: "20 rue Ferdinand Buisson", zip: "29300", phone: "07 69 63 40 66", email: "mellac@lespetitsbabadins.com", active: true, hours: "07h00 - 19h00" },
     { name: "Les p'tits babadins de Quimperlé", slug: "les-ptits-babadins-de-quimperle", link: "creche-les-ptits-babadins-de-quimperle", city: "Quimperlé", address: "2 rue d'Athenry", zip: "29300", phone: "07 69 63 40 66", email: "quimperle@lespetitsbabadins.com", active: true, hours: "07h00 - 19h00" },
     { name: "Au Pays des Sens", slug: "au-pays-des-sens", link: "creche-au-pays-des-sens", city: "Saint Germain du Puy", address: "1 allée colette", zip: "18390", phone: "02 48 24 17 52 / 07 69 09 12 62", email: "creche.aupaysdessens@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins de Souppes", slug: "les-ptits-babadins-de-souppes", link: "creche-les-ptits-babadins-de-souppes", city: "Souppes-sur-Loing", address: "2 Rue du Roulis", zip: "77460", phone: "07 81 11 16 60", email: "souppes@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
-    { name: "Les P’tits Babadins 79260 La Crèche", slug: "les-ptits-babadins-79260-la-creche", link: "creche-les-ptits-babadins-79260-la-creche", city: "La Crèche", address: "ZA Baussais 7 rue Vasco de Gama", zip: "79260", phone: "06 19 64 60 89", email: "direction.lacreche@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Souppes", slug: "les-ptits-babadins-de-souppes", link: "creche-les-ptits-babadins-de-souppes", city: "Souppes-sur-Loing", address: "2 Rue du Roulis", zip: "77460", phone: "07 81 11 16 60", email: "creche.souppes@ce-lpbx.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les P’tits Babadins 79260 La Crèche", slug: "les-ptits-babadins-79260-la-creche", link: "creche-les-ptits-babadins-79260-la-creche", city: "La Crèche", address: "7 rue Vasco de Gama - ZA Baussais", zip: "79260", phone: "06 19 64 60 89", email: "lacreche@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
 
-    { name: "Les P’tits Babadins Pordic", slug: "les-ptits-babadins-pordic", link: "creche-les-ptits-babadins-pordic", city: "Pordic", address: "Zone de Kéribet (en face de Les Compagnons des Saisons)", zip: "22590", phone: "02 96 78 07 22", email: "creche.pordic@ce-lpbsx.com", active: true, hours: "7h30 - 19h" },
+    { name: "Les P’tits Babadins Pordic", slug: "les-ptits-babadins-pordic", link: "creche-les-ptits-babadins-pordic", city: "Pordic", address: "Zone de Kéribet, en face de l'Intermarché", zip: "22590", phone: "02 96 78 07 22", email: "creche.pordic@ce-lpbx.com", active: true, hours: "7h30 - 19h" },
     { name: "Crèche Expansion Savenay 1", slug: "creche-expansion-savenay-1", link: "creche-creche-expansion-savenay-1", city: "Savenay", address: "Parc d'Activité de la Colleraye", zip: "44260", phone: "06 66 17 81 42", email: "emilieguerin30@gmail.com", active: true, hours: "7h00 - 19h00 (Du lundi au samedi)" },
     { name: "Ptits Babadins Téloché", slug: "ptits-babadins-teloche", link: "creche-ptits-babadins-teloche", city: "Téloché", address: "ZA du Gué 1 impasse des Sources", zip: "72220", phone: "07 81 01 88 22", email: "teloche@lespetitsbabadins.com", active: true, hours: "7h00 - 18h45" },
     { name: "MC de Louargat", slug: "mc-de-louargat", link: "creche-mc-de-louargat", city: "Louargat", address: "Rue de la Mairie", zip: "22540", phone: "06 23 98 80 51", email: "stquayperros@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
@@ -17,12 +17,12 @@ let crechesData = [
     { name: "Les P’tits Babadins de Sigournais", slug: "les-ptits-babadins-de-sigournais", link: "creche-les-ptits-babadins-de-sigournais", city: "Sigournais", address: "2 rue des Vignes, Actipôle de Benêtre", zip: "85110", phone: "06 98 39 42 91", email: "creche.sigournais@ce-lpbx.com", active: true, hours: "7h00 - 19h00" },
     { name: "Les P’tits Babadins de Bournezeau", slug: "les-ptits-babadins-de-bournezeau", link: "creche-les-ptits-babadins-de-bournezeau", city: "Bournezeau", address: "31 Rue de l'Oiselière", zip: "85480", phone: "06 98 39 42 91", email: "creche.bournezeau@ce-lpbx.com", active: true, hours: "7h00 - 18h30" },
     { name: "Les P’tits Babadins de Grosbreuil", slug: "les-ptits-babadins-de-grosbreuil", link: "creche-les-ptits-babadins-de-grosbreuil", city: "Grosbreuil", address: "Rue des Sports", zip: "85440", phone: "06 98 39 42 91", email: "sigournais@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p’tits Babadins de Saint Aubin du Cormier", slug: "les-ptits-babadins-de-saint-aubin-du-cormier", link: "creche-les-ptits-babadins-de-saint-aubin-du-cormier", city: "Saint-Aubin-du-Cormier", address: "1 Rue du Trégor", zip: "35140", phone: "07 56 27 77 70", email: "questembert@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les p’tits Babadins de Saint Aubin du Cormier", slug: "les-ptits-babadins-de-saint-aubin-du-cormier", link: "creche-les-ptits-babadins-de-saint-aubin-du-cormier", city: "Saint-Aubin-du-Cormier", address: "1 Rue du Trégor", zip: "35140", phone: "07 52 08 46 12", email: "questembert@lespetitsbabadins.com", active: true, hours: "7h00 - 19h00" },
 
     // --- Group 2: New Additions (With Phone & Hours) ---
-    { name: "Les p’tits Babadins de Questembert", slug: "les-ptits-babadins-de-questembert", link: "creche-les-ptits-babadins-de-questembert", address: "2 Impasse du Verger", zip: "56230", city: "Questembert", phone: "07 56 27 77 70", active: true, hours: "7h30 - 19h00" },
-    { name: "Les p’tits Babadins de Melesse", slug: "les-ptits-babadins-de-melesse", link: "creche-les-ptits-babadins-de-melesse", address: "11 rue des Olivettes", zip: "35520", city: "Melesse", phone: "07 56 27 77 70", active: true, hours: "7h00 - 19h00" },
-    { name: "Les p’tits Babadins de Pleuven", slug: "les-ptits-babadins-de-pleuven", link: "creche-les-ptits-babadins-de-pleuven", address: "12 Ter Ty Keravec", zip: "29170", city: "Pleuven", phone: "07 56 27 77 70", active: true, hours: "7h30 - 19h00" },
+    { name: "Les p’tits Babadins de Questembert", slug: "les-ptits-babadins-de-questembert", link: "creche-les-ptits-babadins-de-questembert", address: "2 Impasse du Verger", zip: "56230", city: "Questembert", phone: "07 56 27 77 70", email: "severine.eon@ce-lpbx.com", active: true, hours: "7h30 - 19h00" },
+    { name: "Les p’tits Babadins de Melesse", slug: "les-ptits-babadins-de-melesse", link: "creche-les-ptits-babadins-de-melesse", address: "11 rue des Olivettes", zip: "35520", city: "Melesse", phone: "07 52 08 46 12", active: true, hours: "7h00 - 19h00" },
+    { name: "Les p’tits Babadins de Pleuven", slug: "les-ptits-babadins-de-pleuven", link: "creche-les-ptits-babadins-de-pleuven", address: "12 Ter Ty Keravec", zip: "29170", city: "Pleuven", phone: "07 52 08 46 12", active: true, hours: "7h30 - 19h00" },
 
     { name: "La Maison des Petits Maraichins", slug: "la-maison-des-petits-maraichins", link: "creche-la-maison-des-petits-maraichins", address: "30 Rue du Maréchal Joffre", zip: "85300", city: "Challans", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
     { name: "La Villa des Petits Garnachois", slug: "la-villa-des-petits-garnachois", link: "creche-la-villa-des-petits-garnachois", address: "Rue des Ciseleurs", zip: "85710", city: "La Garnache", phone: "07 55 60 75 11", active: true, hours: "7h30 - 19h00" },
@@ -38,9 +38,9 @@ let crechesData = [
     { name: "Les P’tits Babadins St Vincent de Paul", slug: "les-ptits-babadins-st-vincent-de-paul", link: "creche-les-ptits-babadins-st-vincent-de-paul", address: "490 rue de la cantère - Zone d'activités", zip: "40990", city: "Saint-Vincent-de-Paul", phone: "07 44 41 76 34", email: "creche.svdp@ce-lpbx.com", active: true, hours: "7h30 - 19h" },
     { name: "Les p’tits Babadins St-Aubin-sur-Scie", slug: "les-ptits-babadins-st-aubin-sur-scie", link: "creche-les-ptits-babadins-st-aubin-sur-scie", address: "35 Rue Neuve", zip: "76550", city: "Saint-Aubin-sur-Scie", phone: "07 66 91 96 65", active: true, hours: "7h30 - 18h30" },
     { name: "Micro-crèche Les P’tits Babadins d’Olivet", slug: "micro-creche-les-ptits-babadins-dolivet", link: "creche-micro-creche-les-ptits-babadins-dolivet", address: "29 Rue Jules Marie Simon", zip: "45160", city: "Olivet", phone: "07 56 10 73 77", active: true, hours: "7h00 - 19h00" },
-    { name: "Les P’tits Babadins de Tavers", slug: "les-ptits-babadins-de-tavers", link: "creche-les-ptits-babadins-de-tavers", address: "11 Rue des Grattelievres", zip: "45190", city: "Tavers", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
-    { name: "Les P’tits Babadins Meung-sur-Loire", slug: "les-ptits-babadins-meung-sur-loire", link: "creche-les-ptits-babadins-meung-sur-loire", address: "3 Mail des Trois Roses", zip: "45130", city: "Meung-sur-Loire", phone: "07 56 10 73 77", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Coëtmieux", slug: "les-ptits-babadins-de-coetmieux", link: "creche-les-ptits-babadins-de-coetmieux", address: "30 bis rue de la Truite", zip: "22400", city: "Coëtmieux", phone: "06 02 71 58 96", email: "creche.coetemieux@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P’tits Babadins de Tavers", slug: "les-ptits-babadins-de-tavers", link: "creche-les-ptits-babadins-de-tavers", address: "11 rue des Gratelièvres", zip: "45190", city: "Tavers", phone: "06 02 26 63 27", email: "creche.tavers@ce-lpbx.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les P’tits Babadins Meung-sur-Loire", slug: "les-ptits-babadins-meung-sur-loire", link: "creche-les-ptits-babadins-meung-sur-loire", address: "3 mail des trois roses", zip: "45130", city: "Meung-sur-Loire", phone: "07.80.16.88.03", email: "creche.msl@ce-lpbx.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les p'tits Babadins de Coëtmieux", slug: "les-ptits-babadins-de-coetmieux", link: "creche-les-ptits-babadins-de-coetmieux", address: "30 bis rue de la Truite", zip: "22400", city: "Coëtmieux", phone: "06 02 71 58 96", email: "creche.coetmieux@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Avermes", slug: "les-ptits-babadins-avermes", link: "creche-les-ptits-babadins-avermes", city: "Avermes", address: "11 Rue des Saccarauds", zip: "03000", phone: "06 62 30 64 40", active: true, hours: "7h30 - 18h30" },
     { name: "Les P’tits Babadins Baldersheim", slug: "les-ptits-babadins-baldersheim", link: "creche-les-ptits-babadins-baldersheim", city: "Baldersheim", address: "ZA 10 Rue des Chasseurs", zip: "68390", phone: "06 63 01 97 03", active: true, hours: "7h30 - 18h30" },
 
@@ -55,7 +55,7 @@ let crechesData = [
     { name: "Les p'tits Babadins de Hégenheim 2", slug: "les-ptits-babadins-de-hegenheim-2", link: "creche-les-ptits-babadins-de-hegenheim-2", city: "Hegenheim", address: "30 A rue des Landes", zip: "68220", phone: "06 63 01 97 03", email: "creche.hegenheim2@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Au Saut du nid", slug: "au-saut-du-nid", link: "creche-au-saut-du-nid", city: "Tignieu-Jameyzieu", address: "38 boulevard Ampère", zip: "38230", phone: "06.70.03.61.55", email: "creche.tignieujameyzieu@gmail.com", active: true, hours: "7h30 - 18h30" },
     { name: "Tintinna Bulle", slug: "tintinna-bulle", link: "creche-tintinna-bulle", city: "Tignieu-Jameyzieu", address: "Boulevard Ampère", zip: "38230", email: "creche.tignieujameyzieu@gmail.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Faye d'Anjou", slug: "les-ptits-babadins-de-faye-danjou", link: "creche-faye-danjou", city: "Faye d'Anjou", address: "4 ter rue des monts", zip: "49380", phone: "07 44 98 74 20", email: "mcfayedanjou@gmail.com", active: true, hours: "7h00 - 19h00" },
+    { name: "Les p'tits Babadins de Faye d'Anjou", slug: "faye-danjou", link: "creche-faye-danjou", city: "Faye d'Anjou", address: "4 ter rue des monts", zip: "49380", phone: "07 44 98 74 20", email: "mcfayedanjou@gmail.com", active: true, hours: "7h00 - 19h00" },
     { name: "Les p'tits Babadins de Miremont", slug: "les-ptits-babadins-de-miremont", link: "creche-les-ptits-babadins-de-miremont", city: "Miremont", address: "4 Voie Eris, ZA Pompignal", zip: "31190", phone: "07.62.70.23.04", email: "creche.miremont@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits papailloux", slug: "les-ptits-papailloux", link: "creche-les-ptits-papailloux", city: "Angers", address: "24, place Terra Botanica", zip: "49100", phone: "06.62.10.19.83", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits charrettes", slug: "les-ptits-charrettes", link: "creche-les-ptits-charrettes", city: "La Roche-sur-Yon", address: "Résidence Le Tamaris, Les Prairies d’Eden", zip: "85000", email: "creche.bourgsouslaroche@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
@@ -85,8 +85,8 @@ let crechesData = [
     { name: "Crèche Les P'tits Babadins de St Martin - Le petit monde de Léopold", slug: "creche-les-ptits-babadins-de-st-martin-le-petit-monde-de-leopold", link: "creche-creche-les-ptits-babadins-de-st-martin-le-petit-monde-de-leopold", city: "Saint-Martin-du-Tertre", address: "17 avenue Jacques Duclos", zip: "95270", phone: "01.30.35.92.10", active: true, hours: "7h - 19h" },
     { name: "Crèche Les P'tits Babadins de Belloy", slug: "creche-les-ptits-babadins-de-belloy", link: "creche-creche-les-ptits-babadins-de-belloy", city: "Belloy-en-France", address: "3 place Sainte-Beuve", zip: "95270", phone: "01.30.35.08.39", active: true, hours: "7h - 19h" },
     { name: "Crèche Les P'tits Babadins de Pernety", slug: "creche-les-ptits-babadins-de-pernety", link: "creche-creche-les-ptits-babadins-de-pernety", city: "Paris", address: "47 rue Bénard", zip: "75014", phone: "01.88.75.02.15", active: true, hours: "8h30 - 19h" },
-    { name: "Micro-crèche les p'tits Babadins Sisteron", slug: "micro-creche-les-ptits-babadins-sisteron", link: "creche-micro-creche-les-ptits-babadins-sisteron", city: "Sisteron", address: "27 Allée des Tilleuls", zip: "04200", phone: "04-92-64-95-15", email: "virginie.herlemont@ce-lpbx.com", active: true, hours: "6h - 20h" },
-    { name: "Les p'tits Babadins de Boissy-le-Châtel", slug: "les-ptits-babadins-de-boissy-le-chatel", link: "creche-les-ptits-babadins-de-boissy-le-chatel", city: "Boissy-le-Châtel", address: "17 Bis ZAC des 18 Arpents", zip: "77169", phone: "01 88 75 01 02 / 07 44 41 46 32", active: true, hours: "7h30 - 19h" },
+    { name: "Micro-crèche les p'tits Babadins Sisteron", slug: "micro-creche-les-ptits-babadins-sisteron", link: "creche-micro-creche-les-ptits-babadins-sisteron", city: "Sisteron", address: "27 Allée des Tilleuls", zip: "04200", phone: "06 74 28 95 10", email: "mathilde.moreau@ce-lpbx.com", active: true, hours: "6h - 20h" },
+    { name: "Les p'tits Babadins de Boissy-le-Châtel", slug: "les-ptits-babadins-de-boissy-le-chatel", link: "creche-les-ptits-babadins-de-boissy-le-chatel", city: "Boissy-le-Châtel", address: "Rue de la ZAC des 18 Arpents", zip: "77169", phone: "07.44.41.46.32", active: true, hours: "7h30 - 19h" },
     { name: "Les P’tits Babadins de Clamart", slug: "les-ptits-babadins-de-clamart", link: "creche-les-ptits-babadins-de-clamart", city: "Clamart", address: "32 rue Georges Huguet", zip: "92140", phone: "01 88 75 02 30 / 07 44 47 88 96", email: "creche.clamart@ce-lpbx.com", active: true, hours: "8h00 - 19h00" },
 
     // --- New Additions (Manual Batch) ---
@@ -98,9 +98,18 @@ let crechesData = [
 
     // --- New Additions (Image Source 2026) ---
     { name: "Les p'tits Babadins de Saint-Maixent-l'École", slug: "les-ptits-babadins-de-saint-maixent-lecole", link: "creche-les-ptits-babadins-de-saint-maixent-lecole", city: "Saint-Maixent-l'École", address: "28 rue d'Horsham", zip: "79400", phone: "06 19 64 60 89", email: "creche.saintmaixent@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Janzé", slug: "les-ptits-babadins-de-janze", link: "creche-les-ptits-babadins-de-janze", city: "Janzé", address: "18 bis rue de la Houlette", zip: "35150", phone: "07 52 08 46 12", email: "benedicte.clediere@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Guichen", slug: "les-ptits-babadins-de-guichen", link: "creche-les-ptits-babadins-de-guichen", city: "Guichen", address: "24 rue Denis Papin", zip: "35580", phone: "07 52 08 46 12", email: "benedicte.clediere@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
-    { name: "Les p'tits Babadins de Rennes 2 Sud Est", slug: "les-ptits-babadins-rennes-2-sud-est", link: "creche-les-ptits-babadins-rennes-2-sud-est", city: "Noyal-Châtillon-sur-Seiche", address: "2 rue Ambroisine Garnier", zip: "35230", phone: "07 49 72 97 18", email: "benedicte.clediere@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Babadins de Janzé", slug: "les-ptits-babadins-de-janze", link: "creche-les-ptits-babadins-de-janze", city: "Janzé", address: "18 bis rue de la Houlette", zip: "35150", phone: "07 52 08 46 12", email: "Creche.janze1@ce-lpbx.com", active: true, hours: "7h30 - 19h" },
+    { name: "Les p'tits Babadins de Guichen", slug: "les-ptits-babadins-de-guichen", link: "creche-les-ptits-babadins-de-guichen", city: "Guichen", address: "24 rue Denis Papin", zip: "35580", phone: "07 52 08 46 12", email: "Creche.guichen@ce-lpbx.com", active: true, hours: "7h30 - 19h" },
+    { name: "Les p'tits Babadins de Noyal-Châtillon-sur-Seiche", slug: "les-ptits-babadins-noyal-chatillon-sur-seiche", link: "creche-les-ptits-babadins-noyal-chatillon-sur-seiche", city: "Noyal-Châtillon-sur-Seiche", address: "30 rue de saint Erblon", zip: "35230", phone: "07 52 08 46 12", email: "Creche.noyal@ce-lpbx.com", active: true, hours: "7h30 - 19h", capacity: 12 },
+    { name: "Les p'tits Babadins de Rennes", slug: "les-ptits-babadins-de-rennes", link: "creche-les-ptits-babadins-de-rennes", city: "Rennes", address: "2 rue ambroisine Garnier Leray", zip: "35000", phone: "07 52 08 46 12", email: "Creche.rennes@ce-lpbx.com", active: true, hours: "7h30 - 19h" },
+    { name: "Les p'tits Babadins de Janzé 2", slug: "les-ptits-babadins-de-janze-2", link: "creche-les-ptits-babadins-de-janze-2", city: "Janzé", address: "184 rue de la Houlette", zip: "35150", phone: "07.52.08.46.12/ 07.66.82.25.71", active: true, hours: "7h30 - 19h" },
+    { name: "Les p'tits Babadins de Rennes ZI SUD EST", slug: "les-ptits-babadins-de-rennes-zi-sud-est", link: "creche-les-ptits-babadins-de-rennes-zi-sud-est", city: "Rennes", address: "2 rue Ambroisine Garnier Leray", zip: "35000", active: true, hours: "7h30 - 19h" },
+    { name: "La Ronde de Carnelle", slug: "la-ronde-de-carnelle", link: "creche-la-ronde-de-carnelle", city: "Saint-Martin-du-Tertre", address: "Halte Garderie Val d'Oise", zip: "95270", email: "laure.bouniol@ce-lpbx.com", active: true, hours: "7h - 19h" },
+    { name: "Les P'tits Babadins de St Agathon", slug: "les-ptits-babadins-de-st-agathon", link: "creche-les-ptits-babadins-de-st-agathon", city: "Saint-Agathon", address: "Chemin des écoliers", zip: "22200", phone: "07 44 44 31 84", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P'tits Pirates", slug: "les-ptits-pirates", link: "creche-les-ptits-pirates", city: "Lamballe", address: "74 Bis Rue de la Déhanne Maroué", zip: "22400", phone: "06 02 71 58 96", email: "creche.lamballe@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
+    { name: "Les P'tits Babadins de St Yvi", slug: "les-ptits-babadins-de-st-yvi", link: "creche-les-ptits-babadins-de-st-yvi", city: "Saint-Yvi", zip: "29140", active: true, hours: "7h30 - 18h30" },
+    { name: "Les p'tits Bababins de Puy l'évêque", slug: "les-ptits-bababins-de-puy-leveque", link: "creche-les-ptits-bababins-de-puy-leveque", city: "Puy-l'Évêque", zip: "46700", active: true, hours: "7h30 - 18h30" },
+    { name: "Aizenay", slug: "aizenay", link: "creche-aizenay", city: "Aizenay", zip: "85190", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits Babadins de Mainvilliers", slug: "les-ptits-babadins-de-mainvilliers", link: "creche-les-ptits-babadins-de-mainvilliers", city: "Mainvilliers", address: "4 rue Paul Emile Victor", zip: "28300", phone: "07 82 58 90 32", email: "creche.mainvilliers@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits Babadins de Luisant", slug: "les-ptits-babadins-de-luisant", link: "creche-les-ptits-babadins-de-luisant", city: "Luisant", address: "52 Rue du Val de la Cavée", zip: "28600", phone: "06 64 91 98 96", email: "creche.luisant@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits Babadins de Gellainville", slug: "les-ptits-babadins-de-gellainville", link: "creche-les-ptits-babadins-de-gellainville", city: "Gellainville", address: "3 Parc de l'Équerre", zip: "28630", phone: "06 64 91 98 96", email: "creche.gelainville@ce-lpbx.com", active: true, hours: "7h30 - 18h30" },
@@ -110,7 +119,7 @@ let crechesData = [
     { name: "Les p'tits Babadins de Saint-Quay-Perros", slug: "les-ptits-babadins-de-saint-quay-perros", link: "creche-les-ptits-babadins-de-saint-quay-perros", city: "Saint-Quay-Perros", address: "8 rue résidence de Kreas Hent", zip: "22700", phone: "06 23 98 08 51", email: "stquayperros@lespetitsbabadins.com", active: true, hours: "7h30 - 18h30" },
     { name: "Les p'tits Babadins de Bize-Minervois", slug: "les-ptits-babadins-de-bize-minervois", link: "creche-les-ptits-babadins-de-bize-minervois", city: "Bize-Minervois", address: "3 Rue des Vignerons", zip: "11120", phone: "06 83 01 96 93", active: true, hours: "7h30 - 18h30" },
     { name: "Crèches Expansion Saint Malo", slug: "creche-saint-malo", link: "creche-saint-malo", city: "Saint Malo", address: "16 rue de la croix Desilles", zip: "35400", email: "creche.saintmalo@ce-lpbx.com", active: true, hours: "07h00 - 19h00" },
-    { name: "Les p'tits Babadins de Mazères", slug: "les-ptits-babadins-de-mazeres", link: "creche-les-ptits-babadins-de-mazeres", city: "Mazères", address: "16 Rue des Acacias", zip: "33210", phone: "09 52 70 60 68", active: true, hours: "07h30 - 18h30" },
+    { name: "Les p'tits Babadins de Mazères", slug: "les-ptits-babadins-de-mazeres", link: "creche-les-ptits-babadins-de-mazeres", city: "Mazères", address: "16 Rue des Acacias", zip: "33210", phone: "07 49 89 35 94", active: true, hours: "07h30 - 18h30" },
     { name: "Crèches Expansion Livre sur Changeon", slug: "creches-expansion-livre-sur-changeon", link: "creche-creches-expansion-livre-sur-changeon", city: "Livré-sur-Changeon", address: "8 Rue Jean Berçu", zip: "35450", email: "creche.livresurchangeon@ce-lpbx.com", active: true, hours: "7h - 19h", capacity: 12 },
     { name: "Les p'tits Babadins de Loiron", slug: "les-ptits-babadins-de-loiron", link: "creche-les-ptits-babadins-de-loiron", city: "Loiron-Ruillé", address: "18 rue du petit bois", zip: "53320", phone: "06 77 42 09 79", active: true, hours: "07h30 - 18h30" },
     { name: "Les p'tits Babadins de Laval", slug: "les-ptits-babadins-de-laval", link: "creche-les-ptits-babadins-de-laval", city: "Laval", address: "180 Boulevard Jean Jaurès", zip: "53000", phone: "06 77 42 09 79", active: true, hours: "07h30 - 18h30" },
@@ -126,189 +135,22 @@ let crechesData = [
 const removals = [
     'Ronron et Zébulon', 'Le refuge des Galopins', "Les p'tits rigolos", 'Le parc des câlinous', 'Le nid des Galopins', 'Les Bébés Du Causse',
     'Perlette Et Pimpin', 'Les Bébés Du Bouldou', 'Chatouilles', 'Les Bébés Du Comtal', 'Les Bébés Du Moulin', 'Happy & Cie',
-    'Les Bébés De Laguarigue', 'Les Bébés Du Faubourg', 'La cabane des Galopins'
+    'Les Bébés De Laguarigue', 'Les Bébés Du Faubourg', 'La cabane des Galopins',
+    'Les P’tits Babadins de Mellac', 'Les p\'tits babadins de Quimperlé', 'Au Pays des Sens', 'Crèche Expansion Savenay 1', 'Ptits Babadins Téloché',
+    'MC de Louargat', 'Les p\'tits Babadins de Wargnies le Grand', 'Les p\'tits Babadins de Lorient', 'Les P’tits Babadins de Pont Saint Esprit',
+    'Les P’tits Babadins de Sigournais', 'Les P’tits Babadins de Bournezeau', 'Les P’tits Babadins de Grosbreuil', 'La Maison des Petits Maraichins',
+    'La Villa des Petits Garnachois', 'Les P’tits Babadins de St Hilaire', 'Les p\'tits Babadins de Quéven', 'La Ville Dieu Crèche',
+    'Les P’tits Babadins Perpignan', 'Les P’tits Babadins Avermes', 'Les P’tits Babadins Baldersheim', 'Les P’tits Babadins Grussenheim',
+    'Les P’tits Babadins Montivilliers', 'Les P’tits Babadins Saint Chamond', 'Au Saut du nid', 'Tintinna Bulle', 'Les p\'tits charrettes',
+    'Les p\'tits Babadins de Masny', 'Les p\'tits Bababins d\'Aniche', 'Les p\'tits Babadins de Beuvry', 'Les p\'tits Babadins de Etival lès le Mans',
+    'Les p\'tits Babadins de Saint Nicolas de Redon', 'Les p’tits Babadins de Pasquis 2', 'Le Grandchamp des Enfants', 'Les enfants des Fontaines',
+    'A Petits Pas', 'Les Lutins du Bois Joli', 'Les p\'tits Babadins de Saveuse', 'Les p\'tit Babadins de Poullainville 2', 'Les p\'tits Babadins de Aubenas',
+    'Micro-crèche Les Singulières', 'Micro-crèche Abolena', 'Bastida', 'Micro-crèche Castel', 'Micro-crèche du Meyrol'
 ];
 
 crechesData = crechesData.filter(c => !removals.includes(c.name));
-document.addEventListener('DOMContentLoaded', () => {
-    console.log("Les p’tits Babadins - Site chargé");
-
-    const creches = typeof crechesData !== 'undefined' ? crechesData : [];
-
-    // LLM Optimization: Generate dynamic structured data for all crèches
-    generateCrechesStructuredData();
-
-    // --- ANIMATED COUNTERS ---
-    const counters = document.querySelectorAll('.counter');
-    const speed = 200; // The lower the slower
-
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                // Handle non-numeric content if refresh happens
-                const currentText = counter.innerText.replace(/\D/g, '');
-                const count = +currentText;
-
-                // Lower inc to slow and higher to slow
-                const inc = target / speed;
-
-                if (count < target) {
-                    // Check if we need to add '%' or '+'
-                    if (target === 98) {
-                        counter.innerText = Math.ceil(count + inc) + "%";
-                    } else if (target === 110 || target === 2000) {
-                        counter.innerText = Math.ceil(count + inc) + "+";
-                    } else {
-                        counter.innerText = Math.ceil(count + inc);
-                    }
-                    setTimeout(updateCount, 20);
-                } else {
-                    counter.innerText = target + (target === 98 ? "%" : (target === 110 || target === 2000 ? "+" : ""));
-                }
-            };
-            updateCount();
-        });
-    };
-
-    // Trigger animation when section is in view
-    let animated = false;
-    const sectionObserver = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !animated) {
-                animateCounters();
-                animated = true;
-                observer.unobserve(entry.target); // Run once
-            }
-        });
-    }, { threshold: 0.5 }); // 50% of the section visible
-
-    // Observe the stats grid or a section containing counters
-    const statsSection = document.querySelector('.stats-grid');
-    if (statsSection) {
-        sectionObserver.observe(statsSection);
-    }
-
-    // Back to Top Button Logic
-    const backToTopBtn = document.getElementById('backToTop');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.style.display = 'flex';
-                // Small delay to allow display flex to apply before opacity transition if we wanted intricate anims
-                // But for now, simple display toggle is fine or we can use opacity
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
-        });
-
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
 
 
-    // Mobile Menu Toggle
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    let overlay = document.querySelector('.menu-overlay');
-
-    // Create overlay if it doesn't exist
-    if (!overlay) {
-        overlay = document.createElement('div');
-        overlay.className = 'menu-overlay';
-        document.body.appendChild(overlay);
-    }
-
-    if (mobileBtn) {
-        const toggleMenu = () => {
-            mobileBtn.classList.toggle('active');
-            navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-        };
-
-        mobileBtn.addEventListener('click', toggleMenu);
-        overlay.addEventListener('click', toggleMenu);
-
-        // Close menu when clicking a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-    }
-
-    // Smooth Scroll for Anchor Links (polishing behavior)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#' || targetId.includes(' ')) return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault(); // Only prevent default if it's purely a scroll
-                // Close mobile menu if open
-                if (window.innerWidth <= 768 && navLinks) {
-                    navLinks.style.display = 'none';
-                }
-
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Reveal animations on scroll
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.value-card, h2, .btn').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
-    });
-
-    // Add the visible class style dynamically
-    const style = document.createElement('style');
-    style.innerHTML = `
-    .visible {
-    opacity: 1!important;
-    transform: translateY(0)!important;
-}
-`;
-    document.head.appendChild(style);
-
-    // --- GEOGRAPHIC MAPPINGS ---
-    const DEPT_MAP = {
-        "02": "Aisne", "03": "Allier", "07": "Ardèche", "17": "Charente-Maritime",
-        "18": "Cher", "22": "Côtes-d'Armor", "26": "Drôme", "29": "Finistère",
-        "30": "Gard", "31": "Haute-Garonne", "33": "Gironde", "35": "Ille-et-Vilaine",
-        "38": "Isère", "42": "Loire", "44": "Loire-Atlantique", "45": "Loiret",
-        "49": "Maine-et-Loire", "56": "Morbihan", "59": "Nord", "62": "Pas-de-Calais",
-        "66": "Pyrénées-Orientales", "68": "Haut-Rhin", "71": "Saône-et-Loire",
-        "72": "Sarthe", "76": "Seine-Maritime", "77": "Seine-et-Marne", "78": "Yvelines",
-        "79": "Deux-Sèvres", "80": "Somme", "81": "Tarn", "84": "Vaucluse", "85": "Vendée"
-    };
-
-    // Proxy coordinates for main cities to enable "nearby" calculation
     const ZIP_COORDS = {
         "44000": [47.2184, -1.5536], // Nantes
         "44240": [47.2858, -1.5524], // La Chapelle sur Erdre
@@ -320,6 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "85000": [46.6705, -1.4260], // La Roche sur Yon
         "85300": [46.8437, -1.8741], // Challans
         "49000": [47.4784, -0.5632], // Angers
+        "49380": [47.2944, -0.5125], // Faye d'Anjou
+        "49124": [47.4667, -0.4833], // St Barthelemy d'Anjou
         "31000": [43.6047, 1.4442],  // Toulouse
         "31190": [43.3703, 1.4883],  // Miremont
         "66000": [42.6887, 2.8948],  // Perpignan
@@ -355,7 +199,106 @@ document.addEventListener('DOMContentLoaded', () => {
         "PACA": ["84"]
     };
 
-    // Dynamic Daycare Listing
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Les p’tits Babadins - Site chargé v20.0');
+
+    // --- DYNAMIC DETAIL LOADER ---
+    try {
+        const detailContainer = document.getElementById('creche-detail-container');
+        if (detailContainer) {
+            const params = new URLSearchParams(window.location.search);
+            let slug = params.get('slug') || params.get('creche');
+            
+            // Fallback: Parse from URL path if clean URLs are used
+            if (!slug) {
+                const pathParts = window.location.pathname.split('/');
+                const lastPart = pathParts[pathParts.length - 1].replace('.html', '');
+                if (lastPart.startsWith('creche-')) slug = lastPart.replace('creche-', '');
+            }
+
+            const creche = crechesData.find(c => 
+                c.slug === slug || 
+                c.link === slug || 
+                c.link === `creche-${slug}.html` ||
+                c.link === `creche-${slug}`
+            );
+
+            if (creche) {
+                document.title = `${creche.name} | Les p’tits Babadins ${creche.city}`;
+                detailContainer.innerHTML = `
+                    <header class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero_child_right.webp');">
+                        <div class="container">
+                            <h1>${creche.name}</h1>
+                            <p>${creche.city} (${creche.zip || ''})</p>
+                        </div>
+                    </header>
+                    <section class="section-padding">
+                        <div class="container">
+                            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+                                <div>
+                                    <h2 class="text-brand-blue">Le bien-être de votre enfant est notre priorité</h2>
+                                    <p>Située à ${creche.city}, notre micro-crèche accueille vos enfants dans un espace sécurisé, propice à la découverte et à l'éveil.</p>
+                                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+                                        <div class="feature-card-premium">
+                                            <h3>⏰ Horaires Souples</h3>
+                                            <p>${creche.hours || 'Ouverture de 07h30 à 19h00'} pour simplifier votre organisation.</p>
+                                        </div>
+                                        <div class="feature-card-premium">
+                                            <h3>🍼 Équipe Experte</h3>
+                                            <p>Des professionnels de la petite enfance formés à l'éducation bienveillante.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebar">
+                                    <div style="background: var(--color-beige-light); padding: 2rem; border-radius: 1.5rem;">
+                                        <h3 class="text-brand-blue" style="margin-bottom: 1.5rem;">Contact & Infos</h3>
+                                        <p><strong>📍 Adresse :</strong><br>${creche.address || 'Contactez-nous pour l\'adresse'}<br>${creche.zip || ''} ${creche.city}</p>
+                                        <p style="margin-top: 1rem;"><strong>📞 Téléphone :</strong><br>${creche.phone || '01 00 00 00 00'}</p>
+                                        <p style="margin-top: 1rem;"><strong>📧 Email :</strong><br>${creche.email || 'contact@lespetitsbabadins.com'}</p>
+                                        <a href="pre-inscription.html?creche=${encodeURIComponent(creche.name)}" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1.5rem; display: block;">Pré-inscription</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                `;
+            } else {
+                detailContainer.innerHTML = '<div class="container" style="padding:100px 0; text-align:center;"><h2>Crèche non trouvée</h2><p>Désolé, nous ne trouvons pas cette crèche.</p><a href="creches.html" class="btn btn-primary">Voir toutes nos crèches</a></div>';
+            }
+        }
+    } catch (e) { console.error("Detail Loader Error:", e); }
+
+
+    // --- PROXIMITY WIDGET FOR STATIC PAGES ---
+    const nearbyContainer = document.getElementById('nearby-creches-container');
+    if (nearbyContainer) {
+        const path = window.location.pathname;
+        const filename = path.split('/').pop().replace('.html', '');
+        const currentCreche = crechesData.find(c => c.link === filename || c.link === filename + '.html' || c.slug === filename.replace('creche-', ''));
+        
+        if (currentCreche && ZIP_COORDS[currentCreche.zip]) {
+            const coords = ZIP_COORDS[currentCreche.zip];
+            const nearby = crechesData
+                .filter(c => c.name !== currentCreche.name && ZIP_COORDS[c.zip])
+                .map(c => ({...c, dist: calculateDistance(coords[0], coords[1], ZIP_COORDS[c.zip][0], ZIP_COORDS[c.zip][1])}))
+                .filter(c => c.dist < 50)
+                .sort((a,b) => a.dist - b.dist)
+                .slice(0, 3);
+                
+            if (nearby.length > 0) {
+                nearbyContainer.innerHTML = '<h3>Crèches à proximité</h3><div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-top:1.5rem;">' + 
+                    nearby.map(n => `
+                        <div class="feature-card-premium" style="padding:1rem;">
+                            <h4>${n.name}</h4>
+                            <p style="font-size:0.9rem;">${n.city} (${Math.round(n.dist)}km)</p>
+                            <a href="${n.link}" style="color:var(--brand-pink); font-weight:bold; font-size:0.8rem;">Découvrir →</a>
+                        </div>
+                    `).join('') + '</div>';
+            }
+        }
+    }
+
     const crechesContainer = document.getElementById('creches-list-container');
     const activeFiltersContainer = document.getElementById('active-filters');
 
@@ -672,485 +615,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Detail Page Logic
-    const detailContainer = document.getElementById('creche-detail-container');
-    if (detailContainer) {
-        const params = new URLSearchParams(window.location.search);
-        const crecheName = params.get('name');
-        let crecheSlug = params.get('slug');
 
-        // Fallback: Try to parse slug from clean URL path (e.g. /creche-marssac-sur-tarn)
-        // because window.location.search is empty for rewritten URLs
-        if (!crecheSlug) {
-            const path = window.location.pathname;
-            // Matches /creche-slug or /creche-slug/
-            const match = path.match(/\/creche-([a-zA-Z0-9-]+)\/?$/);
-            if (match && match[1]) {
-                crecheSlug = match[1];
-            }
-        }
 
-        // Find the daycare by slug (clean URL) or name (legacy)
-        let creche;
-        // Prioritize slug lookup
-        if (crecheSlug) {
-            creche = crechesData.find(c => c.slug === crecheSlug);
-        }
-        // Fallback to name if slug lookup failed or wasn't present
-        if (!creche && crecheName) {
-            creche = crechesData.find(c => c.name === crecheName);
-        }
-
-        if (creche) {
-            // Re-generate the image to match the listing
-            let hash = 0;
-            for (let i = 0; i < creche.name.length; i++) {
-                hash = creche.name.charCodeAt(i) + ((hash << 5) - hash);
-            }
-            const lockId = Math.abs(hash % 1000);
-
-            // Check for specific daycares (same list as listing)
-            const specialDaycares = [
-                "CRECHES EXPANSION Lorient",
-                "Ptits Babadins Téloché",
-                "Crèche Expansion Savenay 2",
-                "Les P’tits Babadins 79260 La Crèche",
-                "Les P’tits Babadins d’Aizenay",
-                "Les p'tits Babadins de Quéven",
-                "Micro-crèche de La Roche (Wilson)"
-            ];
-
-            let imgUrl;
-            if (specialDaycares.includes(creche.name)) {
-                imgUrl = 'images/hero_child_right.webp';
-            } else {
-                const keywords = ['child,daycare', 'toddler,nursery', 'baby,playing,daycare', 'kids,kindergarten', 'child,playgroup'];
-
-                const keywordIndex = Math.abs(hash % keywords.length);
-                const category = keywords[keywordIndex];
-                imgUrl = `https://loremflickr.com/800/400/${category}?lock=${lockId}`;
-            }
-
-            // Logic for Related Daycares (Proximity based for SEO)
-            const crecheCoords = ZIP_COORDS[creche.zip];
-            let nearbyDaycares = [];
-
-            if (crecheCoords) {
-                nearbyDaycares = crechesData
-                    .filter(c => c.name !== creche.name && ZIP_COORDS[c.zip])
-                    .map(c => ({
-                        ...c,
-                        distance: calculateDistance(crecheCoords[0], crecheCoords[1], ZIP_COORDS[c.zip][0], ZIP_COORDS[c.zip][1])
-                    }))
-                    .filter(c => c.distance < 30) // Within 30km (more realistic than 10km for small towns)
-                    .sort((a, b) => a.distance - b.distance)
-                    .slice(0, 6);
-            }
-
-            // Fallback: Same department or random if few nearby
-            if (nearbyDaycares.length < 3) {
-                const dept = creche.zip ? creche.zip.substring(0, 2) : "";
-                const sameDept = crechesData
-                    .filter(c => c.name !== creche.name && c.zip && c.zip.startsWith(dept) && !nearbyDaycares.find(n => n.name === c.name))
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, 6 - nearbyDaycares.length);
-                nearbyDaycares = [...nearbyDaycares, ...sameDept];
-            }
-
-            // Final fallback to random if still empty
-            if (nearbyDaycares.length < 3) {
-                const randoms = crechesData
-                    .filter(c => c.name !== creche.name && !nearbyDaycares.find(n => n.name === c.name))
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, 6 - nearbyDaycares.length);
-                nearbyDaycares = [...nearbyDaycares, ...randoms];
-            }
-
-            const processedNearby = nearbyDaycares.map(c => {
-                let h = 0;
-                for (let i = 0; i < c.name.length; i++) h = c.name.charCodeAt(i) + ((h << 5) - h);
-                const lid = Math.abs(h % 1000);
-                let url;
-                if (specialDaycares.includes(c.name)) {
-                    url = 'images/hero_child_right.webp';
-                } else {
-                    const k = ['child,daycare', 'toddler,nursery', 'baby,playing,daycare'];
-                    url = `https://loremflickr.com/400/300/${k[Math.abs(h % k.length)]}?lock=${lid}`;
-                }
-                return { ...c, imgUrl: url };
-            });
-
-            // Dynamic Title & Meta Update
-            document.title = `${creche.name} | Micro-crèche à ${creche.city} Les p’tits Babadins`;
-            const metaDesc = document.querySelector('meta[name="description"]');
-            if (metaDesc) {
-                metaDesc.setAttribute("content", `Découvrez la micro-crèche ${creche.name} à ${creche.city}. Un accueil de proximité, une pédagogie active Reggio Emilia et un cadre sécurisant pour votre enfant.`);
-            }
-
-            detailContainer.innerHTML = `
-                <div class="page-header" style="background-image: url('${imgUrl}');">
-                    <div class="container">
-                        <h1>${creche.name}</h1>
-                        <p>${creche.city}</p>
-                    </div>
-                </div>
-
-                <div class="details-container">
-                    
-                    <!-- 1. Visite 360 & Galerie -->
-                    <div style="margin-bottom: 3rem;">
-                        <h2 style="color: var(--brand-blue-dark); text-align: center; margin-bottom: 1.5rem;">Découvrir la crèche</h2>
-                        
-                        <!-- Video 360 Placeholder -->
-                        <div style="background: black; border-radius: var(--radius-lg); overflow: hidden; height: 350px; position: relative; margin-bottom: 2rem; box-shadow: var(--shadow-md);">
-                            <img src="images/social_outdoor_play.webp" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
-                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white;">
-                                <div style="font-size: 4rem; margin-bottom: 0.5rem;">↻</div>
-                                <span style="font-size: 1.2rem; font-weight: bold;">Visite Virtuelle 360°</span>
-                                <button class="btn btn-primary" style="margin-top: 1rem;">Lancer la visite</button>
-                            </div>
-                        </div>
-
-                        <!-- Photo Gallery (Carousel) -->
-                        <div style="position: relative; padding: 0 3rem;">
-                            <button onclick="window.scrollContainer('gallery-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
-                            <button onclick="window.scrollContainer('gallery-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
-                        
-                            <div id="gallery-track" style="display: flex; gap: 0.8rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
-                                <img src="images/pedago_motricite.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/blog_alimentation_bebe.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_art_painting.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_story_time.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                <img src="images/social_garden_activity.webp" style="flex: 0 0 auto; width: 140px; height: 100px; object-fit: cover; border-radius: var(--radius-sm); scroll-snap-align: center; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2. Infos Pratiques (Grid) -->
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <h3>📍 Coordonnées</h3>
-                            <p><strong>Adresse :</strong><br>${creche.address || 'Adresse non communiquée'}<br>${creche.zip || ''} ${creche.city}</p>
-                            ${creche.phone ? `<p style="margin-top:1rem;"><strong>📞 Téléphone :</strong><br>${creche.phone}</p>` : ''}
-                            ${creche.email ? `<p style="margin-top:1rem;"><strong>📧 Email :</strong><br><a href="mailto:${creche.email}">${creche.email}</a></p>` : ''}
-                        </div>
-                        <div class="info-card">
-                            <h3>⏰ Horaires & Infos</h3>
-                            <p><strong>Ouverture :</strong><br>${creche.hours || '7h30 - 18h30'}</p>
-                            <p style="margin-top:1rem;"><strong>Statut :</strong><br>
-                                ${creche.active ? '<span style="color:var(--brand-green); font-weight:bold;">● Ouverte</span>' : '<span style="color:var(--brand-orange); font-weight:bold;">● Ouverture Prochaine</span>'}
-                            </p>
-                            <p style="margin-top:1rem;"><strong>Capacité :</strong><br>12 Berceaux</p>
-                        </div>
-                    </div>
-
-                    <!-- 3. À propos -->
-                    <div class="info-card" style="margin-top: 2rem;">
-                        <h3>À propos de la crèche</h3>
-                        ${creche.description ? creche.description : `
-                        <p>Bienvenue chez <strong>${creche.name}</strong> !</p>
-                        <p>Notre structure à ${creche.city} accueille vos enfants dans un cadre bienveillant et sécurisé, spécialement conçu pour leur épanouissement. Notre équipe de professionnels de la petite enfance veille au bien-être et au développement de chacun, en proposant des activités ludiques et éducatives adaptées à chaque âge.</p>`}
-                        
-                        <div style="margin-top: 2rem; text-align: center;">
-                            <a href="pre-inscription.html?creche=${encodeURIComponent(creche.link)}" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem;">Faire une demande de place</a>
-                        </div>
-                    </div>
-
-                    <!-- 4. Nearby Daycares (SEO Anchor widget) -->
-                    <div style="margin-top: 4rem;">
-                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">Autres crèches Les P’tits Babadins à proximité</h3>
-                        <div style="position: relative; padding: 0 3rem;">
-                            <button onclick="window.scrollContainer('related-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
-                            <button onclick="window.scrollContainer('related-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
-
-                             <div id="related-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
-                                ${processedNearby.map(related => `
-                                    <div style="flex: 0 0 auto; width: 200px; scroll-snap-align: center; background: white; border: 1px solid #eee; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);">
-                                        <div style="height: 120px; background: #eee;">
-                                            <img src="${related.imgUrl}" style="width:100%; height:100%; object-fit: cover;" alt="Micro-crèche ${related.name} à ${related.city}" loading="lazy">
-                                        </div>
-                                        <div style="padding: 0.8rem;">
-                                            <h4 style="margin-bottom:0.3rem; color: var(--brand-blue-dark); font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Micro-crèche ${related.name}</h4>
-                                            <p style="font-size:0.8rem; color:#666;">${related.city}</p>
-                                            <a href="${related.link}" title="Trouver une place en crèche à ${related.city}" style="display:block; margin-top:0.4rem; color:var(--brand-pink); font-weight:bold; font-size: 0.85rem;">Découvrir →</a>
-                                        </div>
-                                    </div>
-                                `).join('')}
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 5. Blog Article Suggestion (Carousel) -->
-                    <div style="margin-top: 4rem;">
-                        <h3 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">À lire sur le blog</h3>
-                        <div style="position: relative; padding: 0 3rem;">
-                            <button onclick="window.scrollContainer('blog-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
-                            <button onclick="window.scrollContainer('blog-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
-
-                            <div id="blog-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
-                                <!-- Article 1 -->
-                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_adaptation_creche.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Adaptation">
-                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">Réussir l'adaptation</h4>
-                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Conseils pour une séparation en douceur.</p>
-                                        <a href="blog " class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
-                                    </div>
-                                </div>
-                                <!-- Article 2 -->
-                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_motricite_libre.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Motricité">
-                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">La motricité libre</h4>
-                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Découvrir ses mouvements seul.</p>
-                                        <a href="blog " class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
-                                    </div>
-                                </div>
-                                <!-- Article 3 -->
-                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_sommeil_bebe.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Sommeil">
-                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">Le sommeil de bébé</h4>
-                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Comprendre les cycles et rituels.</p>
-                                        <a href="blog " class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
-                                    </div>
-                                </div>
-                                <!-- Article 4 -->
-                                <div style="flex: 0 0 auto; width: 240px; scroll-snap-align: center; background: var(--color-beige-light); border-radius: var(--radius-md); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
-                                    <img src="images/blog_alimentation_bebe.webp" style="width: 100%; height: 140px; object-fit: cover;" alt="Alimentation">
-                                    <div style="padding: 1rem; flex: 1; display: flex; flex-direction: column;">
-                                        <h4 style="font-size: 1rem; margin-bottom: 0.4rem; color: var(--brand-blue-dark);">L'alimentation</h4>
-                                        <p style="font-size: 0.85rem; margin-bottom: 0.8rem; flex: 1;">Diversification et repas bio.</p>
-                                        <a href="blog " class="btn btn-secondary" style="font-size: 0.8rem; padding: 0.4rem 1rem; align-self: start;">Lire</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 6. Newsletter -->
-                    <div style="margin-top: 4rem; background: var(--brand-blue-dark); color: white; border-radius: var(--radius-lg); padding: 2rem; text-align: center;">
-                        <h3 style="color: white; margin-bottom: 1rem;">Restez informés !</h3>
-                        <p style="max-width: 600px; margin: 0 auto 1.5rem;">Inscrivez-vous à notre newsletter pour recevoir nos actualités et conseils d'experts.</p>
-                        <form onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');" style="display: flex; gap: 0.5rem; justify-content: center; max-width: 400px; margin: 0 auto;">
-                            <input type="email" placeholder="Votre email" style="padding: 0.8rem; border-radius: var(--radius-sm); border: none; flex: 1;">
-                            <button type="submit" class="btn btn-primary" style="background: var(--brand-orange); border: none;">S'inscrire</button>
-                        </form>
-                    </div>
-
-                </div>
-            `;
-        } else {
-            detailContainer.innerHTML = `
-                <div class="container" style="padding: 100px 0; text-align: center;">
-                    <h2>Crèche introuvable</h2>
-                    <p>Désolé, nous ne trouvons pas la crèche demandée.</p>
-                    <a href="creches " class="btn btn-primary" style="margin-top: 20px;">Retour à la liste</a>
-                </div>
-            `;
-        }
-    }
-
-    // Pre-inscription Form Logic: Dynamic Population & Pre-selection
-    const crecheSelect = document.getElementById('creche');
-    if (crecheSelect && typeof crechesData !== 'undefined') {
-        // Keep the first default option
-        const defaultOption = crecheSelect.firstElementChild;
-        const unknownOption = crecheSelect.querySelector('option[value="unknown"]');
-
-        // Clear options but keep the default and 'Je ne sais pas encore' if possible, or just rebuild
-        crecheSelect.innerHTML = '';
-        if (defaultOption) crecheSelect.appendChild(defaultOption);
-
-        // Sort creches alphabetically
-        const sortedCreches = [...crechesData].sort((a, b) => a.name.localeCompare(b.name));
-
-        sortedCreches.forEach(c => {
-            const option = document.createElement('option');
-            option.value = c.link;
-            option.textContent = `${c.name} (${c.city})`;
-            option.setAttribute('data-email', c.email || 'contact@ce-lpbx.com');
-            crecheSelect.appendChild(option);
+    // --- MOBILE MENU ---
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileBtn.classList.toggle('active');
         });
-
-        // Add 'Je ne sais pas encore' at the end
-        if (unknownOption) {
-            crecheSelect.appendChild(unknownOption);
-        } else {
-            const opt = document.createElement('option');
-            opt.value = "unknown";
-            opt.textContent = "Je ne sais pas encore";
-            crecheSelect.appendChild(opt);
-        }
-
-        // Pre-select if param exists
-        const params = new URLSearchParams(window.location.search);
-        const targetCreche = params.get('creche');
-        if (targetCreche) {
-            const decodedParam = decodeURIComponent(targetCreche).toLowerCase();
-
-            // Try to find an option that matches value, or text, or slug
-            for (let i = 0; i < crecheSelect.options.length; i++) {
-                const opt = crecheSelect.options[i];
-                if (opt.value.toLowerCase() === decodedParam ||
-                    opt.textContent.toLowerCase().includes(decodedParam)) {
-                    crecheSelect.selectedIndex = i;
-                    break;
-                }
-            }
-        }
-    }
-
-    // Logic for Proximity Widget on Static Pages
-    const nearbyContainer = document.getElementById('nearby-creches-container');
-    if (nearbyContainer) {
-        // Find current crèche by filename
-        const path = window.location.pathname;
-        const filename = path.split('/').pop().replace(' ', '');
-        const currentCreche = crechesData.find(c => c.link === filename || c.slug === filename.replace('creche-', ''));
-
-        if (currentCreche) {
-            const crecheCoords = ZIP_COORDS[currentCreche.zip];
-            let nearbyDaycares = [];
-
-            if (crecheCoords) {
-                nearbyDaycares = crechesData
-                    .filter(c => c.name !== currentCreche.name && ZIP_COORDS[c.zip])
-                    .map(c => ({
-                        ...c,
-                        distance: calculateDistance(crecheCoords[0], crecheCoords[1], ZIP_COORDS[c.zip][0], ZIP_COORDS[c.zip][1])
-                    }))
-                    .filter(c => c.distance < 30)
-                    .sort((a, b) => a.distance - b.distance)
-                    .slice(0, 6);
-            }
-
-            if (nearbyDaycares.length < 3) {
-                const dept = currentCreche.zip ? currentCreche.zip.substring(0, 2) : "";
-                const sameDept = crechesData
-                    .filter(c => c.name !== currentCreche.name && c.zip && c.zip.startsWith(dept) && !nearbyDaycares.find(n => n.name === c.name))
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, 6 - nearbyDaycares.length);
-                nearbyDaycares = [...nearbyDaycares, ...sameDept];
-            }
-
-            if (nearbyDaycares.length > 0) {
-                nearbyContainer.innerHTML = `
-                    <h3 style="color: var(--brand-blue-dark); margin-bottom: 1.5rem; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; font-size: 1.5rem;">Autres crèches Les P’tits Babadins à proximité</h3>
-                    <div style="position: relative; padding: 0 3rem;">
-                        <button onclick="window.scrollContainer('nearby-track', -1)" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&lsaquo;</button>
-                        <button onclick="window.scrollContainer('nearby-track', 1)" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; background: white; border: 1px solid #ddd; width: 40px; height: 40px; border-radius: 50%; box-shadow: var(--shadow-md); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--brand-blue-dark);">&rsaquo;</button>
-                        <div id="nearby-track" style="display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; padding: 10px 0;">
-                            ${nearbyDaycares.map(related => {
-                    let h = 0;
-                    for (let i = 0; i < related.name.length; i++) h = related.name.charCodeAt(i) + ((h << 5) - h);
-                    const lid = Math.abs(h % 1000);
-                    const k = ['child,daycare', 'toddler,nursery', 'baby,playing,daycare'];
-                    const imgUrl = `https://loremflickr.com/400/300/${k[Math.abs(h % k.length)]}?lock=${lid}`;
-
-                    return `
-                                    <div style="flex: 0 0 auto; width: 220px; scroll-snap-align: center; background: white; border: 1px solid #eee; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm);">
-                                        <div style="height: 130px; background: #eee;">
-                                            <img src="${imgUrl}" style="width:100%; height:100%; object-fit: cover;" alt="Micro-crèche ${related.name} à ${related.city}" loading="lazy">
-                                        </div>
-                                        <div style="padding: 1rem;">
-                                            <h4 style="margin-bottom:0.3rem; color: var(--brand-blue-dark); font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Micro-crèche ${related.name}</h4>
-                                            <p style="font-size:0.85rem; color:#666;">${related.city}</p>
-                                            <a href="${related.link}" title="Trouver une place en crèche à ${related.city}" style="display:block; margin-top:0.5rem; color:var(--brand-pink); font-weight:bold; font-size: 0.9rem;">En savoir plus →</a>
-                                        </div>
-                                    </div>
-                                `;
-                }).join('')}
-                        </div>
-                    </div>
-                `;
-            }
-        }
     }
 });
-
-// Intelligent Lazy Loading with IntersectionObserver
-const initLazyLoading = () => {
-    const lazyImages = document.querySelectorAll('img.lazy-img');
-
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.addEventListener('load', () => {
-                            img.classList.add('loaded');
-                        });
-                    }
-                    observer.unobserve(img);
-                }
-            });
-        }, {
-            rootMargin: '0px 0px 200px 0px' // Load 200px before coming into view
-        });
-
-        lazyImages.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for older browsers
-        lazyImages.forEach(img => {
-            if (img.dataset.src) img.src = img.dataset.src;
-            img.classList.add('loaded');
-        });
-    }
-};
-
-initLazyLoading();
-
-// Generic scroll function for any container
-window.scrollContainer = function (elementId, direction) {
-    const track = document.getElementById(elementId);
-    if (track) {
-        const itemWidth = track.firstElementChild ? track.firstElementChild.getBoundingClientRect().width : 200;
-        const scrollAmount = itemWidth + 20; // width + approximate gap
-        track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-    }
-};
-
-/**
- * LLM Optimization: Generates JSON-LD structured data for all crèches
- * This helps IA search engines understand the full network distribution.
- */
-function generateCrechesStructuredData() {
-    if (typeof crechesData === 'undefined' || !crechesData.length) return;
-
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Liste des micro-crèches Les p’tits Babadins",
-        "description": "Annuaire complet des micro-crèches du réseau Les p’tits Babadins en France.",
-        "numberOfItems": crechesData.length,
-        "itemListElement": crechesData.map((creche, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "item": {
-                "@type": "ChildCare",
-                "name": creche.name,
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": creche.city,
-                    "postalCode": creche.zip || "",
-                    "streetAddress": creche.address || "",
-                    "addressCountry": "FR"
-                },
-                "telephone": creche.phone || "",
-                "openingHours": creche.hours || "Mo-Fr 07:30-18:30"
-            }
-        }))
-    };
-
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(schema);
-    document.head.appendChild(script);
-}
-
 
 // --- BACK TO TOP FUNCTIONALITY ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -1213,3 +689,4 @@ document.addEventListener('DOMContentLoaded', () => {
         counterObserver.observe(counter);
     });
 });
+

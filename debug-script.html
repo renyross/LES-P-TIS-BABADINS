@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Debug LPB</title>
+</head>
+<body>
+    <h1>Debug Script</h1>
+    <div id="debug-output">Initialisation...</div>
+    <div id="creche-detail-container">Chargement...</div>
+    <script src="main.js?v=debug"></script>
+    <script>
+        setTimeout(() => {
+            const out = document.getElementById('debug-output');
+            if (typeof crechesData === 'undefined') {
+                out.innerHTML = "ERROR: crechesData is undefined!";
+            } else {
+                out.innerHTML = "crechesData length: " + crechesData.length;
+                console.log("Data:", crechesData);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
