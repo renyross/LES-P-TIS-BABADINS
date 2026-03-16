@@ -1,5 +1,5 @@
 #!/bin/bash
-HOST="ce-lpbx.com"
+HOST="iguane.o2switch.net"
 USER="duel1944"
 PASS="dNk3-mTfk-Ws3?"
 REMOTE_DIR="public_html"
@@ -22,6 +22,16 @@ echo "Starting targeted deployment (HTML + .htaccess)..."
     fi
     echo "Uploading .htaccess..."
     curl -s -u "$USER:$PASS" -T ".htaccess" "ftp://$HOST/$REMOTE_DIR/.htaccess"
+
+    # Upload Images
+    echo "Uploading images..."
+    for img in images/*; do
+        if [ -f "$img" ]; then
+            img_filename=$(basename "$img")
+            echo "Uploading $img_filename..."
+            curl -s -u "$USER:$PASS" -T "$img" "ftp://$HOST/$REMOTE_DIR/images/$img_filename"
+        fi
+    done
 
 
 # Upload HTML files

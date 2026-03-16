@@ -88,6 +88,8 @@ let crechesData = [
     { name: "Micro-crèche les p'tits Babadins Sisteron", slug: "micro-creche-les-ptits-babadins-sisteron", link: "creche-micro-creche-les-ptits-babadins-sisteron", city: "Sisteron", address: "27 Allée des Tilleuls", zip: "04200", phone: "06 74 28 95 10", email: "mathilde.moreau@ce-lpbx.com", active: true, hours: "6h - 20h" },
     { name: "Les p'tits Babadins de Boissy-le-Châtel", slug: "les-ptits-babadins-de-boissy-le-chatel", link: "creche-les-ptits-babadins-de-boissy-le-chatel", city: "Boissy-le-Châtel", address: "Rue de la ZAC des 18 Arpents", zip: "77169", phone: "07.44.41.46.32", active: true, hours: "7h30 - 19h" },
     { name: "Les P’tits Babadins de Clamart", slug: "les-ptits-babadins-de-clamart", link: "creche-les-ptits-babadins-de-clamart", city: "Clamart", address: "32 rue Georges Huguet", zip: "92140", phone: "01 88 75 02 30 / 07 44 47 88 96", email: "creche.clamart@ce-lpbx.com", active: true, hours: "8h00 - 19h00" },
+    { name: "La Ronde de Carnelle", slug: "halte-garderie-itinerante-la-ronde-de-carnelle", link: "creche-halte-garderie-itinerante-la-ronde-de-carnelle", city: "Carnelle Pays-de-France", address: "Halte-garderie itinérante (Multi-communes)", zip: "95270", phone: "06 68 63 01 95", active: true, hours: "08h45 - 16h45", description: "La halte-garderie itinérante 'La Ronde de Carnelle' offre un accueil de qualité pour les enfants de 6 mois à 6 ans. Elle se déplace chaque jour dans une commune différente du territoire Carnelle Pays-de-France : Saint-Martin-du-Tertre (lundi/vendredi), Maffliers (mardi), Baillet-en-France (mercredi) et Belloy-en-France (jeudi)." },
+
 
     // --- New Additions (Manual Batch) ---
     { name: "Coccinelle", slug: "coccinelle", link: "creche-coccinelle", city: "St Barthelemy d'Anjou", address: "2 rue de la Morellerie", zip: "49124", phone: "06.15.52.90.31", email: "eva.zara@hotmail.fr", active: true, hours: "7h30 - 18h30" },
@@ -335,7 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            const filtered = creches.filter(c => {
+            const filtered = crechesData.filter(c => {
                 if (!filterValue) return true;
 
                 if (type === "search") {
@@ -378,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = document.createElement('div');
                 card.className = 'creche-card';
 
-                imgUrl = 'images/hero_child_right.webp';
+                const imgUrl = 'images/hero_child_right.webp';
 
                 let availHtml = "";
                 if (!c.active) {
@@ -464,7 +466,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Stats extraction
             const stats = { regions: {} };
 
-            creches.forEach(c => {
+            crechesData.forEach(c => {
                 let deptCode = c.zip ? c.zip.substring(0, 2) : "??";
                 if (c.zip && c.zip.length === 4) deptCode = "0" + c.zip.substring(0, 1);
 

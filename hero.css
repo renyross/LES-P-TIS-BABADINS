@@ -1,24 +1,128 @@
 /* Hero Specific Styles */
 .hero {
     position: relative;
-    height: 80vh;
-    /* Taller for full impact */
-    min-height: 600px;
+    height: 88vh;
+    /* Increased to 88vh */
+    min-height: 650px;
+    /* Increased to 650px */
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* Shift background to show right side (child) more */
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%), url('images/hero_child_right.webp');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    justify-content: flex-start;
     text-align: left;
     color: var(--color-white);
     padding-top: 80px;
-    /* Offset for fixed header if needed */
     margin-top: -80px;
-    /* Pull up behind transparent header if we want that look, but sticking to standard for now */
+    overflow: hidden;
 }
+
+/* Carousel Container */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    /* Fallback image to ensure no white flash */
+    background: url('images/hero_child_right.webp');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+/* Individual Slides */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: right center;
+    /* Align images to right */
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeLoop 18s infinite;
+    /* 6s per slide * 3 slides */
+}
+
+/* Staggered Animations for 3 slides */
+/* Staggered Animations for 3 slides */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+    animation-name: fadeLoopFirst;
+    /* Immediate visibility */
+    opacity: 1;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 6s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 12s;
+}
+
+/* Custom loop for the first slide to start visible */
+@keyframes fadeLoopFirst {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    33% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    38% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    95% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Cross-fade Animation for 3 slides */
+@keyframes fadeLoop {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    5% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* Fade in fast */
+    33% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    /* Stay visible & zoom slightly */
+    38% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    /* Fade out by next start */
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+/* Remove old single BG styles if present or just override above */
 
 /* Hero Container Grid Layout */
 .hero .container {
@@ -81,10 +185,13 @@
 }
 
 .hero-content>* {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
+    /* Optimize LCP: Remove initial opacity:0 and fade-in delay */
+    /* animation: fadeInUp 0.8s ease-out forwards; */
+    /* opacity: 0; */
+    opacity: 1;
 }
 
+/* 
 .hero-content h1 {
     animation-delay: 0.1s;
 }
@@ -95,7 +202,7 @@
 
 .hero-content .hero-actions {
     animation-delay: 0.5s;
-}
+} */
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
