@@ -62,7 +62,7 @@
     <link href="style.css" rel="stylesheet" />
     <link href="/images/logo.webp" rel="icon" type="image/webp" />
     <link as="image" fetchpriority="high" href="/images/hero_creche_premium.webp" rel="preload" />
-    <script defer="" src="main.js?v=21.0"></script>
+    <script defer="" src="main.js?v=44.0"></script>
     <style>
         .search-bar {
             max-width: 600px;
@@ -214,6 +214,87 @@
         .region-pill {
             animation: fadeIn 0.4s ease backwards;
         }
+
+        /* Global Reset for Horizontal Scroll */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Responsive Search Bar */
+        @media (max-width: 768px) {
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                position: relative;
+            }
+            .page-header {
+                width: 100% !important;
+                margin: 0 !important;
+                min-height: 300px !important;
+                padding: var(--spacing-lg) 0 !important;
+                background-attachment: scroll !important; /* Better for mobile */
+            }
+            .page-header h1 {
+                font-size: 2.5rem !important;
+            }
+            .search-bar {
+                margin: -30px auto var(--spacing-lg) !important;
+                padding: 0.5rem 0.8rem !important;
+                gap: 0.4rem !important;
+                width: calc(100% - 40px) !important; /* Proper margin on both sides */
+                max-width: 500px !important;
+                display: flex !important;
+                align-items: center !important;
+                box-sizing: border-box !important;
+            }
+            .search-input {
+                font-size: 0.9rem !important;
+                padding: 0.3rem !important;
+                min-width: 50px !important;
+                flex: 1 !important;
+            }
+            #searchBtn {
+                padding: 0.6rem 1.2rem !important;
+                font-size: 0.9rem !important;
+                margin-left: 0 !important;
+                flex-shrink: 0 !important;
+            }
+            #geoBtn {
+                width: 38px !important;
+                height: 38px !important;
+                padding: 0 !important;
+                flex-shrink: 0 !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #searchBtn {
+                padding: 0.6rem 1rem !important;
+                border-radius: 50% !important;
+                width: 44px !important;
+                height: 44px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            .search-btn-text {
+                display: none !important;
+            }
+            .search-btn-icon {
+                display: block !important;
+                font-size: 1.2rem !important;
+                margin: 0 !important;
+            }
+            .search-divider {
+                display: none !important;
+            }
+            .search-clear {
+                font-size: 0.7rem !important;
+            }
+        }
     </style>
     
     <link rel="icon" type="image/png" href="/images/favicon.png" />
@@ -221,16 +302,16 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
+        <div class="logo"><a href="/"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
                     src="/images/logo.webp" width="150" /></a></div>
         <ul class="nav-links">
-            <li><a href="reseau.html">Nous découvrir</a></li>
-            <li><a href="creches.html">Nos Crèches</a></li>
-            <li><a href="pedagogie.html">Notre pédagogie</a></li>
-            <li><a href="entreprises.html">Vous êtes...</a></li>
-            <li><a href="recrutement.html">Recrutement</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a class="btn btn-primary" href="contact.html"
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a class="btn btn-primary" href="contact"
                     style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a></li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
@@ -238,7 +319,7 @@
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
+            <a href="/" style="color: #6c757d;">Accueil</a> <span
                 style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Nos Crèches</span>
         </div>
@@ -258,14 +339,17 @@
         <div class="search-bar">
             <input class="search-input" placeholder="Ville, code postal ou région..." type="text" />
             <button class="search-clear" id="clearSearch" title="Effacer">✕</button>
-            <div style="height: 24px; width: 1px; background: #eee; margin: 0 0.5rem;"></div>
+            <div class="search-divider" style="height: 24px; width: 1px; background: #eee; margin: 0 0.5rem;"></div>
             <button class="btn btn-outline" id="geoBtn"
                 style="border: none; padding: 0.5rem; display: flex; align-items: center; justify-content: center; border-radius: 50%; width: 40px; height: 40px;"
                 title="Autour de moi">
                 📍
             </button>
             <button class="btn btn-primary" id="searchBtn"
-                style="padding: 0.5rem 1.5rem; border-radius: 2rem; margin-left: 0.5rem;">Rechercher</button>
+                style="padding: 0.5rem 1.5rem; border-radius: 2rem; margin-left: 0.5rem;">
+                <span class="search-btn-text">Rechercher</span>
+                <span class="search-btn-icon" style="display: none;">🔍</span>
+            </button>
         </div>
         <!-- Active Filters Display -->
         <div id="active-filters"
@@ -278,7 +362,7 @@
         </div>
         <div style="text-align: center; margin-bottom: 2rem; color: var(--color-text-light);">
             <p>Découvrez nos structures d'accueil partout en France. <br />
-                Vous ne trouvez pas de crèche à proximité ? <a href="pre-inscription.html"
+                Vous ne trouvez pas de crèche à proximité ? <a href="pre-inscription"
                     style="color: var(--brand-blue-dark); font-weight: bold; text-decoration: underline;">Faites une
                     demande spontanée</a>, nous ouvrons régulièrement de nouvelles crèches !</p>
         </div>
@@ -299,9 +383,9 @@
                 Babadins dans votre commune.
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a class="btn btn-primary" href="contact.html?subject=local"
+                <a class="btn btn-primary" href="contact?subject=local"
                     style="background: var(--brand-orange); border-color: var(--brand-orange);">Proposer un local</a>
-                <a class="btn btn-outline" href="entreprises.html"
+                <a class="btn btn-outline" href="entreprises"
                     style="color: var(--brand-blue-dark); border-color: var(--brand-blue-dark);">Devenir
                     partenaire</a>
             </div>
@@ -341,35 +425,35 @@
                 <div class="footer-col">
                     <h4>Familles</h4>
                     <ul>
-                        <li><a href="creches.html">Trouver ma crèche</a></li>
-                        <li><a href="pedagogie.html">Le projet pédagogique</a></li>
-                        <li><a href="pre-inscription.html">Inscription en ligne</a></li>
-                        <li><a href="index.html#reseau-preview">Pourquoi nous choisir ?</a></li>
+                        <li><a href="creches">Trouver ma crèche</a></li>
+                        <li><a href="pedagogie">Le projet pédagogique</a></li>
+                        <li><a href="pre-inscription">Inscription en ligne</a></li>
+                        <li><a href="/#reseau-preview">Pourquoi nous choisir ?</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme.html">Alimentation &amp; DME</a></li>
-                        <li><a href="blog-sommeil-bebe.html">Sommeil de bébé</a></li>
-                        <li><a href="blog-motricite-libre.html">Motricité libre</a></li>
-                        <li><a href="blog-adaptation-creche.html">Adaptation en douceur</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation &amp; DME</a></li>
+                        <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
+                        <li><a href="blog-motricite-libre">Motricité libre</a></li>
+                        <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="entreprises.html">Offres Entreprises</a></li>
-                        <li><a href="reseau.html">Le Réseau LPB</a></li>
-                        <li><a href="recrutement.html">Travailler avec nous</a></li>
-                        <li><a href="contact.html">Contact Siège</a></li>
+                        <li><a href="entreprises">Offres Entreprises</a></li>
+                        <li><a href="reseau">Le Réseau LPB</a></li>
+                        <li><a href="recrutement">Travailler avec nous</a></li>
+                        <li><a href="contact">Contact Siège</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
-                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
-                        href="plan-du-site.html">Plan
+                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a
+                        href="plan-du-site">Plan
                         du site</a></p>
             </div>
         </div>
