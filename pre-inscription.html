@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta
-        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; object-src 'none'; base-uri 'self';"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self';"
         http-equiv="Content-Security-Policy" />
     <meta content="strict-origin-when-cross-origin" name="referrer" />
     <meta content="1; mode=block" http-equiv="X-XSS-Protection" />
@@ -19,15 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&amp;display=swap"
         rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
-    <script defer="" src="main.js?v=21.0" type="module"></script>
+    <script defer="" src="main.js?v=45.0" type="module"></script>
     <style>
         .form-container {
             background: white;
-            padding: var(--spacing-lg);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
+            padding: 3.5rem 2.5rem;
+            border-radius: 32px;
+            box-shadow: 0 30px 60px -12px rgba(0, 77, 113, 0.12);
             max-width: 800px;
             margin: 0 auto;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+                border-radius: 24px;
+            }
         }
 
         .form-group {
@@ -36,28 +45,32 @@
 
         .form-label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--color-text-main);
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            color: var(--brand-blue-dark);
+            font-size: 0.95rem;
         }
 
         .form-input,
         .form-select,
         .form-textarea {
             width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #eee;
-            border-radius: var(--radius-sm);
+            padding: 1rem;
+            border: 2px solid #f1f5f9;
+            border-radius: 16px;
             font-family: inherit;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
+            background: #f8fafc;
         }
 
         .form-input:focus,
         .form-select:focus,
         .form-textarea:focus {
             outline: none;
-            border-color: var(--color-sage);
+            border-color: var(--brand-blue-light);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(45, 170, 225, 0.1);
         }
 
         .form-section-title {
@@ -79,6 +92,94 @@
             gap: 0.5rem;
             cursor: pointer;
         }
+
+        /* Minimalist Time Scheduler Styles */
+        .days-scheduler {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            padding: 0 0.5rem;
+        }
+
+        .day-row {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 2rem;
+            padding: 0.75rem 0;
+            transition: all 0.2s;
+        }
+
+        .day-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 120px;
+            font-weight: 500;
+            color: var(--brand-blue-dark);
+            cursor: pointer;
+        }
+
+        .day-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--brand-blue);
+        }
+
+        .time-range {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .day-row.active .time-range {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+        .time-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f8f9fa;
+            padding: 0.3rem 0.6rem;
+            border-radius: 8px;
+            border: 1px solid #eee;
+        }
+
+        .time-input-small {
+            border: none;
+            background: transparent;
+            font-size: 0.9rem;
+            color: #444;
+            width: 70px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .time-separator {
+            color: #999;
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 600px) {
+            .day-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+                padding: 1rem 0;
+                border-bottom: 1px solid #f5f5f5;
+            }
+            .day-row:last-child { border-bottom: none; }
+            .time-range { transform: none; }
+        }
     </style>
     
     <link rel="icon" type="image/png" href="/images/favicon.png" />
@@ -86,16 +187,16 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
+        <div class="logo"><a href="/"><img alt="Les P'tits Babadins - Réseau de micro-crèches" height="45"
                     src="/images/logo.webp" width="150" /></a></div>
         <ul class="nav-links">
-            <li><a href="reseau.html">Nous découvrir</a></li>
-            <li><a href="creches.html">Nos Crèches</a></li>
-            <li><a href="pedagogie.html">Notre pédagogie</a></li>
-            <li><a href="entreprises.html">Vous êtes...</a></li>
-            <li><a href="recrutement.html">Recrutement</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a class="btn btn-primary" href="contact.html"
+            <li><a href="reseau">Nous découvrir</a></li>
+            <li><a href="creches">Nos Crèches</a></li>
+            <li><a href="pedagogie">Notre pédagogie</a></li>
+            <li><a href="entreprises">Vous êtes...</a></li>
+            <li><a href="recrutement">Recrutement</a></li>
+            <li><a href="blog">Blog</a></li>
+            <li><a class="btn btn-primary" href="contact"
                     style="padding: 0.4rem 1.2rem; color: white;">Contactez-nous</a></li>
         </ul>
         <div class="mobile-menu-btn"><span></span><span></span><span></span></div>
@@ -103,7 +204,7 @@
     <!-- Breadcrumb -->
     <div style="background: #f8f9fa; padding: 0.8rem 0; font-size: 0.9rem; border-bottom: 1px solid #eee;">
         <div class="container">
-            <a href="index.html" style="color: #6c757d;">Accueil</a> <span
+            <a href="/" style="color: #6c757d;">Accueil</a> <span
                 style="margin: 0 0.5rem; color: #ccc;">/</span>
             <span style="color: var(--brand-blue-dark); font-weight: 600;">Pré-inscription</span>
         </div>
@@ -215,15 +316,19 @@
                     <input class="form-input" id="income" name="income" placeholder="Ex: 45000" type="number" />
                     <small style="color: #999;">Optionnel - Utile pour estimer les aides CAF</small>
                 </div>
+                <div class="form-group">
+                    <label class="form-label" for="household-children">Nombre d'enfants au foyer</label>
+                    <input class="form-input" id="household-children" name="household-children" placeholder="Ex: 2" required="" type="number" min="0" />
+                </div>
                 <!-- Section 4: Recherche & Planning -->
                 <h3 class="form-section-title">Votre Recherche &amp; Planning</h3>
                 <div class="responsive-grid-2">
                     <div class="form-group">
-                        <label class="form-label" for="creche">Crèche souhaitée</label>
-                        <select class="form-select" id="creche" name="creche" required="">
-                            <option value="">-- Choisir une crèche --</option>
-                            <option value="unknown">Je ne sais pas encore</option>
-                        </select>
+                        <label class="form-label" for="creche">Crèche souhaitée (Tapez le nom ou la ville)</label>
+                        <input class="form-input" id="creche" name="creche" list="creches-list" placeholder="ex: Janzé, Rennes..." required="" autocomplete="off" />
+                        <datalist id="creches-list">
+                            <!-- Rempli par main.js -->
+                        </datalist>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="start-date">Date d'entrée souhaitée</label>
@@ -231,18 +336,78 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Jours d'accueil souhaités</label>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label"><input name="days" type="checkbox" value="Lundi" />
-                            Lundi</label>
-                        <label class="checkbox-label"><input name="days" type="checkbox" value="Mardi" />
-                            Mardi</label>
-                        <label class="checkbox-label"><input name="days" type="checkbox" value="Mercredi" />
-                            Mercredi</label>
-                        <label class="checkbox-label"><input name="days" type="checkbox" value="Jeudi" />
-                            Jeudi</label>
-                        <label class="checkbox-label"><input name="days" type="checkbox" value="Vendredi" />
-                            Vendredi</label>
+                    <label class="form-label">Jours et Horaires d'accueil souhaités</label>
+                    <div class="days-scheduler">
+                        <!-- Lundi -->
+                        <div class="day-row" id="row-Lundi">
+                            <label class="day-label">
+                                <input name="days" type="checkbox" value="Lundi" onchange="this.closest('.day-row').classList.toggle('active', this.checked)" />
+                                Lundi
+                            </label>
+                            <div class="time-range">
+                                <div class="time-input-wrapper">
+                                    <input class="time-input-small" name="start-Lundi" type="time" value="08:00" />
+                                    <span class="time-separator">—</span>
+                                    <input class="time-input-small" name="end-Lundi" type="time" value="18:00" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mardi -->
+                        <div class="day-row" id="row-Mardi">
+                            <label class="day-label">
+                                <input name="days" type="checkbox" value="Mardi" onchange="this.closest('.day-row').classList.toggle('active', this.checked)" />
+                                Mardi
+                            </label>
+                            <div class="time-range">
+                                <div class="time-input-wrapper">
+                                    <input class="time-input-small" name="start-Mardi" type="time" value="08:00" />
+                                    <span class="time-separator">—</span>
+                                    <input class="time-input-small" name="end-Mardi" type="time" value="18:00" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mercredi -->
+                        <div class="day-row" id="row-Mercredi">
+                            <label class="day-label">
+                                <input name="days" type="checkbox" value="Mercredi" onchange="this.closest('.day-row').classList.toggle('active', this.checked)" />
+                                Mercredi
+                            </label>
+                            <div class="time-range">
+                                <div class="time-input-wrapper">
+                                    <input class="time-input-small" name="start-Mercredi" type="time" value="08:00" />
+                                    <span class="time-separator">—</span>
+                                    <input class="time-input-small" name="end-Mercredi" type="time" value="18:00" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Jeudi -->
+                        <div class="day-row" id="row-Jeudi">
+                            <label class="day-label">
+                                <input name="days" type="checkbox" value="Jeudi" onchange="this.closest('.day-row').classList.toggle('active', this.checked)" />
+                                Jeudi
+                            </label>
+                            <div class="time-range">
+                                <div class="time-input-wrapper">
+                                    <input class="time-input-small" name="start-Jeudi" type="time" value="08:00" />
+                                    <span class="time-separator">—</span>
+                                    <input class="time-input-small" name="end-Jeudi" type="time" value="18:00" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Vendredi -->
+                        <div class="day-row" id="row-Vendredi">
+                            <label class="day-label">
+                                <input name="days" type="checkbox" value="Vendredi" onchange="this.closest('.day-row').classList.toggle('active', this.checked)" />
+                                Vendredi
+                            </label>
+                            <div class="time-range">
+                                <div class="time-input-wrapper">
+                                    <input class="time-input-small" name="start-Vendredi" type="time" value="08:00" />
+                                    <span class="time-separator">—</span>
+                                    <input class="time-input-small" name="end-Vendredi" type="time" value="18:00" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group" style="margin-top: 1.5rem;">
@@ -263,20 +428,11 @@
                 </p>
                 <div id="submit-container" style="text-align: center; margin-top: 2rem;">
                     <button class="btn btn-primary btn-cta" id="submit-btn"
-                        style="width: 100%; max-width: 400px; font-size: 1.1rem; padding: 1rem;" type="submit">Finaliser
-                        ma
-                        demande</button>
+                        style="width: 100%; max-width: 400px; font-size: 1.1rem; padding: 1rem;" type="submit">Accéder à la dernière étape</button>
                 </div>
                 <!-- Success Message -->
                 <div id="success-message"
                     style="display: none; margin-top: 2rem; padding: 2rem; background: #fff; color: #155724; border-radius: var(--radius-md); border: 2px solid #28a745; text-align: center; box-shadow: var(--shadow-md); animation: fadeIn 0.5s ease;">
-                    <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
-                    <h3 style="margin-bottom: 1rem; color: #155724; font-size: 1.5rem;">✓ Demande préparée !</h3>
-                    <p style="font-size: 1.1rem; line-height: 1.6; color: #444;">Votre logiciel de messagerie (Outlook,
-                        Mail, Gmail...) va s'ouvrir pour envoyer le formulaire directement à la crèche.</p>
-                    <p style="margin-top: 1rem; font-size: 0.95rem; color: #666;">Si rien ne se passe, veuillez nous
-                        contacter directement à :<br><strong
-                            style="color: var(--brand-blue-dark);">contact@ce-lpbx.com</strong></p>
                 </div>
             </form>
         </div>
@@ -293,7 +449,7 @@
                             onmouseover="this.style.transform='scale(1.1)'"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             target="_blank">
-                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                            <img alt="Facebook"
                                 height="24" loading="lazy" src="/images/icon_facebook.webp"
                                 style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
@@ -301,7 +457,7 @@
                             onmouseover="this.style.transform='scale(1.1)'"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             target="_blank">
-                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                            <img alt="LinkedIn"
                                 height="24" loading="lazy" src="/images/icon_linkedin.webp"
                                 style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
@@ -309,7 +465,7 @@
                             onmouseover="this.style.transform='scale(1.1)'"
                             style="display: block; width: 24px; height: 24px; transition: transform 0.2s;"
                             target="_blank">
-                            <img alt="Intérieur sécurisé et aménagé de la micro-crèche Les P'tits Babadins à Pré-inscription Crèche - Demande de Place en Ligne"
+                            <img alt="Instagram"
                                 height="24" loading="lazy" src="/images/icon_instagram.webp"
                                 style="width: 100%; height: 100%; object-fit: contain;" width="24" />
                         </a>
@@ -318,134 +474,223 @@
                 <div class="footer-col">
                     <h4>Familles</h4>
                     <ul>
-                        <li><a href="creches.html">Trouver ma crèche</a></li>
-                        <li><a href="pedagogie.html">Le projet pédagogique</a></li>
-                        <li><a href="pre-inscription.html">Inscription en ligne</a></li>
-                        <li><a href="index.html#reseau-preview">Pourquoi nous choisir ?</a></li>
+                        <li><a href="creches">Trouver ma crèche</a></li>
+                        <li><a href="pedagogie">Le projet pédagogique</a></li>
+                        <li><a href="pre-inscription">Inscription en ligne</a></li>
+                        <li><a href="/#reseau-preview">Pourquoi nous choisir ?</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Vie en crèche</h4>
                     <ul>
-                        <li><a href="blog-alimentation-dme.html">Alimentation &amp; DME</a></li>
-                        <li><a href="blog-sommeil-bebe.html">Sommeil de bébé</a></li>
-                        <li><a href="blog-motricite-libre.html">Motricité libre</a></li>
-                        <li><a href="blog-adaptation-creche.html">Adaptation en douceur</a></li>
+                        <li><a href="blog-alimentation-dme">Alimentation &amp; DME</a></li>
+                        <li><a href="blog-sommeil-bebe">Sommeil de bébé</a></li>
+                        <li><a href="blog-motricite-libre">Motricité libre</a></li>
+                        <li><a href="blog-adaptation-creche">Adaptation en douceur</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Solutions</h4>
                     <ul>
-                        <li><a href="entreprises.html">Offres Entreprises</a></li>
-                        <li><a href="reseau.html">Le Réseau LPB</a></li>
-                        <li><a href="recrutement.html">Travailler avec nous</a></li>
-                        <li><a href="contact.html">Contact Siège</a></li>
+                        <li><a href="entreprises">Offres Entreprises</a></li>
+                        <li><a href="reseau">Le Réseau LPB</a></li>
+                        <li><a href="recrutement">Travailler avec nous</a></li>
+                        <li><a href="contact">Contact Siège</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales.html">Mentions Légales</a> | <a
-                        href="politique-confidentialite.html">Politique de Confidentialité</a> | <a
-                        href="plan-du-site.html">Plan du site</a></p>
+                <p>© 2024 Les p’tits Babadins. <a href="mentions-legales">Mentions Légales</a> | <a
+                        href="politique-confidentialite">Politique de Confidentialité</a> | <a
+                        href="plan-du-site">Plan du site</a></p>
             </div>
         </div>
     </footer>
     <!-- Back to Top Button -->
     <button id="backToTop" title="Retour en haut">↑</button>
-    <!-- Back to Top Button -->
-    <!-- Back to Top Button -->
     <script>
+        // Use window.crechesData from main.js if available
+        const normalizeStr = (str) => {
+            if (!str) return "";
+            return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+                .replace(/['’]/g, " ").replace(/[-_]/g, " ").replace(/[()]/g, "")
+                .replace(/\bst\b/gi, "saint")
+                .replace(/\b(ptits|babadins|p|tits|micro)\b/gi, "") // Only strip brand keywords
+                .replace(/\s+/g, " ")
+                .trim().toLowerCase();
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
+            console.log("V2.2 - MATCHING FIXED");
             const form = document.getElementById('single-step-form');
+            if (!form) return;
 
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
 
                 // Honeypot check
                 const hp = form.querySelector('input[name="hp_field"]').value;
-                if (hp) {
-                    console.warn("Spam detected");
-                    return;
+                if (hp) return;
+
+                const submitBtn = document.getElementById('submit-btn');
+                const submitContainer = document.getElementById('submit-container');
+                const successMsg = document.getElementById('success-message');
+                
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = "Traitement en cours...";
                 }
 
-                // Gather form data
                 const formData = new FormData(form);
-                let body = "Nouvelle pré-inscription :\n\n";
+                
+                // CRÈCHE MATCHING
+                const crecheInput = document.getElementById('creche');
+                const crecheNameInput = crecheInput ? crecheInput.value : (formData.get('creche') || "Non spécifiée");
+                let recipientEmail = "contact@ce-lpbx.com";
+                let matchedCrecheName = crecheNameInput;
 
-                // Section 1: L'Enfant
-                body += "--- L'ENFANT ---\n";
-                body += `Prénom et Nom: ${formData.get('child-name')}\n`;
-                body += `Date de naissance: ${formData.get('birthdate')}\n\n`;
+                const normalizedInput = normalizeStr(crecheNameInput);
+                if (window.crechesData && normalizedInput !== "") {
+                    // Precision matching V3.9: Fixed collision between cities
+                    const normalizedData = window.crechesData.map(c => ({
+                        ...c,
+                        normName: normalizeStr(c.name),
+                        normCity: normalizeStr(c.city)
+                    }));
 
-                // Section 2: Les Parents
-                body += "--- PARENT 1 ---\n";
-                body += `Nom: ${formData.get('parent1-name')}\n`;
-                body += `Profession: ${formData.get('parent1-job')}\n`;
-                body += `Email: ${formData.get('parent1-email')}\n`;
-                body += `Téléphone: ${formData.get('parent1-phone')}\n\n`;
+                    // 1. Try exact match on name or city
+                    let matched = normalizedData.find(c => 
+                        (c.normName !== "" && normalizedInput === c.normName) || 
+                        (c.normCity !== "" && normalizedInput === c.normCity)
+                    );
 
-                if (formData.get('parent2-name')) {
-                    body += "--- PARENT 2 ---\n";
-                    body += `Nom: ${formData.get('parent2-name')}\n`;
-                    body += `Profession: ${formData.get('parent2-job')}\n`;
-                    body += `Email: ${formData.get('parent2-email')}\n`;
-                    body += `Téléphone: ${formData.get('parent2-phone')}\n\n`;
+                    // 2. Try containment if no exact match (only for specific, non-generic search terms)
+                    const genericTerms = ['les', 'creche', 'micro', 'babadins', 'la creche', 'micro creche'];
+                    const isGeneric = normalizedInput.length <= 3 || genericTerms.includes(normalizedInput);
+
+                    if (!matched && !isGeneric) {
+                        matched = normalizedData.find(c => 
+                            (c.normName !== "" && (c.normName.includes(normalizedInput) || normalizedInput.includes(c.normName))) ||
+                            (c.normCity !== "" && (c.normCity.includes(normalizedInput) || normalizedInput.includes(c.normCity)))
+                        );
+                    }
+
+                    if (matched && matched.email) {
+                        recipientEmail = matched.email;
+                        matchedCrecheName = matched.name;
+                    }
                 }
 
-                // Section 3: Foyer
-                body += "--- FOYER ---\n";
-                body += `Adresse: ${formData.get('address')}, ${formData.get('zipcode')} ${formData.get('city')}\n`;
-                body += `Revenu fiscal: ${formData.get('income')} €\n\n`;
+                // FULL EMAIL BODY
+                let emailBody = `DEMANDE DE PRÉ-INSCRIPTION\n`;
+                emailBody += `---------------------------\n`;
+                emailBody += `ENFANT : ${formData.get('child-name')} (${formData.get('birthdate')})\n`;
+                emailBody += `PARENT 1 : ${formData.get('parent1-name')} (${formData.get('parent1-job') || 'N/A'}) - ${formData.get('parent1-phone')}\n`;
+                emailBody += `EMAIL 1 : ${formData.get('parent1-email')}\n`;
+                
+                const p2Name = formData.get('parent2-name');
+                if (p2Name) {
+                    emailBody += `PARENT 2 : ${p2Name} (${formData.get('parent2-job') || 'N/A'}) - ${formData.get('parent2-phone')}\n`;
+                    emailBody += `EMAIL 2 : ${formData.get('parent2-email')}\n`;
+                }
 
-                // Section 4: Recherche
-                body += "--- RECHERCHE ---\n";
-                const crecheSelect = document.getElementById('creche');
-                const selectedOption = crecheSelect.options[crecheSelect.selectedIndex];
-                const crecheName = selectedOption ? selectedOption.text : formData.get('creche');
-                const recipientEmail = selectedOption ? selectedOption.getAttribute('data-email') : 'contact@ce-lpbx.com';
-
-                body += `Crèche: ${crecheName}\n`;
-                body += `Date d'entrée: ${formData.get('start-date')}\n`;
-
-                const days = [];
-                form.querySelectorAll('input[name="days"]:checked').forEach(cb => days.push(cb.value));
-                body += `Jours souhaités: ${days.join(', ')}\n\n`;
-
-                body += "--- METADONNÉES ---\n";
-                body += `Date/Heure soumission: ${new Date().toLocaleString()}\n`;
-                body += `URL d'origine: ${window.location.href}\n`;
-
-                // Automation Webhook JSON (Logged for future use)
-                const webhookPayload = {
-                    "parent_name": formData.get('parent1-name'),
-                    "parent_email": formData.get('parent1-email'),
-                    "parent_phone": formData.get('parent1-phone'),
-                    "code_postal": formData.get('zipcode'),
-                    "message": formData.get('income') ? `Revenu: ${formData.get('income')}€` : "N/A",
-                    "creche_selected": crecheName,
-                    "page_url": window.location.href,
-                    "date_submitted": new Date().toISOString(),
-                    "recipient_email": recipientEmail
-                };
-                console.log("Webhook Payload Preview:", webhookPayload);
+                emailBody += `REVENUS : ${formData.get('income') || 'Non renseigné'} €/an\n`;
+                emailBody += `ENFANTS AU FOYER : ${formData.get('household-children') || '1'}\n`;
+                emailBody += `ADRESSE : ${formData.get('address')}, ${formData.get('zipcode')} ${formData.get('city')}\n`;
+                emailBody += `---------------------------\n`;
+                emailBody += `CRÈCHE : ${matchedCrecheName}\n`;
+                emailBody += `DÉBUT : ${formData.get('start-date')}\n`;
+                
+                // DAYS & HOURS
+                const selectedDays = [];
+                form.querySelectorAll('input[name="days"]:checked').forEach(cb => {
+                    const day = cb.value;
+                    const start = formData.get(`start-${day}`);
+                    const end = formData.get(`end-${day}`);
+                    selectedDays.push(`${day} (${start}-${end})`);
+                });
+                emailBody += `PLANNING : ${selectedDays.length > 0 ? selectedDays.join(', ') : 'Non précisé'}\n`;
+                emailBody += `---------------------------\n`;
+                emailBody += `Envoyé le : ${new Date().toLocaleDateString()}\n`;
 
                 const subject = `Pré-inscription Crèche - ${formData.get('parent1-name')}`;
-                const mailtoUrl = `mailto:${recipientEmail || 'contact@ce-lpbx.com'}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Webmail Links - Optimized for Mobile Compose (V3.4)
+                const gmailUrl = `https://mail.google.com/mail/u/0/?view=cm&fs=1&to=${recipientEmail}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                const outlookUrl = `https://outlook.live.com/owa/?path=/mail/action/compose&to=${recipientEmail}&subject=${encodeURIComponent(subject)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
 
-                // Show success message and update UI
-                const successMsg = document.getElementById('success-message');
-                const submitContainer = document.getElementById('submit-container');
+                // Helper for fallback copy
+                window.copyEmailInfo = () => {
+                    const textToCopy = `À : ${recipientEmail}\nObjet : ${subject}\n\n${emailBody}`;
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        alert("✅ Informations copiées ! Vous pouvez maintenant les coller dans votre email.");
+                    });
+                };
 
-                if (successMsg) successMsg.style.display = 'block';
-                if (submitContainer) submitContainer.style.display = 'none';
+                // SHOW SUCCESS UI
+                if (successMsg) {
+                    successMsg.style.border = "none";
+                    successMsg.style.background = "transparent";
+                    successMsg.style.boxShadow = "none";
+                    successMsg.style.padding = "0";
 
-                // Small delay to let user see the UI change before redirect
-                setTimeout(() => {
-                    window.location.href = mailtoUrl;
-                }, 500);
+                    // NEW LOGIC V3.3 - Robust Mobile Flow
+                    // Auto-copy full text to clipboard for the user
+                    const fullRecap = `À : ${recipientEmail}\nObjet : ${subject}\n\n${emailBody}`;
+                    navigator.clipboard.writeText(fullRecap).catch(() => console.log("Clipboard blocked"));
+
+                    successMsg.innerHTML = `
+                        <!-- Version Identifier: V3.3 - Robust Mobile Schema -->
+                        <div style="background: white; padding: 2.5rem 1.5rem; border-radius: 32px; max-width: 580px; margin: 0 auto; box-shadow: 0 30px 60px -12px rgba(0, 77, 113, 0.15); text-align: center; font-family: 'Nunito', sans-serif; animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1); border: none !important;">
+                            
+                            <div style="margin-bottom: 1.5rem;">
+                                <div style="width: 70px; height: 70px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2daae1" stroke-width="2.5"><path d="M22 7l-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M22 7v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2Z"/></svg>
+                                </div>
+                            </div>
+
+                            <h3 style="margin: 0 0 0.5rem; color: #004d71; font-size: 1.7rem; font-weight: 800;">Dossier prêt à l'envoi !</h3>
+                            <p style="margin: 0 0 1.5rem; color: #577083; font-weight: 500; font-size: 1rem;">Votre récapitulatif a été <b>copié automatiquement</b>.<br>Choisissez votre application pour l'envoyer :</p>
+
+                            <!-- Options Grid -->
+                            <div class="mail-grid" style="display: grid; grid-template-columns: 1fr; gap: 0.8rem; margin-bottom: 2rem;">
+                                <!-- Gmail -->
+                                <a href="${gmailUrl}" target="_blank" style="text-decoration: none; background: #fff; color: #1a1a1a; padding: 1.2rem; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 1rem; border: 2px solid #f1f5f9; font-weight: 700;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="#EA4335"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-1.356 1.509-2.154 2.623-1.378L12 11.115l9.377-7.036c1.114-.776 2.623.022 2.623 1.378Z"/></svg>
+                                    Gmail
+                                </a>
+                                <!-- Outlook -->
+                                <a href="${outlookUrl}" target="_blank" style="text-decoration: none; background: #0078d4; color: white; padding: 1.2rem; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 700;">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M11.371 11.233L1.144 9.176V1.309L11.371 3.366V11.233ZM1.144 11.536L11.371 13.593V21.46L1.144 23.517V15.65ZM11.674 11.233L21.901 13.29V5.423L11.674 3.366V11.233ZM11.674 11.536L21.901 13.593V21.46L11.674 19.403V11.536Z"/></svg>
+                                    Outlook
+                                </a>
+                                <!-- Application Mail (Default) -->
+                                <a href="${mailtoUrl}" style="text-decoration: none; background: #2daae1; color: white; padding: 1.2rem; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 1rem; font-weight: 700;">
+                                    <span>✉️</span> Autre application Mail
+                                </a>
+                            </div>
+
+                            <div style="background: #f8fafc; padding: 1rem; border-radius: 12px; font-size: 0.9rem; color: #64748b; margin-bottom: 2rem;">
+                                💡 <b>Astuce :</b> Si le mail est vide, restez appuyé dans la zone de texte et choisissez <b>"Coller"</b>.
+                            </div>
+
+                            <button onclick="location.reload()" style="background: none; border: none; color: #94a3b8; font-weight: 700; cursor: pointer; font-size: 0.9rem;">
+                                ← Modifier mes informations
+                            </button>
+                        </div>
+
+                        <style>
+                            @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+                            .mail-grid a:active { transform: scale(0.98); }
+                        </style>
+                    `;
+                    successMsg.style.display = 'block';
+                    if (submitContainer) submitContainer.style.display = 'none';
+                    window.scrollTo({ top: successMsg.offsetTop - 80, behavior: 'smooth' });
+                }
             });
         });
     </script>
 </body>
-
 </html>
